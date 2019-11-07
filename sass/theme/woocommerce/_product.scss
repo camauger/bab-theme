@@ -58,7 +58,6 @@ div.productAttribute {
 .product-template-default {
 	&.single-product {
 		form.cart, .yith-ywraq-add-to-quote {
-			display: inline-block;
 
 		}
 		.yith-ywraq-add-to-quote {
@@ -66,4 +65,8 @@ div.productAttribute {
 			padding-left:20px;
 		}
 	}
+}
+
+.cart_button_group {
+	display: flex;
 }

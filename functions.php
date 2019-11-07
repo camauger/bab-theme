@@ -198,3 +198,14 @@ function price_spacing( $price ) {
 
     return $text;
 } );
+
+function cart_button_group_before() {
+	echo "<div class='cart_button_group'>";
+}
+function cart_button_group_after() {
+	echo "</div>";
+}
+
+
+add_action('woocommerce_single_product_summary', 'cart_button_group_before', 29);
+add_action('woocommerce_single_product_summary', 'cart_button_group_after', 39);
