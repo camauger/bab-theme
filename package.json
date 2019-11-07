@@ -1,7 +1,7 @@
 {
-  "name": "understrap",
+  "name": "bab-theme",
   "version": "0.9.3",
-  "description": "WordPress Theme framework",
+  "description": "WordPress Theme built with Understrap",
   "main": "index.js",
   "scripts": {
     "postinstall": "gulp copy-assets"
