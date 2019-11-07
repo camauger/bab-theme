@@ -6,5 +6,7 @@
 	padding-right: 16px!important;
 	font-weight: normal!important;
 	min-width: 161px!important;
+	max-width: 170px!important;
 	text-align: center!important;
+	@include media-breakpoint-up(md) { max-width: 260px;}
 }

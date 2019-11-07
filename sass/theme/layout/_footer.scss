@@ -28,7 +28,9 @@ footer.site-footer {
     justify-content: space-between;
     .telephone {
         font-size: 1.2rem;
+
         @include media-breakpoint-up(md) { font-size: 2rem; }
+        padding-bottom: 1rem;
         color: white;
         width: 100%;
         text-align: center;
