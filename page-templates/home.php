@@ -64,16 +64,16 @@ $container = get_theme_mod('understrap_container_type');
  ?>" alt="<?php the_title(); ?>">
 			<div class="product--star__info">
 				<span>
-				<?php esc_html_e( 'La vedette du mois', 'bab' ); ?></span>
+				<?php esc_html_e( 'Featured Product', 'bab' ); ?></span>
 				<h3><?php the_title(); ?></h3>
-				<a class="btn btn-secondary" href="<?php the_permalink(); ?>">Plus de détails</a>
+				<a class="btn btn-secondary" href="<?php the_permalink(); ?>"><?php esc_html_e( 'More info', 'bab' ); ?></a>
 			</div>
 			<div class="store--info">
 				<a href="/boutique/" title="Boutique en ligne">
-					<span class="boutiqueEnLigne">Boutique en ligne</span>
-					<span class="plusDe">plus de</span>
+					<span class="boutiqueEnLigne"><?php esc_html_e( 'Online Store', 'bab' ); ?></span>
+					<span class="plusDe"><?php esc_html_e( 'more than', 'bab' ); ?></span>
 					<span class="vedetteMontant">400</span>
-					<span class="bijouxUniques">bijoux uniques</span>
+					<span class="bijouxUniques"><?php esc_html_e( 'unique jewelry items', 'bab' ); ?></span>
 					<i class="fas fa-shopping-cart"></i>
 				</a>
 
@@ -81,11 +81,11 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="store--reasons">
 				<a href="/bijoux-occasion/" title="Pourquoi acheter un bijou ancien?">
 					
-					<span class="pourquoi">Pourquoi</span>
-					<span class="acheterUnBijouAncien">acheter un bijou ancien ?</span>
+					<span class="pourquoi"><?php esc_html_e( 'Why', 'bab' ); ?></span>
+					<span class="acheterUnBijouAncien"><?php esc_html_e( 'buy an estate jewelry?', 'bab' ); ?></span>
 					<span class="cinqRaisons">
 						<span class="nombreRaisons">5</span>
-						<span class="raisons">raisons</span>
+						<span class="raisons"><?php esc_html_e( 'reasons', 'bab' ); ?></span>
 					</span>
 				</a>
 			</div>

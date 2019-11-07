@@ -1,0 +1,14 @@
+// Related products
+
+section.related {
+	h2 {
+		margin-top: 3rem;
+		margin-bottom: 2rem;
+		color: $primary;
+	}
+}
+
+// Clearfix pour la section des produits apparentés
+section.related.products {
+	clear:both;
+}

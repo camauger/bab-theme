@@ -25,7 +25,7 @@ $container = get_theme_mod('understrap_container_type');
         <main class="site-main container contact" id="main" role="main">
             <div class="row">
                 <div class="col-12">
-                    <h1>Contact</h1>
+                    <h1><span><?php esc_html_e( 'Contact', 'bab' ); ?></span></h1>
                 </div>
 
                 <div class="address col-lg-6">
@@ -52,7 +52,7 @@ $container = get_theme_mod('understrap_container_type');
                 <div class="schedule col-lg-6">
                     <h3>Horaire du magasin</h3>
                     <strong>Lundi et mardi</strong>
-                    <span>Fermé</span>
+                    <span><?php esc_html_e( 'Closed', 'bab' ); ?></span>
                     <strong>Mercredi</strong>
                     <span>11h00 à 17h30</span>
                     <strong>Jeudi et vendredi</strong>
@@ -60,7 +60,7 @@ $container = get_theme_mod('understrap_container_type');
                     <strong>Samedi</strong>
                     <span>Sur rendez-vous</span>
                     <strong>Dimanche</strong>
-                    <span>Fermé</span>
+                    <span><?php esc_html_e( 'Closed', 'bab' ); ?></span>
 
                     <h3>Heure d’ouverture du laboratoire d’évaluation</h3>
                     <p>

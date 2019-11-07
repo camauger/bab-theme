@@ -6,7 +6,7 @@
 <?php if ($post->question1) { ?>
 <aside class="block--expertise">
     <i class="fas fa-gem decorum"></i>
-    <h3>Notre expertise</h3>
+    <h3><span><?php esc_html_e( 'Our Expertise', 'bab' ); ?></span></h3>
     <nav class="col-12 col-md-8">
         
         <a title="<?php echo esc_html($post->question1) ?>"

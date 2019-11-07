@@ -2,6 +2,8 @@
 @import "product";
 @import "search";
 
+
+
 .woocommerce-loop-product__title {
 	min-height: 60px;
 }
@@ -30,29 +32,7 @@ body.product-template-default.single.single-product {
 }
 
 
-@import "categories";
-@import "product";
 
-// Clearfix pour la section des produits apparentés
-section.related.products {
-	clear:both;
-}
-
-// Promo
-
-span.price{
-	del {
-		color: gray;
-	}
-	ins {
-		color: red;
-	}
-}
-
-.woocommerce span.onsale {
-	background-color: $secondary;
-	border-radius: 0;
-}
 
 
 .woocommerce-loop-product__link {
@@ -72,27 +52,6 @@ form.cart {
 	button {
 		@extend .btn-secondary;
 	}
-}
-
-// Related products
-
-section.related {
-	h2 {
-		margin-top: 3rem;
-		margin-bottom: 2rem;
-		color: $primary;
-	}
-}
-
-// Request quote
-
-.add-request-quote-button {
-	border-radius: 25px!important;
-    padding-left: 16px!important;
-	padding-right: 16px!important;
-	font-weight: normal!important;
-	min-width: 161px!important;
-	text-align: center!important;
 }
 
 

@@ -30,55 +30,39 @@ $container = get_theme_mod('understrap_container_type');
                 <main class="site-main" id="main" role="main">
 
                     <div class="row no-gutters">
-                    <div class="col-12">
-                    <h1 class="page__title">Nos Collections</h1>
-                    
-                </div>
+                        <div class="col-12">
+                            <h1 class="page__title"><span><?php esc_html_e('Our Collections', 'bab'); ?></span></h1>
+
+                        </div>
 
                         <a href="https://laboiteabijoux.ca/categorie-produit/bijoux-precieux/" title="Bijoux précieux">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/collections/precieux-categorie.jpg" alt="Bijoux précieux" title="Bijoux précieux" class="img-responsive">
                             Bijoux précieux
                         </a>
 
-
-
-
-
                         <a href="https://laboiteabijoux.ca/categorie-produit/bijoux-anciens/" title="Bijoux anciens">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/collections/ancien.jpg" alt="Bijoux anciens" title="Bijoux anciens" class="img-responsive">
                             Bijoux anciens
                         </a>
-
-
-
-
 
                         <a href="https://laboiteabijoux.ca/categorie-produit/bijoux-argent/" title="Bijoux argent">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/collections/argent-categorie.jpg" alt="Bijoux argent" title="Bijoux argent" class="img-responsive">
                             Bijoux argent
                         </a>
 
-
-
-
-                  
-
                         <div class="home--testimonials">
-		<div class="row no-gutters d-flex justify-content-center">
-			<blockquote>
-				Conseils avec beaucoup de professionnalisme et belles découvertes à La Boîte à Bijoux...et facile d’accès rue Maguire, Sillery...
-				<span>Mme T. Bouchard</span>
-			</blockquote>
-		
-			<blockquote>
-				J’ai bien reçu mon bijou, merci. Il est magnifique ! Merci encore et à bientôt.
-				<span>Mme F. Charbonneau</span>
-			</blockquote>
-		</div>
-	</div>
-                        
+                            <div class="row no-gutters d-flex justify-content-center">
+                                <blockquote>
+                                    Conseils avec beaucoup de professionnalisme et belles découvertes à La Boîte à Bijoux...et facile d’accès rue Maguire, Sillery...
+                                    <span>Mme T. Bouchard</span>
+                                </blockquote>
 
-
+                                <blockquote>
+                                    J’ai bien reçu mon bijou, merci. Il est magnifique ! Merci encore et à bientôt.
+                                    <span>Mme F. Charbonneau</span>
+                                </blockquote>
+                            </div>
+                        </div>
 
                         <a href="https://laboiteabijoux.ca/categorie-produit/perles/" title="Perles">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/collections/perlest-categorie.jpg" alt="Perles" title="Perles" class="img-responsive">
@@ -150,7 +134,7 @@ $container = get_theme_mod('understrap_container_type');
                             <img src="<?php echo get_template_directory_uri(); ?>/images/collections/epoque-categorie.jpg" alt="Époque" title="Époque" class="img-responsive">
                             Époque
                         </a>
-                
+
 
                         <a href="https://laboiteabijoux.ca/categorie-produit/type-de-metal/" title="Type de métal">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/collections/metal-categorie.jpg" alt="Type de métal" title="Type de métal" class="img-responsive">

@@ -6,3 +6,19 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+// Promo
+
+span.price{
+	del {
+		color: gray;
+	}
+	ins {
+		color: red;
+	}
+}
+
+.woocommerce span.onsale {
+	background-color: $secondary;
+	border-radius: 0;
+}
