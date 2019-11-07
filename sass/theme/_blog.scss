@@ -117,19 +117,16 @@ body.blog {
 
 // Article seul
 .single-post {
+	article > header {
+		margin-top: 0;
+	}
 	main {
 		width: 100%;
 		max-width: 960px;
 		margin: auto;}
 		article {
 		h1 {
-			text-align: center;
-			padding: 15px;
-
-			@include media-breakpoint-up(md) {
-				font-family: $font-head;
-				font-size: 6rem;
-			}
+			@extend %page__title;
 		}
 
 		div.entry-meta {

@@ -63,7 +63,8 @@ $container = get_theme_mod('understrap_container_type');
 			<img src="<?php echo get_template_directory_uri() . "/images/featured/" . $featured_image ."" ;
  ?>" alt="<?php the_title(); ?>">
 			<div class="product--star__info">
-				<span>La vedette du mois</span>
+				<span>
+				<?php esc_html_e( 'La vedette du mois', 'bab' ); ?></span>
 				<h3><?php the_title(); ?></h3>
 				<a class="btn btn-secondary" href="<?php the_permalink(); ?>">Plus de détails</a>
 			</div>
