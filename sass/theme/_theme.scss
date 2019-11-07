@@ -17,14 +17,14 @@ body {
 
 // Headings
 %page__title {
-	color: $primary;
+	
 	text-align: center;
 		font-family: $font-head;
 		font-size: 6rem;
 }
 
 h1 {
-	
+	color: $primary;
 	&.page__title {
 		@extend %page__title;
 	}
@@ -55,6 +55,9 @@ h1 {
 .img--services {
 	width: 100%;
 }
+figure {
+	margin-bottom: 0;
+}
 
 
 /* Home - Page d'accueil */
@@ -62,11 +65,6 @@ h1 {
 // Vedette
 @import "home-featured";
 
-// À propos
-
-figure {
-	margin-bottom: 0; // pour permettre des rangs de hauteur égale
-}
 
 
 i.decorum {
