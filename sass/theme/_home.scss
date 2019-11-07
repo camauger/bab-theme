@@ -2,13 +2,13 @@
 template Home  **/
 
 .accroche {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	color: $primary;
 	font-weight: 300;
 	text-align: center;
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding: 100px 15px 100px 15px;
 	word-break: break-word;
+	@include media-breakpoint-up(md) { font-size: 2rem;}
 }
 
 // Services
@@ -17,10 +17,6 @@ template Home  **/
 	@extend .no-gutters;
 	@extend .d-flex;
 	@extend .justify-content-between;
-
-	div {
-		
-	}
 
 	h2 {
 		font-family: $font-main;

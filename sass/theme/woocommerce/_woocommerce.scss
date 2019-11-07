@@ -52,7 +52,6 @@ span.price{
 .woocommerce span.onsale {
 	background-color: $secondary;
 	border-radius: 0;
-
 }
 
 
@@ -94,4 +93,18 @@ section.related {
 	font-weight: normal!important;
 	min-width: 161px!important;
 	text-align: center!important;
+}
+
+
+// Remove padding from container in all woocommerce pages
+
+body.woocommerce-page {
+	div.wrapper > div {
+		padding-left: 0!important;
+		padding-right: 0!important;
+		main {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
 }

@@ -1,6 +1,8 @@
 
 aside.block--expertise {
-	background-color: #b0b4d0;
+	background-color: $the-flesh;
+	padding-left: 15px;
+	padding-right: 15px;
 	padding-bottom: 40px;
 	@extend .d-flex;
 	@extend .flex-column;
