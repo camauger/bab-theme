@@ -1,0 +1,73 @@
+// Liste des catégories
+
+$catpadding: 30px;
+
+
+.widget.woocommerce.widget_product_search,
+.widget.woocommerce.widget_product_categories {
+	background-color: $primary;
+	color: white;
+
+	h3 {
+		padding-left: $catpadding;
+		padding-right: $catpadding;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+
+	ul.product-categories {
+		list-style: none;
+		padding: 0;
+		padding-bottom: 2rem;
+		ul.children {
+			list-style: none;
+		}
+		a {
+			padding-left: $catpadding;
+			padding-right: $catpadding;
+			display: block;
+			width: 100%;
+			color: white;
+			transition: all 200ms ease-in-out;
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
+			padding-top: 0.5rem;
+			&:after {
+				content: "";
+				display: block;
+				width: 75px;
+				position: relative;
+				height: 2px;
+				background-color: transparent;
+				margin-top: 4px;
+				margin-bottom: 4px;
+			}
+			&:hover {
+				text-decoration: none;
+				
+				&:after {
+					background-color: white;
+				}
+			}
+		}
+	}
+}
+
+.widget.woocommerce.widget_product_categories {
+	padding-top: 1rem;
+
+}
+
+// Catégories actives
+
+.cat-item.current-cat {
+	> a {
+		background: white;
+		color: $primary!important;
+	}
+	ul.children {
+		a {
+			border-left: 4px solid white;
+		}
+	}
+}

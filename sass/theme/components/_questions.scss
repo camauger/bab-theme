@@ -1,0 +1,42 @@
+
+aside.block--expertise {
+	background-color: #b0b4d0;
+	padding-bottom: 40px;
+	@extend .d-flex;
+	@extend .flex-column;
+	@extend .row;
+	@extend .no-gutters;
+	@extend .justify-content-center;
+	@extend .align-items-center;
+
+	* {
+		color: white;
+		display: flex;
+	}
+
+	h3 {
+		padding: 1.5rem;
+	}
+
+	nav {
+		flex-direction: column;
+
+		a {
+			margin-bottom: 1.5rem;
+			padding: 1rem;
+			border: 1px solid white;
+			border-radius: 6px;
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+
+		i {
+			margin-right: 1rem;
+			margin-top: 3px;
+		}
+	}
+
+
+}

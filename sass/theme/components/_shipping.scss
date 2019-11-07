@@ -1,0 +1,39 @@
+// Livraison express (sidebard gauche)
+.expressShipping {
+
+	* {
+		display: flex;
+	}
+
+	a {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		transition: all 200ms ease-in-out;
+		aside & { // if in the left sidebard
+			flex-direction: column;
+			align-items: center;
+		}
+		border: 1px solid $primary;
+		div { // only in product page
+			flex-direction: column;
+			margin-left: 30px;
+		}
+
+		&:hover {
+			text-decoration: none;
+			color: white;
+			background: $primary;
+		}
+	}
+
+
+	h3 {
+		font-size: 1.1rem;
+	}
+
+	i {
+		padding: 20px;
+	}
+
+	span {}
+}

@@ -1,0 +1,51 @@
+
+main.contact {
+    h1 {
+        text-align: center;
+        font-family: $font-head;
+        color: $primary;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 6rem;
+    }
+    .address {
+        margin-bottom: 2rem;
+    }
+    address {
+        text-align: center;
+    }
+
+    h3 {
+        color: white;
+        background-color: $primary;
+        border-radius: 6px;
+        padding: 6px 6px 6px 12px;
+        font-size: 1.2rem;
+        font-weight: 100;
+        margin-bottom: 1rem;
+        &:not(:first-of-type) {
+            margin-top: 1rem;
+        }
+    }
+    
+    .schedule {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    .buttonGroup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .btn {
+            margin: 1rem;
+        } 
+
+        @include media-breakpoint-up(md) { 
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: auto;
+
+        }
+    }
+}

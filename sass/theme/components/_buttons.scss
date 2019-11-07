@@ -1,0 +1,20 @@
+.btn {
+    border-radius: 25px;
+    padding-left: 16px;
+    padding-right: 16px;
+} 
+
+.btn-lg {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+// Button Contact form
+.gform_button {
+    @extend .btn;
+    @extend .btn-secondary;
+}
+
+button > a:hover {
+    text-decoration: none;
+}

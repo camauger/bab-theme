@@ -1,0 +1,69 @@
+// Fiche produit
+
+// Meta
+
+.product_meta {
+	display: none; // remove normal meta
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	>span {
+		display: flex;
+		flex-wrap: wrap;
+
+		&:before {
+			content: "\f3a5";
+			color: #999;
+			font-family: "FontAwesome";
+
+			padding-right: .5rem;
+		}
+	}
+
+}
+
+// Product Meta
+
+
+
+div.productAttributes {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+div.metaLabel {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 50%;
+
+	span {
+		font-weight: bold;
+	}
+}
+
+div.productAttribute {
+
+	&:before {
+		content: "\f3a5";
+		color: #999;
+		font-family: "FontAwesome";
+		padding-right: .5rem;
+	}
+}
+
+
+.product-template-default {
+	&.single-product {
+		form.cart, .yith-ywraq-add-to-quote {
+			display: inline-block;
+
+		}
+		.yith-ywraq-add-to-quote {
+			max-width: 250px;
+			padding-left:20px;
+		}
+	}
+}

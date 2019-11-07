@@ -1,0 +1,68 @@
+.sass-cache
+
+bower_components
+
+node_modules
+
+understrap.zip
+
+dist
+
+dist-product
+
+npm-debug.log
+
+/vendor/
+
+.DS_Store
+
+Thumbs.db
+
+.svn
+
+.cvs
+
+*.bak
+
+*.swp
+.idea/
+
+  
+# ignore everything in the root except the "wp-content" directory.
+!wp-content/
+
+# ignore everything in the "wp-content" directory, except:
+# "themes" directory
+wp-content/*
+!wp-content/themes/
+
+# ignore node dependency directories
+node_modules/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+#ignore
+        .htaccess
+        index.php
+        license.txt
+        package-lock.json
+        readme.html
+        wp-activate.php
+        wp-admin/
+        wp-blog-header.php
+        wp-comments-post.php
+        wp-config-sample.php
+        wp-config.php
+        wp-cron.php
+        wp-includes/
+        wp-links-opml.php
+        wp-load.php
+        wp-login.php
+        wp-mail.php
+        wp-settings.php
+        wp-signup.php
+        wp-trackback.php
+        xmlrpc.php

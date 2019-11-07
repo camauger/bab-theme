@@ -1,0 +1,20 @@
+// Moteur de recherche des produits
+
+// Search
+.widget_product_search {
+	padding-bottom: 2rem;
+	&:after {
+		content: "";
+		display:block;
+		border-bottom: 2px solid white;
+		width: 90%;
+		margin: auto;
+		padding-top: 2rem;
+	}
+}
+
+
+form.woocommerce-product-search {
+	padding-left: 15px;
+	padding-right: 15px;
+}

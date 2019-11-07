@@ -1,0 +1,89 @@
+/**Styles spécifiques pour la page d'accueil
+template Home  **/
+
+.accroche {
+	font-size: 2rem;
+	color: $primary;
+	font-weight: 300;
+	text-align: center;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	word-break: break-word;
+}
+
+// Services
+.home--services {
+	@extend .row;
+	@extend .no-gutters;
+	@extend .d-flex;
+	@extend .justify-content-between;
+
+	div {
+		
+	}
+
+	h2 {
+		font-family: $font-main;
+		font-size: 1.2rem;
+		text-align: center;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+	}
+
+	a {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+}
+
+
+
+// Présentation Jocelyne Rousseau
+.home--expertise {
+	@extend .row;
+	@extend .no-gutters;
+	@extend .d-flex;
+	@extend .flex-lg-row-reverse;
+
+	&__text {
+		@extend .col-12;
+		@extend .col-lg-6;
+		@extend  .d-flex;
+		@extend .flex-column;
+		@extend .align-items-center;
+		@extend  .justify-content-center;
+		padding-top: 2rem;
+		padding-bottom: 2rem;;
+	}
+	h2 {
+		font-family: $font-main;
+		font-size: 2rem;
+		text-align: center;
+		padding-bottom: 2rem;
+		font-weight: 100;
+	}
+
+	p {
+		padding: 1rem;
+		@include media-breakpoint-up(md) { padding: 4rem;}
+	}
+
+	button {
+		display: flex;
+	}
+}
+
+

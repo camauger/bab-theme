@@ -1,0 +1,23 @@
+// Images Hover pour les produits
+
+
+
+.home--services a {
+    @include media-breakpoint-up(md) { 
+    img {
+        filter: grayscale(100%);
+        transition: all 250ms ease-in-out;
+        
+    }
+    &:hover img {
+        filter: grayscale(0%) brightness(115%);
+    }
+}}
+
+
+.home--services a:hover {
+    h2 {
+        background: $primary;
+        color: white;
+    }
+}
