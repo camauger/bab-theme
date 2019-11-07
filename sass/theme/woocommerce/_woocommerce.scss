@@ -1,7 +1,9 @@
 @import "categories";
 @import "product";
 @import "search";
-
+@import "promotions";
+@import "quote";
+@import "related";
 
 
 .woocommerce-loop-product__title {
@@ -18,7 +20,8 @@
 body.product-template-default.single.single-product {
 	h1 {
 		
-		font-size: 2.5rem;
+		font-size: 1.5rem;
+		@include media-breakpoint-up(md) { font-size: 2.5rem; }
 	}
 	p.stock {display: none}
 	.single_add_to_cart_button {
@@ -30,9 +33,6 @@ body.product-template-default.single.single-product {
 		@extend .container;
 	}
 }
-
-
-
 
 
 .woocommerce-loop-product__link {

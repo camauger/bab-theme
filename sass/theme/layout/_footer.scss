@@ -1,0 +1,107 @@
+// Footer 
+footer.site-footer {
+	background-color: $primary;
+	color: white;
+	
+}
+
+.social,
+.address,
+.sitemap {
+    @extend .col-12;
+    @extend .col-md-4;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include media-breakpoint-up(md) { 
+        margin-bottom: inherit;
+        padding: 30px;
+     }
+    @include media-breakpoint-up(lg) { 
+        padding: 90px;
+     }
+}
+
+.social {
+    background-color: $footer-secondary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .telephone {
+        font-size: 1.2rem;
+        @include media-breakpoint-up(md) { font-size: 2rem; }
+        color: white;
+        width: 100%;
+        text-align: center;
+        display: block;
+       
+    }
+    h5 {
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 0.5rem;
+        padding-bottom: 1rem;
+        @include media-breakpoint-up(md) { 
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+    }
+    i {
+        color: white;
+        font-size: 30px;
+        transition: color 150ms ease-in-out;
+        &:hover {
+            color: $secondary;
+        }
+
+    }
+    span {
+        font-size: 12px;
+        font-weight: 100;
+        text-align: center;
+    }
+} 
+
+.address {
+    @extend .d-flex;
+    @extend .flex-column;
+    justify-content: space-between;
+    img {
+        margin-bottom: 1rem;;
+        max-width: 300px;
+margin-left: auto;
+margin-right: auto;
+    }
+    address {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+}
+
+.nav--footer {
+	@extend .d-flex;
+	@extend .flex-column;
+
+	a {
+		text-transform: uppercase;
+        color: white;
+        transition: all 150ms ease-in-out;
+        &:hover {
+            border-radius: 6px;
+            color: $primary;
+            background-color: $white;
+        }
+        i {
+            margin-right: 10px;
+        }
+	}
+    
+
+
+}

@@ -9,109 +9,29 @@
 	display: none!important;
 }
 
+// Styles
+@import "styles/styles";
 
-// Fonts
-body {
-	font-family: $font-main;
-}
-
-// Headings
-%page__title {
-	
-	text-align: center;
-		font-family: $font-head;
-		font-size: 4rem;
-		@include media-breakpoint-up(md) { font-size: 6rem; }
-}
-
-h1 {
-	color: $primary;
-	&.page__title {
-		@extend %page__title;
-	}
-}
-
-
-// Important text
-.emphatic {
-	font-size: 2rem;
-	color: $primary;
-	font-weight: 300;
-}
-
+// Layout
+@import "layout/layout";
 // Animations
 @import "animation/animation";
-
-// Navigation
-@import "nav";
-// Footer
-@import "footer";
-
-// Blocs de texte
-.block--services {
-	padding: 6rem;
-}
-
-// Images
-.img--services {
-	width: 100%;
-}
-figure {
-	margin-bottom: 0;
-}
-
-
 /* Home - Page d'accueil */
 @import "home";
 // Vedette
 @import "home-featured";
-
-
-
-i.decorum {
-	color: $secondary!important;
-	font-size: 3rem;
-	margin-top: -1.1rem;
-	z-index: 5;
-}
-
-// Services
-@import "grid";
-
 // Blog
-@import "blog";
-
+@import "blog/blog";
 // Woocommerce
 @import "woocommerce/woocommerce";
 
 // Collections
 @import "collections";
-
 // Components
 @import "components/components";
 // Contact Page
 @import "contact";
 
-// Reordering sidebar
 
-.widget-area {
-	@extend .order-1;
-	@extend .order-md-0;
- 
-}
-
-
-
-.widget-area {
-	aside:last-of-type{
-		
-		margin-bottom: 3rem;
-	}
-}
-
-// Pagination
-ul.page-numbers {
-	margin-bottom: 2rem;
-}
 
 

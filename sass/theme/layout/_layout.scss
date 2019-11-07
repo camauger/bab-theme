@@ -1,0 +1,28 @@
+@import "grid";
+@import "nav";
+@import "footer";
+
+// Blocs de texte
+.block--services {
+	padding: 6rem;
+}
+
+// Reordering sidebar
+
+.widget-area {
+	@extend .order-1;
+	@extend .order-md-0;
+ 
+}
+
+.widget-area {
+	aside:last-of-type{
+		
+		margin-bottom: 3rem;
+	}
+}
+
+// Pagination
+ul.page-numbers {
+	margin-bottom: 2rem;
+}

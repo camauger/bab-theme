@@ -1,0 +1,20 @@
+// Fonts
+body {
+	font-family: $font-main;
+}
+
+// Headings
+%page__title {
+	
+	text-align: center;
+		font-family: $font-head;
+		font-size: 4rem;
+		@include media-breakpoint-up(md) { font-size: 6rem; }
+}
+
+h1 {
+	color: $primary;
+	&.page__title {
+		@extend %page__title;
+	}
+}
