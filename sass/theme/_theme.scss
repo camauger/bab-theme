@@ -15,21 +15,23 @@
 @import "layout/layout";
 // Animations
 @import "animation/animation";
-/* Home - Page d'accueil */
-@import "home";
-// Vedette
-@import "home-featured";
+
 // Blog
 @import "blog/blog";
 // Woocommerce
 @import "woocommerce/woocommerce";
 
-// Collections
-@import "collections";
+
 // Components
 @import "components/components";
+/* Home - Page d'accueil */
+@import "pages/home";
+// Vedette
+@import "pages/home-featured";
 // Contact Page
-@import "contact";
+@import "pages/contact";
+// Collections
+@import "pages/collections";
 
 
 
