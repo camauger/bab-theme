@@ -108,11 +108,15 @@ function register_top_menu() {
   function cw_woo_attribute(){
     global $product;
 	$attributes = $product->get_attributes();
-	$attMetal = esc_html_e('Metal', 'bab');
-	$attTime = esc_html_e('Time Period', 'bab');
-	$attSize = esc_html_e('Size', 'bab');
+	
+	
     if ( ! $attributes ) {
-		echo "<div class='productAttributes'><div class='metaLabel'><span>$attSize</span><div class='productAttribute'>-</div><br></div><div class='metaLabel'><span>$attMetal</span><div class='productAttribute'>-</div><br></div><div class='metaLabel'><span>$attTime</span><div class='productAttribute'>-</div><br></div><div class='metaLabel'><span>SKU</span><div class='productAttribute'>" . $product->get_sku()  . "</div></div></div>";
+
+		if(ICL_LANGUAGE_CODE=='en'):
+			echo "<div class='productAttributes'><div class='metaLabel'><span>Size</span><div class='productAttribute'>-</div><br></div><div class='metaLabel'><span>Metal</span><div class='productAttribute'>-</div><br></div><div class='metaLabel'><span>Time Period</span><div class='productAttribute'>-</div><br></div><div class='metaLabel'><span>SKU</span><div class='productAttribute'>" . $product->get_sku()  . "</div></div></div>";
+elseif(ICL_LANGUAGE_CODE=='fr'):
+	echo "<div class='productAttributes'><div class='metaLabel'><span>Taille</span><div class='productAttribute'>-</div><br></div><div class='metaLabel'><span>Type de métal</span><div class='productAttribute'>-</div><br></div><div class='metaLabel'><span>Période</span><div class='productAttribute'>-</div><br></div><div class='metaLabel'><span>SKU</span><div class='productAttribute'>" . $product->get_sku()  . "</div></div></div>";
+endif;
 		return;
     }
 
