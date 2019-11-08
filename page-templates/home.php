@@ -112,14 +112,8 @@ $container = get_theme_mod('understrap_container_type');
 		<div class="home--services">
 
 			<div class="col-12 col-md-6 col-lg">
-				<a href="<?php echo get_site_url(); ?>/en/product-category/precious-jewelry/" title="<?php esc_html_e('Precious Jewelry', 'bab'); ?>">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/collections/precieux-categorie.jpg" alt="<?php esc_html_e('Precious Jewelry', 'bab'); ?>" title="<?php esc_html_e('Precious Jewelry', 'bab'); ?>" class="img-fluid">
-					<h2><?php esc_html_e('Precious Jewelry', 'bab'); ?></h2>
-				</a>
+				<?php collectionCatEn('Precious Jewelry', 'precious-jewelry', 'precious-jewelry.jpg'); ?>
 			</div>
-
-
-
 
 			<div class="col-12 col-md-6 col-lg">
 				<a href="<?php echo get_site_url(); ?>/en/services-2/" title="<?php esc_html_e('Evaluation', 'bab'); ?>">
@@ -129,17 +123,16 @@ $container = get_theme_mod('understrap_container_type');
 			</div>
 
 			<div class="col-12 col-md-4 col-lg">
-				<a href="<?php echo get_site_url(); ?>/en/product-category/antique-jewelry/" title="<?php esc_html_e('Antique Jewelry', 'bab'); ?>">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/collections/ancien.jpg" alt="<?php esc_html_e('Antique Jewelry', 'bab'); ?>" title="<?php esc_html_e('Antique Jewelry', 'bab'); ?>" class="img-fluid">
-					<h2><?php esc_html_e('Antique Jewelry', 'bab'); ?></h2>
-				</a>
+				<?php
+					collectionCatEn('Antique Jewelry', 'antique-jewelry', 'antique-jewelry.jpg');
+					?>
+
 			</div>
 
 			<div class="col-12 col-md-4 col-lg">
-				<a href="<?php echo get_site_url(); ?>/en/product-category/silver-jewelry/" title="<?php esc_html_e('Silver Jewelry', 'bab'); ?>">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/collections/argent-categorie.jpg" alt="<?php esc_html_e('Silver Jewelry', 'bab'); ?>" title="<?php esc_html_e('Silver Jewelry', 'bab'); ?>" class="img-fluid">
-					<h2><?php esc_html_e('Silver Jewelry', 'bab'); ?></h2>
-				</a>
+				<?php
+					collectionCatEn('Silver Jewelry', 'silver-jewelry', 'silver-jewelry.jpg'); ?>
+
 			</div>
 
 			<div class="col-12 col-md-4 col-lg">
@@ -149,17 +142,14 @@ $container = get_theme_mod('understrap_container_type');
 				</a>
 			</div>
 
-
-
 		</div>
 	<?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
 		<div class="home--services">
 
 			<div class="col-12 col-md-6 col-lg">
-				<a href="<?php echo get_site_url(); ?>/categorie-produit/bijoux-precieux/" title="Bijoux précieux">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/collections/precieux-categorie.jpg" alt="Bijoux précieux" title="Bijoux précieux" class="img-fluid">
-					<h2>Bijoux précieux</h2>
-				</a>
+				<?php collectionCatFr('Bijoux Précieux', 'bijoux-precieux', 'bijoux-precieux.jpg');
+
+					?>
 			</div>
 
 			<div class="col-12 col-md-6 col-lg">
@@ -170,17 +160,16 @@ $container = get_theme_mod('understrap_container_type');
 			</div>
 
 			<div class="col-12 col-md-4 col-lg">
-				<a href="<?php echo get_site_url(); ?>/categorie-produit/bijoux-anciens/" title="Bijoux anciens">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/collections/ancien.jpg" alt="Bijoux anciens" title="Bijoux anciens" class="img-responsive">
-					<h2>Bijoux anciens</h2>
-				</a>
+			<?php 
+                                collectionCatFr('Bijoux Anciens', 'bijoux-anciens', 'bijoux-anciens.jpg');
+                                
+                                ?>
 			</div>
 
 			<div class="col-12 col-md-4 col-lg">
-				<a href="<?php echo get_site_url(); ?>/categorie-produit/bijoux-argent/" title="Bijoux argent">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/collections/argent-categorie.jpg" alt="Bijoux argent" title="Bijoux argent" class="img-responsive">
-					<h2>Bijoux argent</h2>
-				</a>
+			<?php 
+                                collectionCatFr('Bijoux Argent', 'bijoux-argent', 'bijoux-argent.jpg');
+                                ?>
 			</div>
 
 			<div class="col-12 col-md-4 col-lg">
