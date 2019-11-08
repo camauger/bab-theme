@@ -115,7 +115,7 @@ $container = get_theme_mod('understrap_container_type');
 	<div class="home--services">
 
 <div class="col-12 col-md-6 col-lg">
-	<a href="https://laboiteabijoux.ca/categorie-produit/bijoux-precieux/" title="<?php esc_html_e( 'Precious Jewelry', 'bab' ); ?>">
+	<a href="<?php echo get_site_url(); ?>/categorie-produit/bijoux-precieux/" title="<?php esc_html_e( 'Precious Jewelry', 'bab' ); ?>">
 		<img src="<?php echo get_template_directory_uri(); ?>/images/collections/precieux-categorie.jpg" alt="<?php esc_html_e( 'Precious Jewelry', 'bab' ); ?>" title="<?php esc_html_e( 'Precious Jewelry', 'bab' ); ?>" class="img-fluid">
 		<h2><?php esc_html_e( 'Precious Jewelry', 'bab' ); ?></h2>
 	</a>
@@ -125,29 +125,28 @@ $container = get_theme_mod('understrap_container_type');
 
 
 <div class="col-12 col-md-6 col-lg">
-	<a href="https://laboiteabijoux.ca/en/services-2/" title="<?php esc_html_e( 'Evaluation', 'bab' ); ?>">
+	<a href="<?php echo get_site_url(); ?>/en/services-2/" title="<?php esc_html_e( 'Evaluation', 'bab' ); ?>">
 		<img src="<?php echo get_template_directory_uri(); ?>/images/collections/estimation-evaluation-accue.jpg" alt="<?php esc_html_e( 'Evaluation', 'bab' ); ?>" title="<?php esc_html_e( 'Evalution Jewelry', 'bab' ); ?>" class="img-fluid">
 		<h2><?php esc_html_e( 'Evaluation', 'bab' ); ?></h2>
 	</a>
 </div>
 
 <div class="col-12 col-md-4 col-lg">
-	<a href="https://laboiteabijoux.ca/en/product-category/antique-jewelry/" title="<?php esc_html_e( 'Antique Jewelry', 'bab' ); ?>">
+	<a href="<?php echo get_site_url(); ?>/en/product-category/antique-jewelry/" title="<?php esc_html_e( 'Antique Jewelry', 'bab' ); ?>">
 		<img src="<?php echo get_template_directory_uri(); ?>/images/collections/ancien.jpg" alt="<?php esc_html_e( 'Antique Jewelry', 'bab' ); ?>" title="<?php esc_html_e( 'Antique Jewelry', 'bab' ); ?>" class="img-fluid">
 		<h2><?php esc_html_e( 'Antique Jewelry', 'bab' ); ?></h2>
 	</a>
 </div>
 
 <div class="col-12 col-md-4 col-lg">
-	<a href="https://laboiteabijoux.ca/en/product-category/silver-jewelry/" title="<?php esc_html_e( 'Silver Jewelry', 'bab' ); ?>">
+	<a href="<?php echo get_site_url(); ?>/en/product-category/silver-jewelry/" title="<?php esc_html_e( 'Silver Jewelry', 'bab' ); ?>">
 		<img src="<?php echo get_template_directory_uri(); ?>/images/collections/argent-categorie.jpg" alt="<?php esc_html_e( 'Silver Jewelry', 'bab' ); ?>" title="<?php esc_html_e( 'Silver Jewelry', 'bab' ); ?>" class="img-fluid">
 		<h2><?php esc_html_e( 'Silver Jewelry', 'bab' ); ?></h2>
-
 	</a>
 </div>
 
 <div class="col-12 col-md-4 col-lg">
-	<a href="https://laboiteabijoux.ca/en/product-category/synthetic-stones-jewelry/" title="<?php esc_html_e( 'Synthetic Stones Jewelry', 'bab' ); ?>">
+	<a href="<?php echo get_site_url(); ?>/en/product-category/synthetic-stones-jewelry/" title="<?php esc_html_e( 'Synthetic Stones Jewelry', 'bab' ); ?>">
 		<img src="<?php echo get_template_directory_uri(); ?>/images/collections/synthetique-categorie.jpg" alt="<?php esc_html_e( 'Synthetic Stones Jewelry', 'bab' ); ?>" title="<?php esc_html_e( 'Synthetic Stones Jewelry', 'bab' ); ?>" class="img-fluid">
 		<h2><?php esc_html_e( 'Synthetic Stones Jewelry', 'bab' ); ?></h2>
 	</a>
@@ -160,35 +159,35 @@ $container = get_theme_mod('understrap_container_type');
 <div class="home--services">
 
 		<div class="col-12 col-md-6 col-lg">
-			<a href="https://laboiteabijoux.ca/categorie-produit/bijoux-precieux/" title="Bijoux précieux">
+			<a href="<?php echo get_site_url(); ?>/categorie-produit/bijoux-precieux/" title="Bijoux précieux">
 				<img src="<?php echo get_template_directory_uri(); ?>/images/collections/precieux-categorie.jpg" alt="Bijoux précieux" title="Bijoux précieux" class="img-fluid">
 				<h2>Bijoux précieux</h2>
 			</a>
 		</div>
 
 		<div class="col-12 col-md-6 col-lg">
-			<a href="https://laboiteabijoux.ca/services/#serviceEstimation" title="Évaluation &amp; estimation">
+			<a href="<?php echo get_site_url(); ?>/services/#serviceEstimation" title="Évaluation &amp; estimation">
 				<img src="<?php echo get_template_directory_uri(); ?>/images/collections/estimation-evaluation-accue.jpg" alt="Évaluation &amp; estimation" title="Évaluation &amp; estimation" class="img-responsive">
 				<h2>Évaluation &amp; estimation</h2>
 			</a>
 		</div>
 
 		<div class="col-12 col-md-4 col-lg">
-			<a href="https://laboiteabijoux.ca/categorie-produit/bijoux-anciens/" title="Bijoux anciens">
+			<a href="<?php echo get_site_url(); ?>/categorie-produit/bijoux-anciens/" title="Bijoux anciens">
 				<img src="<?php echo get_template_directory_uri(); ?>/images/collections/ancien.jpg" alt="Bijoux anciens" title="Bijoux anciens" class="img-responsive">
 				<h2>Bijoux anciens</h2>
 			</a>
 		</div>
 
 		<div class="col-12 col-md-4 col-lg">
-			<a href="https://laboiteabijoux.ca/categorie-produit/bijoux-argent/" title="Bijoux argent">
+			<a href="<?php echo get_site_url(); ?>/categorie-produit/bijoux-argent/" title="Bijoux argent">
 				<img src="<?php echo get_template_directory_uri(); ?>/images/collections/argent-categorie.jpg" alt="Bijoux argent" title="Bijoux argent" class="img-responsive">
 				<h2>Bijoux argent</h2>
 			</a>
 		</div>
 
 		<div class="col-12 col-md-4 col-lg">
-			<a href="https://laboiteabijoux.ca/categorie-produit/bijoux-synthetiques/" title="Bijoux pierres synthétiques">
+			<a href="<?php echo get_site_url(); ?>/categorie-produit/bijoux-synthetiques/" title="Bijoux pierres synthétiques">
 				<img src="<?php echo get_template_directory_uri(); ?>/images/collections/synthetique-categorie.jpg" alt="Bijoux pierres synthétiques" title="Bijoux pierres synthétiques" class="img-responsive">
 				<h2>Bijoux pierres synthétiques</h2>
 			</a>
@@ -220,13 +219,12 @@ $container = get_theme_mod('understrap_container_type');
 	<!-- présentation jocelyne rousseau -->
 	<div class="home--expertise">
 		<div class="col-12 col-lg-6">
-
 			<img src="<?php echo get_template_directory_uri(); ?>/images/jocelyne-portrait.png" alt="Jocelyne Rouleau" title="Jocelyne Rouleau">
 		</div>
 		<div class="home--expertise__text">
 			<h2>Jocelyne Rouleau,<br>gemmologiste diamantaire<br>depuis 25 ans</h2>
 			<p>Diplômée de l’Association de gemmologie de Grande-Bretagne et de l’Association canadienne de gemmologie , Mme Jocelyne Rouleau est également évaluatrice certifiée MV de l’Association canadienne des bijoutiers.</p>
-			<button class="btn btn-secondary btn-lg"><a href="https://laboiteabijoux.ca/services">Services</a></button>
+			<button class="btn btn-secondary btn-lg"><a href="<?php echo get_site_url(); ?>/services">Services</a></button>
 		</div>
 
 	</div>

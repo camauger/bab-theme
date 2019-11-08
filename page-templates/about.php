@@ -38,7 +38,7 @@ $container = get_theme_mod('understrap_container_type');
                                 <h2>Une référence pour plusieurs bijoutiers de renom au Québec !</h2>
                                 <p> 
                             Diplômée de l’Association de gemmologie de Grande-Bretagne et de l’Association canadienne de gemmologie , Mme Jocelyne Rouleau est également évaluatrice certifiée MV de l’Association canadienne des bijoutiers.</p>
-                            <a class="btn btn-primary" href="https://laboiteabijoux.ca/boutique">VISITEZ LA BOUTIQUE</a><a class="btn btn-primary" href="https://laboiteabijoux.ca/contact">CONTACTEZ JOCELYNE ROULEAU</a>
+                            <a class="btn btn-primary" href="<?php echo get_site_url(); ?>/boutique">VISITEZ LA BOUTIQUE</a><a class="btn btn-primary" href="<?php echo get_site_url(); ?>/contact">CONTACTEZ JOCELYNE ROULEAU</a>
                         </div>
 
                         </div>
@@ -60,16 +60,16 @@ $container = get_theme_mod('understrap_container_type');
                         <i class="fas fa-gem decorum"></i>
                         <h3>Notre expertise</h3>
                         <nav class="col-12 col-md-8">
-                            <a title="Histoire des bijoux" href="https://laboiteabijoux.ca/services/">
+                            <a title="Histoire des bijoux" href="<?php echo get_site_url(); ?>/services/">
                                 <i class="fas fa-gem"></i> Histoire des bijoux
                             </a>
-                            <a title="Évaluation et estimation de bijoux et pierres précieuses" href="https://laboiteabijoux.ca/services/#serviceEstimation">
+                            <a title="Évaluation et estimation de bijoux et pierres précieuses" href="<?php echo get_site_url(); ?>/services/#serviceEstimation">
                                 <i class="fas fa-gem"></i> Évaluation et estimation de bijoux et pierres précieuses
                             </a>
-                            <a title="Nettoyage et entretien de bijoux" href="https://laboiteabijoux.ca/services/#serviceNettoyage">
+                            <a title="Nettoyage et entretien de bijoux" href="<?php echo get_site_url(); ?>/services/#serviceNettoyage">
                                 <i class="fas fa-gem"></i> Nettoyage et entretien de bijoux
                             </a>
-                            <a title="Restauration de bijoux" href="https://laboiteabijoux.ca/services/#serviceRestauration">
+                            <a title="Restauration de bijoux" href="<?php echo get_site_url(); ?>/services/#serviceRestauration">
                                 <i class="fas fa-gem"></i> Restauration de bijoux
                             </a>
                         </nav>

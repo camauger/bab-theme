@@ -73,7 +73,7 @@ add_action( 'woocommerce_single_product_summary', 'product_expertise', 42 );
 function express_shipping() {
 	?>
 	<div class="expressShipping">
-	<a href="https://laboiteabijoux.ca/contact/">
+	<a href="<?php echo get_site_url(); ?>/contact/">
               <i class="fas fa-shipping-fast fa-3x fa-fw"></i>
               <div>
 			  <h3>Besoin d'une livraison express ?<br/> C'est possible !</h3>

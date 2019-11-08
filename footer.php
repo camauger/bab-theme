@@ -23,32 +23,32 @@ $container = get_theme_mod('understrap_container_type');
 			<?php if (ICL_LANGUAGE_CODE == 'en') : ?>
 				<div class="sitemap">
 					<nav class="nav nav--footer">
-						<a class="nav-link" href="https://laboiteabijoux.ca/en/shop/"><i class="fas fa-gem"></i>store</a>
-						<a class="nav-link" href="https://laboiteabijoux.ca/en/about/"><i class="fas fa-gem"></i>about</a>
-						<a class="nav-link" href="https://laboiteabijoux.ca/en/services-2/"><i class="fas fa-gem"></i>services</a>
-						<a class="nav-link" href="https://laboiteabijoux.ca/en/estate-jewelry-2/"><i class="fas fa-gem"></i>antique jewelry</a>
-						<a class="nav-link" href="https://laboiteabijoux.ca/en/blog/"><i class="fas fa-gem"></i>blog</a>
-						<a class="nav-link" href="https://laboiteabijoux.ca/en/contact/"><i class="fas fa-gem"></i>contact</a>
-						<a class="nav-link" href="https://laboiteabijoux.ca/en/terms-conditions/"><i class="fas fa-gem"></i>terms and conditions</a>
+						<a class="nav-link" href="<?php echo get_site_url(); ?>/en/shop/"><i class="fas fa-gem"></i>store</a>
+						<a class="nav-link" href="<?php echo get_site_url(); ?>/en/about/"><i class="fas fa-gem"></i>about</a>
+						<a class="nav-link" href="<?php echo get_site_url(); ?>/en/services-2/"><i class="fas fa-gem"></i>services</a>
+						<a class="nav-link" href="<?php echo get_site_url(); ?>/en/estate-jewelry-2/"><i class="fas fa-gem"></i>antique jewelry</a>
+						<a class="nav-link" href="<?php echo get_site_url(); ?>/en/blog/"><i class="fas fa-gem"></i>blog</a>
+						<a class="nav-link" href="<?php echo get_site_url(); ?>/en/contact/"><i class="fas fa-gem"></i>contact</a>
+						<a class="nav-link" href="<?php echo get_site_url(); ?>/en/terms-conditions/"><i class="fas fa-gem"></i>terms and conditions</a>
 					</nav>
 				</div>
 			<?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
 				<div class="sitemap">
 					<nav class="nav nav--footer">
-						<a class="nav-link" href="https://laboiteabijoux.ca/boutique"><i class="fas fa-gem"></i>boutique</a>
-						<a class="nav-link" href="https://laboiteabijoux.ca/a-propos"><i class="fas fa-gem"></i>à propos</a>
-						<a class="nav-link" href="https://laboiteabijoux.ca/services"><i class="fas fa-gem"></i>services</a>
-						<a class="nav-link" href="https://laboiteabijoux.ca/bijoux-occasion/"><i class="fas fa-gem"></i>bijoux d'occasion</a>
-						<a class="nav-link" href="https://laboiteabijoux.ca/la-loupe-a-loeil"><i class="fas fa-gem"></i>la loupe à l'oeil</a>
-						<a class="nav-link" href="https://laboiteabijoux.ca/contact"><i class="fas fa-gem"></i>contact</a>
-						<a class="nav-link" href="https://laboiteabijoux.ca/conditions-utilisation/"><i class="fas fa-gem"></i>conditions d'utilisation</a>
+						<a class="nav-link" href="<?php echo get_site_url(); ?>/boutique"><i class="fas fa-gem"></i>boutique</a>
+						<a class="nav-link" href="<?php echo get_site_url(); ?>/a-propos"><i class="fas fa-gem"></i>à propos</a>
+						<a class="nav-link" href="<?php echo get_site_url(); ?>/services"><i class="fas fa-gem"></i>services</a>
+						<a class="nav-link" href="<?php echo get_site_url(); ?>/bijoux-occasion/"><i class="fas fa-gem"></i>bijoux d'occasion</a>
+						<a class="nav-link" href="<?php echo get_site_url(); ?>/la-loupe-a-loeil"><i class="fas fa-gem"></i>la loupe à l'oeil</a>
+						<a class="nav-link" href="<?php echo get_site_url(); ?>/contact"><i class="fas fa-gem"></i>contact</a>
+						<a class="nav-link" href="<?php echo get_site_url(); ?>/conditions-utilisation/"><i class="fas fa-gem"></i>conditions d'utilisation</a>
 					</nav>
 				</div>
 			<?php endif; ?>
 
 			<div class="social">
 				<a class="telephone" href="tel:+14186879393" title="+1 (418) 687-9393">+1 (418) 687-9393</a>
-				<a class="btn btn-outline-light" href="https://laboiteabijoux.ca/contact" title="Contactez-nous">Contactez-nous</a>
+				<a class="btn btn-outline-light" href="<?php echo get_site_url(); ?>/contact" title="Contactez-nous">Contactez-nous</a>
 				<h5>Suivez-nous</h5>
 				<div>
 					<a target="_blank" href="http://www.facebook.com/LaBoiteaBijouxQuebec" title="Suivez-nous sur Facebook">

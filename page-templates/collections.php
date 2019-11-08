@@ -35,20 +35,43 @@ $container = get_theme_mod('understrap_container_type');
 
                         </div>
 
-                        <a href="https://laboiteabijoux.ca/categorie-produit/bijoux-precieux/" title="Bijoux précieux">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/collections/precieux-categorie.jpg" alt="Bijoux précieux" title="Bijoux précieux" class="img-responsive">
-                            Bijoux précieux
-                        </a>
+                        <?php
+                        function collectionCatFr($catName, $catSlug, $imgSlug)
+                        {
+                            $imgSrc = get_template_directory_uri() . "/images/collections/" . $imgSlug;
+                            //$catUrlEn = get_site_url() . "/en/product-category/";
+                            $catUrl = get_site_url() . "/categorie-produit/";
+                            $catUrl .= $catSlug;
+                            $collectionCat = "<a href=$catUrl title='$catName'><img src=$imgSrc alt='$catName' title'=$catName' class='img-fluid'><h2>$catName</h2></a>";
+                            echo $collectionCat;
+                        }; ?>
+                        <?php
+                        function collectionCatEn($catName, $catSlug, $imgSlug)
+                        {
+                            $imgSrc = get_template_directory_uri() . "/images/collections/" . $imgSlug;
+                            $catUrl = get_site_url() . "/en/product-category/" . $catSlug;
 
-                        <a href="https://laboiteabijoux.ca/categorie-produit/bijoux-anciens/" title="Bijoux anciens">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/collections/ancien.jpg" alt="Bijoux anciens" title="Bijoux anciens" class="img-responsive">
-                            Bijoux anciens
-                        </a>
+                            $collectionCat = "<a href=$catUrl title='$catName'><img src=$imgSrc alt='$catName' title'=$catName' class='img-fluid'><h2>$catName</h2></a>";
+                            echo $collectionCat;
+                        }; ?>
 
-                        <a href="https://laboiteabijoux.ca/categorie-produit/bijoux-argent/" title="Bijoux argent">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/collections/argent-categorie.jpg" alt="Bijoux argent" title="Bijoux argent" class="img-responsive">
-                            Bijoux argent
-                        </a>
+                        <?php if (ICL_LANGUAGE_CODE == 'en') : ?>
+
+                            <?php collectionCatEn('Precious Jewelry', 'precious-jewelry', 'precieux-categorie.jpg');
+                                collectionCatEn('Antique Jewelry', 'antique-jewelry', 'ancien.jpg');
+                                collectionCatEn('Silver Jewelry', 'silver-jewelry', 'argent-categorie.jpg'); ?>
+
+                        <?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
+
+                            <?php collectionCatFr('Bijoux Précieux', 'bijoux-precieux', 'precieux-categorie.jpg');
+                                collectionCatFr('Bijoux Anciens', 'bijoux-anciens', 'ancien.jpg');
+                                collectionCatFr('Bijoux Argent', 'bijoux-argent', 'argent-categorie.jpg');
+                                ?>
+
+
+
+
+                        <?php endif; ?>
 
                         <div class="home--testimonials">
                             <div class="row no-gutters d-flex justify-content-center">
@@ -64,88 +87,37 @@ $container = get_theme_mod('understrap_container_type');
                             </div>
                         </div>
 
-                        <a href="https://laboiteabijoux.ca/categorie-produit/perles/" title="Perles">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/collections/perlest-categorie.jpg" alt="Perles" title="Perles" class="img-responsive">
-                            Perles
-                        </a>
+
+                        <?php if (ICL_LANGUAGE_CODE == 'en') : ?>
+
+                            <?php collectionCatFr('Pearls', 'pearls', 'perlest-categorie.jpg');
+                                collectionCatFr('Synthetic stones jewelry', 'synthetic-stones-jewelry', 'synthetique-categorie.jpg');
+                                collectionCatFr('Costume jewelry', 'costume-jewelry', 'fantaisie1.jpg');
+                                collectionCatFr("Collector's items", 'collectors-items', 'collection-categorie.jpg');
+                                collectionCatFr('Stones and minerals', 'stones-minerals', 'Pierres-et-mineraux.jpg');
+                                collectionCatFr('Books and tools', 'books-gemmoligical-instruments', 'livres-2.jpg');
+                                collectionCatFr('Jewelry box', 'jewerly-box', 'boite-a-bijoux.png');
+                                collectionCatFr('Last chances', 'last-chances', 'chance-categorie.jpg');
+                                collectionCatFr('Time Period', 'time', 'epoque-categorie.jpg');
+                                collectionCatFr('Type of metal', 'type-of-metal', 'metal-categorie.jpg');
+                                collectionCatFr('Gift Card', 'gift-card', 'certificat.jpg'); ?>
+
+                        <?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
+
+                            <?php collectionCatFr('Perles', 'perles', 'perlest-categorie.jpg');
+                                collectionCatFr('Bijoux pierres synthétiques', 'bijoux-synthetiques', 'synthetique-categorie.jpg');
+                                collectionCatFr('Bijoux fantaisie', 'bijoux-fantaisie', 'fantaisie1.jpg');
+                                collectionCatFr('Objets de collection', 'objets-collection', 'collection-categorie.jpg');
+                                collectionCatFr('Pierres et minéraux', 'pierres-et-mineraux', 'Pierres-et-mineraux.jpg');
+                                collectionCatFr('Livres / instruments gemmologie', 'livres-et-instruments', 'livres-2.jpg');
+                                collectionCatFr('Boîtes à bijoux', 'boites-a-bijoux', 'boite-a-bijoux.png');
+                                collectionCatFr('Dernières chances', 'dernieres-chances', 'chance-categorie.jpg');
+                                collectionCatFr('Époque', 'epoque', 'epoque-categorie.jpg');
+                                collectionCatFr('Type de métal', 'type-de-metal', 'metal-categorie.jpg');
+                                collectionCatFr('Certificat cadeau', 'certificat-cadeau', 'certificat.jpg'); ?>
 
 
-
-
-
-                        <a href="https://laboiteabijoux.ca/categorie-produit/bijoux-synthetiques/" title="Bijoux pierres synthétiques">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/collections/synthetique-categorie.jpg" alt="Bijoux pierres synthétiques" title="Bijoux pierres synthétiques" class="img-responsive">
-                            Bijoux pierres synthétiques
-                        </a>
-
-
-
-
-
-                        <a href="https://laboiteabijoux.ca/categorie-produit/bijoux-fantaisie/" title="Bijoux fantaisie">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/collections/fantaisie1.jpg" alt="Bijoux fantaisie" title="Bijoux fantaisie" class="img-responsive">
-                            Bijoux fantaisie
-                        </a>
-
-
-
-
-
-                        <a href="https://laboiteabijoux.ca/categorie-produit/objets-collection/" title="Objets de collection">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/collections/collection-categorie.jpg" alt="Objets de collection" title="Objets de collection" class="img-responsive">
-                            Objets de collection
-                        </a>
-
-
-
-                        <a href="https://laboiteabijoux.ca/categorie-produit/pierres-et-mineraux/" title="Pierres et minéraux">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/collections/Pierres-et-mineraux.jpg" alt="Pierres et minéraux" title="Pierres et minéraux" class="img-responsive">
-
-                            Pierres et minéraux
-                        </a>
-
-
-
-                        <a href="https://laboiteabijoux.ca/categorie-produit/livres-et-instruments/" title="Livres / instruments gemmologie">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/collections/livres-2.jpg" alt="Livres / instruments gemmologie" title="Livres / instruments gemmologie" class="img-responsive">
-                            Livres / instruments gemmologie
-                        </a>
-
-
-
-                        <a href="https://laboiteabijoux.ca/categorie-produit/boites-a-bijoux/" title="Boîtes à bijoux">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/collections/boite-a-bijoux.png" alt="Boîtes à bijoux" title="Boîtes à bijoux" class="img-responsive">
-                            Boîtes à bijoux
-                        </a>
-
-
-
-
-                        <a href="https://laboiteabijoux.ca/categorie-produit/dernieres-chances/" title="Dernières chances">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/collections/chance-categorie.jpg" alt="Dernières chances" title="Dernières chances" class="img-responsive">
-                            Dernières chances
-                        </a>
-
-
-
-
-
-                        <a href="https://laboiteabijoux.ca/categorie-produit/epoque/" title="Époque">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/collections/epoque-categorie.jpg" alt="Époque" title="Époque" class="img-responsive">
-                            Époque
-                        </a>
-
-
-                        <a href="https://laboiteabijoux.ca/categorie-produit/type-de-metal/" title="Type de métal">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/collections/metal-categorie.jpg" alt="Type de métal" title="Type de métal" class="img-responsive">
-                            Type de métal
-                        </a>
-
-
-                        <a href="https://laboiteabijoux.ca/categorie-produit/certificat-cadeau/" title="Certificat cadeau">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/collections/certificat.jpg" alt="Certificat cadeau" title="Certificat cadeau" class="img-responsive">
-                            Certificat cadeau
-                        </a>
+                        <?php endif; ?>
 
                     </div>
 
