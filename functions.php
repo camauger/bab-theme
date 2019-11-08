@@ -179,7 +179,7 @@ function price_hiding($price) {
 function price_spacing( $price ) {
 	
     if (!$price) {
-		$price .= 'Prix sur demande';
+		$price .= esc_html_e( 'Price upon request', 'bab' );
 	}
 	return $price;
   }
