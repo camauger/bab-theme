@@ -67,8 +67,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<?php else : ?>
 
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">				<img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo-boite-a-bijoux.png" alt="La boîte à bijoux" title="La boîte à bijoux">
+						<?php if(ICL_LANGUAGE_CODE=='en'): ?>
+						<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">				<img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo-bab-en.png" alt="La boîte à bijoux" title="La boîte à bijoux">
 </a>
+<?php elseif(ICL_LANGUAGE_CODE=='fr'): ?>
+<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">				<img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo-bab-fr.png" alt="La boîte à bijoux" title="La boîte à bijoux">
+</a>
+<?php endif; ?>
+
+							
 
 						<?php endif; ?>
 
