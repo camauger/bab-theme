@@ -29,7 +29,7 @@ footer.site-footer {
     .telephone {
         font-size: 1.2rem;
 
-        @include media-breakpoint-up(md) { font-size: 2rem; }
+        @include media-breakpoint-up(md) { font-size: 1.6rem; }
         padding-bottom: 1rem;
         color: white;
         width: 100%;

@@ -6,9 +6,18 @@ body.blog {
 }
 
 
+html[lang^='en'] body.blog {
+	main:before {
+		content: "The Magnifying Glass";}
+}
+html[lang^='fr'] body.blog {
+	main:before {
+		content: "La Loupe à L'Oeil";}
+}
+
 body.blog {
 	main:before {
-		content: "La Loupe à L'Oeil";
+		//content: "La Loupe à L'Oeil";
 		font-family: $font-head;
 		font-size: 6rem;
 		text-align: center;

@@ -70,7 +70,14 @@ $container = get_theme_mod('understrap_container_type');
 				<span><?php esc_html_e( 'All rights reserved.', 'bab' ); ?> © La boîte à bijoux 2019</span>
 			</div>
 			<div class="address">
-				<img class="logo--footer" src="<?php echo get_template_directory_uri(); ?>/images/logo-boite-a-bijoux-blanc.png" alt="La boîte à bijoux" title="La boîte à bijoux">
+
+			<?php if(ICL_LANGUAGE_CODE=='en'): ?>
+			<img class="logo--footer" src="<?php echo get_template_directory_uri(); ?>/images/logo-footer-en.png" alt="La boîte à bijoux" title="La boîte à bijoux">
+<?php elseif(ICL_LANGUAGE_CODE=='fr'): ?>
+<img class="logo--footer" src="<?php echo get_template_directory_uri(); ?>/images/logo-footer-fr.png" alt="La boîte à bijoux" title="La boîte à bijoux">
+<?php endif; ?>
+
+				
 				<address>
 					1323, Avenue Maguire, Bureau 101<br />
 					Québec (Québec)<br />
