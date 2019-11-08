@@ -124,54 +124,8 @@ body.blog {
 	}
 }
 
-// Article seul
-.single-post {
-	article > header {
-		margin-top: 0;
-	}
-	main {
-		width: 100%;
-		max-width: 960px;
-		margin: auto;}
-		article {
-		h1 {
-			@extend %page__title;
-		}
 
-		div.entry-meta {
-			display: flex;
-			flex-direction: row;
-			margin-bottom: 1rem;
-			padding: 15px;
-			
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-			
-
-			.article--avatar {
-				border-radius: 100%;
-				width: 50px;
-				height: 50px;
-				object-fit: cover;
-				
-				@include media-breakpoint-up(md) {
-					
-					width: 150px;
-					height: 150px;
-				}
-			}
-		}
-	}
-}
-
-.article-img--hero {
-
-	img {
-		width: 100%;
-		height: fit-content;
-		object-fit: cover;
-	}
-}
-
-
+// Single post
+@import "single-post";
+// Post-navigation
+@import "navigation";
