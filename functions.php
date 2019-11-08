@@ -61,7 +61,8 @@ function product_expertise() {
 	<div class="expertiseAward">
 	<i class="fas fa-award fa-fw"></i>
 	<span>
-	<?php echo "Évalué par Jocelyne Rouleau, gemmologiste diplômée"; ?>
+	
+	<?php esc_html_e('Reviewed by Jocelyne Rouleau, graduate gemologist', 'bab'); ?>
 	</span></div>
 	<?php
 
