@@ -57,7 +57,7 @@ $container = get_theme_mod('understrap_container_type');
                     <strong><?php esc_html_e( 'Wednesday', 'bab' ); ?></strong>
                     <span><?php esc_html_e( '11:00 to 17:30', 'bab' ); ?></span>
                     <strong><?php esc_html_e( 'Thursday, Friday', 'bab' ); ?></strong>
-                    <span><?php esc_html_e( '1:00 to 18:00', 'bab' ); ?></span>
+                    <span><?php esc_html_e( '11:00 to 18:00', 'bab' ); ?></span>
                     <strong><?php esc_html_e( 'Saturday', 'bab' ); ?></strong>
                     <span><?php esc_html_e( 'By Appointment', 'bab' ); ?></span>
                     <strong><?php esc_html_e( 'Sunday', 'bab' ); ?></strong>
