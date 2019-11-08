@@ -31,7 +31,7 @@ $container = get_theme_mod('understrap_container_type');
                 <div class="address col-lg-6">
                     <address>
                         <strong>Jocelyne Rouleau, FGA, FCGmA, GJ</strong><br />
-                        Gemmologiste • Diamantaire • Évaluatrice certifiée MV
+                        <?php esc_html_e( 'Gemologist • Diamond • MV Certified Evaluator', 'bab' ); ?>
                         <br />
                         1323, avenue Maguire, bureau 101<br />
                         Québec (Québec) G1T 1Z2<br />
@@ -41,7 +41,8 @@ $container = get_theme_mod('understrap_container_type');
                             418 687-9393
                         </a>
                         <a class="btn btn-secondary" href="https://www.google.com/maps/place/La+Bo%C3%AEte+%C3%A0+Bijoux/@46.7810912,-71.2540924,17z/data=!4m13!1m7!3m6!1s0x4cb896bd29c91561:0x6cafd85ebdd68a46!2s1323+Avenue+Maguire,+Qu%C3%A9bec,+QC+G1T+1K6!3b1!8m2!3d46.7810912!4d-71.2519037!3m4!1s0x4cb896bd29caada9:0x2f053529d5c2e97e!8m2!3d46.7810912!4d-71.2519037" target="_blank" title="S'y rendre">
-                            <i class="fas fa-map-pin"></i> S'y rendre
+                            <i class="fas fa-map-pin"></i>
+                            <?php esc_html_e( 'Getting There', 'bab' ); ?>
                         </a>
                     </div>
                     <div>
@@ -50,24 +51,24 @@ $container = get_theme_mod('understrap_container_type');
 
                 </div>
                 <div class="schedule col-lg-6">
-                    <h3>Horaire du magasin</h3>
-                    <strong>Lundi et mardi</strong>
+                    <h3><?php esc_html_e( 'Store Business Hours', 'bab' ); ?></h3>
+                    <strong><?php esc_html_e( 'Monday, Tuesday', 'bab' ); ?></strong>
                     <span><?php esc_html_e( 'Closed', 'bab' ); ?></span>
-                    <strong>Mercredi</strong>
-                    <span>11h00 à 17h30</span>
-                    <strong>Jeudi et vendredi</strong>
-                    <span>11h00 à 18h00</span>
-                    <strong>Samedi</strong>
-                    <span>Sur rendez-vous</span>
-                    <strong>Dimanche</strong>
+                    <strong><?php esc_html_e( 'Wednesday', 'bab' ); ?></strong>
+                    <span><?php esc_html_e( '11:00 to 17:30', 'bab' ); ?></span>
+                    <strong><?php esc_html_e( 'Thursday, Friday', 'bab' ); ?></strong>
+                    <span><?php esc_html_e( '1:00 to 18:00', 'bab' ); ?></span>
+                    <strong><?php esc_html_e( 'Saturday', 'bab' ); ?></strong>
+                    <span><?php esc_html_e( 'By Appointment', 'bab' ); ?></span>
+                    <strong><?php esc_html_e( 'Sunday', 'bab' ); ?></strong>
                     <span><?php esc_html_e( 'Closed', 'bab' ); ?></span>
 
-                    <h3>Heure d’ouverture du laboratoire d’évaluation</h3>
+                    <h3><?php esc_html_e( 'Opening hours of the evaluation laboratory', 'bab' ); ?></h3>
                     <p>
-                        Sur rendez-vous seulement. Remplissez le formulaire ci-contre afin d'en faire la demande.
+                    <?php esc_html_e( 'By appointment only. Fill out the form to make the request', 'bab' ); ?>
                     </p>
-                    <h3>Retour</h3>
-                    <p>Pour retourner un produit, il faut tout d'abord en faire la demande en remplissant le formulaire de contact.</p>
+                    <h3><?php esc_html_e( 'Return', 'bab' ); ?></h3>
+                    <p><?php esc_html_e( 'To return a product, you must first make the request by completing the form.', 'bab' ); ?></p>
                 </div>
 
         </main><!-- #main -->
