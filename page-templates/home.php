@@ -203,12 +203,14 @@ $container = get_theme_mod('understrap_container_type');
 	<div class="home--testimonials">
 		<div class="row no-gutters d-flex justify-content-center">
 			<blockquote>
-				Conseils avec beaucoup de professionnalisme et belles découvertes à La Boîte à Bijoux...et facile d’accès rue Maguire, Sillery...
+				<!-- Conseils avec beaucoup de professionnalisme et belles découvertes à La Boîte à Bijoux...et facile d’accès rue Maguire, Sillery... -->
+				<?php esc_html_e( 'Advices with a lot of professionalism and beautiful discoveries at La Boîte à Bijoux ... and easy to access on Maguire Street, Sillery.', 'bab' ); ?>
 				<span>Mme T. Bouchard</span>
 			</blockquote>
 		
 			<blockquote>
-				J’ai bien reçu mon bijou, merci. Il est magnifique ! Merci encore et à bientôt.
+				<!-- J’ai bien reçu mon bijou, merci. Il est magnifique ! Merci encore et à bientôt. -->
+				<?php esc_html_e( 'I received my jewel, thank you. It is magnificent ! Thank you again and see you soon.', 'bab' ); ?>
 				<span>Mme F. Charbonneau</span>
 			</blockquote>
 		</div>
@@ -222,9 +224,16 @@ $container = get_theme_mod('understrap_container_type');
 			<img src="<?php echo get_template_directory_uri(); ?>/images/jocelyne-portrait.png" alt="Jocelyne Rouleau" title="Jocelyne Rouleau">
 		</div>
 		<div class="home--expertise__text">
-			<h2>Jocelyne Rouleau,<br>gemmologiste diamantaire<br>depuis 25 ans</h2>
-			<p>Diplômée de l’Association de gemmologie de Grande-Bretagne et de l’Association canadienne de gemmologie , Mme Jocelyne Rouleau est également évaluatrice certifiée MV de l’Association canadienne des bijoutiers.</p>
-			<button class="btn btn-secondary btn-lg"><a href="<?php echo get_site_url(); ?>/services">Services</a></button>
+			<h2>Jocelyne Rouleau,<br><?php esc_html_e( 'Diamond-Gemologist', 'bab' ); ?><br><?php esc_html_e( 'for 25 years', 'bab' ); ?></h2>
+			<p><?php esc_html_e( 'A graduate of the Gemmological Association of Great Britain and the Canadian Gemmology Association, Ms. Rouleau is also a Certified Valuation Assessor of the Canadian Jewelers Association.', 'bab' ); ?></p>
+			
+			<?php if(ICL_LANGUAGE_CODE=='en'): ?>
+			<button class="btn btn-secondary btn-lg"><a href="<?php echo get_site_url(); ?>/en/services-2/">Services</a></button>
+<?php elseif(ICL_LANGUAGE_CODE=='fr'): ?>
+<button class="btn btn-secondary btn-lg"><a href="<?php echo get_site_url(); ?>/services/">Services</a></button>
+<?php endif; ?>
+
+
 		</div>
 
 	</div>
