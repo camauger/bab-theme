@@ -61,7 +61,6 @@ function product_expertise() {
 	<div class="expertiseAward">
 	<i class="fas fa-award fa-fw"></i>
 	<span>
-	
 	<?php esc_html_e('Reviewed by Jocelyne Rouleau, graduate gemologist', 'bab'); ?>
 	</span></div>
 	<?php
@@ -77,8 +76,9 @@ function express_shipping() {
 	<a href="<?php echo get_site_url(); ?>/contact/">
               <i class="fas fa-shipping-fast fa-3x fa-fw"></i>
               <div>
-			  <h3>Besoin d'une livraison express ?<br/> C'est possible !</h3>
-				<span>Contactez-nous pour connaitre les conditions</span>  
+			  
+			  <h3> <?php esc_html_e('Need an express delivery?', 'bab'); ?><br/>  <?php esc_html_e('It is possible!', 'bab'); ?></h3>
+				<span><?php esc_html_e('Contact Us', 'bab'); ?></span>  
 			  </div>
 			
 			</a>
@@ -107,9 +107,12 @@ function register_top_menu() {
 
   function cw_woo_attribute(){
     global $product;
-    $attributes = $product->get_attributes();
+	$attributes = $product->get_attributes();
+	$attMetal = esc_html_e('Metal', 'bab');
+	$attTime = esc_html_e('Time Period', 'bab');
+	$attSize = esc_html_e('Size', 'bab');
     if ( ! $attributes ) {
-		echo "<div class='productAttributes'><div class='metaLabel'><span>Taille</span><div class='productAttribute'>-</div><br></div><div class='metaLabel'><span>Type de métal</span><div class='productAttribute'>-</div><br></div><div class='metaLabel'><span>Période</span><div class='productAttribute'>-</div><br></div><div class='metaLabel'><span>SKU</span><div class='productAttribute'>" . $product->get_sku()  . "</div></div></div>";
+		echo "<div class='productAttributes'><div class='metaLabel'><span>$attSize</span><div class='productAttribute'>-</div><br></div><div class='metaLabel'><span>$attMetal</span><div class='productAttribute'>-</div><br></div><div class='metaLabel'><span>$attTime</span><div class='productAttribute'>-</div><br></div><div class='metaLabel'><span>SKU</span><div class='productAttribute'>" . $product->get_sku()  . "</div></div></div>";
 		return;
     }
 
