@@ -48,20 +48,26 @@ $container = get_theme_mod('understrap_container_type');
 
 			<div class="social">
 				<a class="telephone" href="tel:+14186879393" title="+1 (418) 687-9393">+1 (418) 687-9393</a>
-				<a class="btn btn-outline-light" href="<?php echo get_site_url(); ?>/contact" title="Contactez-nous">Contactez-nous</a>
-				<h5>Suivez-nous</h5>
+				<?php if(ICL_LANGUAGE_CODE=='en'): ?>
+				<a class="btn btn-outline-light" href="<?php echo get_site_url(); ?>/en/contact" title="Contact Us">Contact Us</a>
+<?php elseif(ICL_LANGUAGE_CODE=='fr'): ?>
+<a class="btn btn-outline-light" href="<?php echo get_site_url(); ?>/contact" title="Contactez-nous">Contactez-nous</a>
+<?php endif; ?>
+				
+				
+				<h5><?php esc_html_e( 'Follow Us', 'bab' ); ?></h5>
 				<div>
-					<a target="_blank" href="http://www.facebook.com/LaBoiteaBijouxQuebec" title="Suivez-nous sur Facebook">
+					<a target="_blank" href="http://www.facebook.com/LaBoiteaBijouxQuebec" title="Facebook">
 						<i class="fa-fw fab fa-facebook-f"></i>
 					</a>
-					<a target="_blank" href="http://pinterest.com/boiteabijoux/la-boite-a-bijoux-quebec/" title="Suivez-nous sur Pinterest">
+					<a target="_blank" href="http://pinterest.com/boiteabijoux/la-boite-a-bijoux-quebec/" title="Pinterest">
 						<i class="fa-fw fab fa-pinterest"></i>
 					</a>
-					<a target="_blank" href="https://www.youtube.com/channel/UC_9QG263anDD17Z-L-MjqoQ" title="Suivez-nous sur YouTube">
+					<a target="_blank" href="https://www.youtube.com/channel/UC_9QG263anDD17Z-L-MjqoQ" title="YouTube">
 						<i class="fa-fw fab fa-youtube"></i>
 					</a>
 				</div>
-				<span>Tous droits réservés © La boîte à bijoux 2019</span>
+				<span><?php esc_html_e( 'All rights reserved.', 'bab' ); ?> © La boîte à bijoux 2019</span>
 			</div>
 			<div class="address">
 				<img class="logo--footer" src="<?php echo get_template_directory_uri(); ?>/images/logo-boite-a-bijoux-blanc.png" alt="La boîte à bijoux" title="La boîte à bijoux">
