@@ -75,15 +75,7 @@ $container = get_theme_mod('understrap_container_type');
 
                         <div class="home--testimonials">
                             <div class="row no-gutters d-flex justify-content-center">
-                                <blockquote>
-                                    Conseils avec beaucoup de professionnalisme et belles découvertes à La Boîte à Bijoux...et facile d’accès rue Maguire, Sillery...
-                                    <span>Mme T. Bouchard</span>
-                                </blockquote>
-
-                                <blockquote>
-                                    J’ai bien reçu mon bijou, merci. Il est magnifique ! Merci encore et à bientôt.
-                                    <span>Mme F. Charbonneau</span>
-                                </blockquote>
+                                <?php get_template_part('page-modules/testimonials'); ?>
                             </div>
                         </div>
 

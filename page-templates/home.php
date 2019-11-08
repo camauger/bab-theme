@@ -76,7 +76,7 @@ $container = get_theme_mod('understrap_container_type');
 
 			</div>
 			<div class="store--reasons">
-				<a href="/bijoux-occasion/" title="Pourquoi acheter un bijou ancien?">
+				<a href="/en/estate-jewelry/" title="Why buy an estate jewelry?">
 
 					<span class="pourquoi"><?php esc_html_e('Why', 'bab'); ?></span>
 					<span class="acheterUnBijouAncien"><?php esc_html_e('buy an estate jewelry?', 'bab'); ?></span>
@@ -112,7 +112,7 @@ $container = get_theme_mod('understrap_container_type');
 		<div class="home--services">
 
 			<div class="col-12 col-md-6 col-lg">
-				<a href="<?php echo get_site_url(); ?>/categorie-produit/bijoux-precieux/" title="<?php esc_html_e('Precious Jewelry', 'bab'); ?>">
+				<a href="<?php echo get_site_url(); ?>/en/product-category/precious-jewelry/" title="<?php esc_html_e('Precious Jewelry', 'bab'); ?>">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/collections/precieux-categorie.jpg" alt="<?php esc_html_e('Precious Jewelry', 'bab'); ?>" title="<?php esc_html_e('Precious Jewelry', 'bab'); ?>" class="img-fluid">
 					<h2><?php esc_html_e('Precious Jewelry', 'bab'); ?></h2>
 				</a>
@@ -199,17 +199,7 @@ $container = get_theme_mod('understrap_container_type');
 	<!-- témoignages -->
 	<div class="home--testimonials">
 		<div class="row no-gutters d-flex justify-content-center">
-			<blockquote>
-				<!-- Conseils avec beaucoup de professionnalisme et belles découvertes à La Boîte à Bijoux...et facile d’accès rue Maguire, Sillery... -->
-				<?php esc_html_e('Advices with a lot of professionalism and beautiful discoveries at La Boîte à Bijoux ... and easy to access on Maguire Street, Sillery.', 'bab'); ?>
-				<span>Mme T. Bouchard</span>
-			</blockquote>
-
-			<blockquote>
-				<!-- J’ai bien reçu mon bijou, merci. Il est magnifique ! Merci encore et à bientôt. -->
-				<?php esc_html_e('I received my jewel, thank you. It is magnificent ! Thank you again and see you soon.', 'bab'); ?>
-				<span>Mme F. Charbonneau</span>
-			</blockquote>
+			<?php get_template_part('page-modules/testimonials'); ?>
 		</div>
 	</div>
 

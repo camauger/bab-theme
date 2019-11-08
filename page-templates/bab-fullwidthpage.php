@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php endwhile; // end of the loop. ?>
 
 				</main><!-- #main -->
-				<?php get_template_part( 'page-templates/questions' ); ?>
+				<?php get_template_part( 'page-modules/questions' ); ?>
 
 			</div><!-- #primary -->
 
