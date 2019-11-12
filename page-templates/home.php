@@ -112,7 +112,7 @@ $container = get_theme_mod('understrap_container_type');
 		<div class="home--services">
 
 			<div class="col-12 col-md-6 col-lg">
-				<?php collectionCatEn('Precious Jewelry', 'precious-jewelry', 'precious-jewelry.jpg'); ?>
+				<?php collectionCatEn('Precious Jewelry', 'precious-jewelry', 'precious-jewlery.jpg'); ?>
 			</div>
 
 			<div class="col-12 col-md-6 col-lg">
@@ -137,7 +137,7 @@ $container = get_theme_mod('understrap_container_type');
 
 			<div class="col-12 col-md-4 col-lg">
 				<a href="<?php echo get_site_url(); ?>/en/product-category/synthetic-stones-jewelry/" title="<?php esc_html_e('Synthetic Stones Jewelry', 'bab'); ?>">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/collections/synthetique-categorie.jpg" alt="<?php esc_html_e('Synthetic Stones Jewelry', 'bab'); ?>" title="<?php esc_html_e('Synthetic Stones Jewelry', 'bab'); ?>" class="img-fluid">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/collections/synthetic-stones-jewelry.jpg" alt="<?php esc_html_e('Synthetic Stones Jewelry', 'bab'); ?>" title="<?php esc_html_e('Synthetic Stones Jewelry', 'bab'); ?>" class="img-fluid">
 					<h2><?php esc_html_e('Synthetic Stones Jewelry', 'bab'); ?></h2>
 				</a>
 			</div>
@@ -174,7 +174,7 @@ $container = get_theme_mod('understrap_container_type');
 
 			<div class="col-12 col-md-4 col-lg">
 				<a href="<?php echo get_site_url(); ?>/categorie-produit/bijoux-synthetiques/" title="Bijoux pierres synthétiques">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/collections/bijoux-synthetique.jpg" alt="Bijoux pierres synthétiques" title="Bijoux pierres synthétiques" class="img-responsive">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/collections/bijoux-synthetiques.jpg" alt="Bijoux pierres synthétiques" title="Bijoux pierres synthétiques" class="img-responsive">
 					<h2>Bijoux pierres synthétiques</h2>
 				</a>
 			</div>
