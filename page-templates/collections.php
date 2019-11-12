@@ -69,7 +69,7 @@ $container = get_theme_mod('understrap_container_type');
                         <?php if (ICL_LANGUAGE_CODE == 'en') : ?>
 
                             <?php collectionCatFr('Pearls', 'pearls', 'pearls.jpg');
-                                collectionCatFr('Synthetic stones jewelry', 'synthetic-stones-jewelry', 'synthetique-categorie.jpg');
+                                collectionCatFr('Synthetic stones jewelry', 'synthetic-stones-jewelry', 'synthetic-stones-jewelry.jpg');
                                 collectionCatFr('Costume jewelry', 'costume-jewelry', 'costume-jewelry.jpg');
                                 collectionCatFr("Collector's items", 'collectors-items', 'collectors-items.jpg');
                                 collectionCatFr('Stones and minerals', 'stones-minerals', 'stones-minerals.jpg');
