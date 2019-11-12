@@ -90,7 +90,7 @@ $container = get_theme_mod('understrap_container_type');
                                     array('Bijoux pierres synthétiques', 'bijoux-synthetiques', 'bijoux-synthetiques.jpg'),
                                     array('Bijoux fantaisie', 'bijoux-fantaisie', 'bijoux-fantaisie.jpg'),
                                     array('Objets de collection', 'objets-collection', 'objets-collection.jpg'),
-                                    array('Pierres et minéraux', 'pierres-et-mineraux', 'pierres-et-mineraux.jpg'),
+                                    array('Pierres et minéraux', 'pierres-et-mineraux', 'pierres-mineraux.jpgg'),
                                     array('Livres / instruments gemmologie', 'livres-et-instruments', 'livres-et-instruments.jpg'),
                                     array('Boîtes à bijoux', 'boites-a-bijoux', 'boites-a-bijoux.jpg'),
                                     array('Dernières chances', 'dernieres-chances', 'dernieres-chances.jpg'),
