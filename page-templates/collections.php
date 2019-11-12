@@ -70,11 +70,11 @@ $container = get_theme_mod('understrap_container_type');
 
                             <?php collectionCatFr('Pearls', 'pearls', 'pearls.jpg');
                                 collectionCatFr('Synthetic stones jewelry', 'synthetic-stones-jewelry', 'synthetique-categorie.jpg');
-                                collectionCatFr('Costume jewelry', 'costume-jewelry', 'fantaisie1.jpg');
+                                collectionCatFr('Costume jewelry', 'costume-jewelry', 'costume-jewelry.jpg');
                                 collectionCatFr("Collector's items", 'collectors-items', 'collectors-items.jpg');
                                 collectionCatFr('Stones and minerals', 'stones-minerals', 'stones-minerals.jpg');
                                 collectionCatFr('Books and tools', 'books-gemmoligical-instruments', 'books-gemmoligical-instruments.jpg');
-                                collectionCatFr('Jewelry box', 'jewerly-box', 'boite-a-bijoux.png');
+                                collectionCatFr('Jewelry box', 'jewelry-box', 'jewelry-box.jpg');
                                 collectionCatFr('Last chances', 'last-chances', 'last-chances.jpg');
                                 collectionCatFr('Time Period', 'time', 'time.jpg');
                                 collectionCatFr('Type of metal', 'type-of-metal', 'type-of-metal.jpg');
