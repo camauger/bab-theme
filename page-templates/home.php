@@ -63,9 +63,9 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="store--info">
 
 				<?php if (ICL_LANGUAGE_CODE == 'en') : ?>
-					<a href="/en/shop/" title="Online Store">
+					<a href="/en/our-collections/" title="Online Store">
 					<?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
-						<a href="/boutique/" title="Boutique en ligne">
+						<a href="/nos-collections/" title="Boutique en ligne">
 						<?php endif; ?>
 						<span class="boutiqueEnLigne"><?php esc_html_e('Online Store', 'bab'); ?></span>
 						<span class="plusDe"><?php esc_html_e('more than', 'bab'); ?></span>
