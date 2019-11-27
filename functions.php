@@ -324,6 +324,11 @@ function kitList()
 	$kitListFuture = array_slice($kitList, $slice);
 	$kitListNow = array_slice($kitList, $sliceNow);
 
+	include 'page-modules/christmas-products';
+	foreach ($kitListNow as $kit) {
+		
+		kit('fr', $kit, $items);
+	}
 
 	foreach ($kitListFuture as $kit) {
 		$kitListHtml .= '<div class="ball ball--small ball--full">
