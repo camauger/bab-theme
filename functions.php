@@ -116,6 +116,9 @@ function cw_woo_attribute()
 	$attributes = $product->get_attributes();
 
 
+
+
+
 	if (!$attributes) {
 
 		if (ICL_LANGUAGE_CODE == 'en') :
