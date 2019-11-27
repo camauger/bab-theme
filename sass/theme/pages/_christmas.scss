@@ -23,7 +23,11 @@
 main.christmas {
 	* {
 		transition: all 250ms ease-in-out;
-	}
+    }
+    
+    a:hover {
+        text-decoration: none;
+    }
 
 	padding: 30px;
 	// Background de flocons (multiple image background)
@@ -380,5 +384,5 @@ main.christmas {
 
 .ball:hover {
 	border-color: $secondary;
-	background-color: $secondary;
+	//background-color: $secondary;
 }

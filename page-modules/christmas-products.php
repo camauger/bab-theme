@@ -14,8 +14,10 @@ $kit = [
 $items = [
     [
         'Bague saphirs multicolore, 18K or jaune',
+        'Multicolored sapphires, 18K yellow gold ring',
         'https://laboiteabijoux.ca/wp-content/uploads/2018/11/B6144-1.jpg',
-        'https://laboiteabijoux.ca/boutique/saphirs-multicolore-18k-or-jaune/'
+        'https://laboiteabijoux.ca/boutique/saphirs-multicolore-18k-or-jaune/',
+        'https://laboiteabijoux.ca/en/shop/multicolored-sapphires-18k-yellow-gold-ring/'
     ], [
         'Bague Péridot et diamants, 14K jaune',
         'https://laboiteabijoux.ca/wp-content/uploads/2019/10/B6693-1.jpg',

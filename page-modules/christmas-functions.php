@@ -36,7 +36,7 @@ function kit($lang, $kit, $items)
 
         $kithtml .= '<div class="ball ball--small ball--empty ball--one">
     <a href="' . $itemUrl . '"><img src="' . $itemImage . '" alt="' . $itemName . '"></a>
-    <a class="kit__name kit--one" href="">' . $itemName . '</a><span class="ball__shadow"></span>
+    <a class="kit__name kit--one" href="' . $itemUrl . '">' . $itemName . '</a><span class="ball__shadow"></span>
 </div>';
     }
     // Affichage de l'ensemble
