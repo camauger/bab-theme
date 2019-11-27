@@ -3,7 +3,7 @@
 function kit($lang, $kit, $items)
 {
     $kithtml = '';
-
+    $kitName = '';
     if ($lang == 'en') :
         $kitName = esc_html($kit[0]);
     elseif ($lang == 'fr') :
