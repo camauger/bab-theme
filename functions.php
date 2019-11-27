@@ -320,9 +320,9 @@ function kitList()
 		$month = 'décembre';
 	endif;
 	$slice = 1;
-	$sliceNow = sizeof($kitList);
+	$sliceNow = sizeof($kitList) - $slice;
 	$kitListFuture = array_slice($kitList, $slice);
-	$kitListNow = array_slice($kitList, 2);
+	$kitListNow = array_slice($kitList, $sliceNow);
 
 	include 'page-modules/christmas-products';
 	foreach ($kitListNow as $kit) {
