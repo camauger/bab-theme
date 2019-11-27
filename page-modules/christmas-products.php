@@ -19,7 +19,7 @@ $kit = [
 
 $items = [
     [
-        'B6145',
+        'B6144',
         'Multicolored sapphires, 18K yellow gold ring',
         'https://laboiteabijoux.ca/wp-content/uploads/2018/11/B6144-1.jpg',
         'https://laboiteabijoux.ca/boutique/saphirs-multicolore-18k-or-jaune/',
@@ -33,7 +33,7 @@ $items = [
 
     ],
     [
-        'Bague Améthystes et diamants, 14K or jaune',
+        'B3076',
         'Amethysts and diamonds, 14K yellow gold',
         'https://laboiteabijoux.ca/wp-content/uploads/2018/07/B3076-1-1.jpg',
         'https://laboiteabijoux.ca/boutique/amethystes-et-diamants-14k-jaune',
