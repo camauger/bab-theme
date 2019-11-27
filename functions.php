@@ -324,9 +324,9 @@ function kitList()
 	$kitListFuture = array_slice($kitList, $slice);
 	$kitListNow = array_slice($kitList, $sliceNow);
 
+	include 'page-modules/christmas-products';
 	foreach ($kitListNow as $kit) {
-		
-		echo $kit;
+		$kitListHtml .= kit('fr', $kit, $items);
 	}
 
 	foreach ($kitListFuture as $kit) {
