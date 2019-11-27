@@ -254,6 +254,7 @@ function collectionCatEn($catName, $catSlug, $imgSlug)
 // */
 function kit($lang, $kit, $items)
 {
+	global $product;
 	// Déclarations des variables de kit
 	// 1 - name FR 2 - name EN - 3 - image 4 - url fr - 5 url en
 	$kithtml = '';
@@ -279,16 +280,16 @@ function kit($lang, $kit, $items)
 		// Déclarations des variables en fonction de la langue
 		//  1 - itemName FR, 2 - itemName EN, 3 - itemImage, 4 - itemURl FR, 5 - itemUrl EN
 		$itemId = wc_get_product_id_by_sku( $item[0] );
-		$itemImage = esc_html($item[2]);
-		$itemUrl = '';
+		$itemImage =  wp_get_attachment_url( $product->get_image_id() ); 
+		$itemUrl = get_permalink($itemId);
 		$itemName = get_the_title($itemId);
-		if ($lang == 'en') :
-			// $itemName = esc_html($item[1]);
-			$itemUrl = esc_html($item[4]);
-		elseif ($lang == 'fr') :
-			// $itemName = esc_html($item[0]);
-			$itemUrl = esc_html($item[3]);
-		endif;
+		// if ($lang == 'en') :
+		// 	// $itemName = esc_html($item[1]);
+		// 	//$itemUrl = esc_html($item[4]);
+		// elseif ($lang == 'fr') :
+		// 	// $itemName = esc_html($item[0]);
+		// 	//$itemUrl = esc_html($item[3]);
+		// endif;
 
 		$kithtml .= '<div class="ball ball--small ball--empty ball--one">
     <a href="' . $itemUrl . '"><img src="' . $itemImage . '" alt="' . $itemName . '"></a>
