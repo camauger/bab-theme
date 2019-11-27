@@ -12,11 +12,14 @@ $kit = [
 // Déclarations des produits
 //  1 - itemName FR, 2 - itemName EN, 3 - itemImage, 4 - itemURl FR, 5 - itemUrl EN
 //
+global $product;
 
+$itemOneId = wc_get_product_id_by_sku( 'B6144' );
+$itemName = get_the_title( $itemOneId );
 
 $items = [
     [
-        'Bague saphirs multicolore, 18K or jaune',
+        $itemName,
         'Multicolored sapphires, 18K yellow gold ring',
         'https://laboiteabijoux.ca/wp-content/uploads/2018/11/B6144-1.jpg',
         'https://laboiteabijoux.ca/boutique/saphirs-multicolore-18k-or-jaune/',
