@@ -41,8 +41,12 @@ $container = get_theme_mod('understrap_container_type');
                     <a href=""><img src="https://res.cloudinary.com/prospection/image/upload/v1574865030/boiteabijoux/kit1.png" alt=""></a>
                     <a class="kit__name kit--big" href="">Ensemble diamant</a><span class="ball__shadow"></span>
                 </div>
-                <?php kit($kit, $items); ?>
-
+                <?php
+                if (ICL_LANGUAGE_CODE == 'en') :
+                    kit('en', $kit, $items);
+                elseif (ICL_LANGUAGE_CODE == 'fr') :
+                    kit('fr', $kit, $items);
+                endif; ?>
             </div>
         </div>
 

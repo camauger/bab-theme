@@ -1,12 +1,12 @@
 
 <?php
-function kit($kit, $items)
+function kit($lang, $kit, $items)
 {
     $kithtml = '';
 
-    if (ICL_LANGUAGE_CODE == 'en') :
+    if ($lang == 'en') :
         $kitName = esc_html($kit[0]);
-    elseif (ICL_LANGUAGE_CODE == 'fr') :
+    elseif ($lang == 'fr') :
         $kitName = esc_html($kit[0]);
     endif;
 
