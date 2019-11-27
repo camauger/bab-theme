@@ -36,12 +36,7 @@ $container = get_theme_mod('understrap_container_type');
                 </div>
             </div>
             <div class="balls">
-                <div class="ball--first ball ball--big ball--empty">
-                    <a href=""><img src="https://res.cloudinary.com/prospection/image/upload/v1574865030/boiteabijoux/kit1.png" alt=""></a>
-                    <a class="kit__name kit--big" href="">Ensemble diamant</a><span class="ball__shadow"></span>
-                </div>
                 <?php get_template_part('page-modules/christmas-products'); ?>
-                
             </div>
         </div>
 
