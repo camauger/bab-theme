@@ -14,7 +14,7 @@ $kit = [
 //
 global $product;
 
-$itemOneId = wc_get_product_id_by_sku( 'B6144' );
+$itemOneId = wc_get_product_id_by_sku( 'B6145' );
 $itemName = get_the_title( $itemOneId );
 
 $items = [
