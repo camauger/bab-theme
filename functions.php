@@ -280,7 +280,7 @@ function kit($lang, $kit, $items)
 		// Déclarations des variables en fonction de la langue
 		//  1 - itemName FR, 2 - itemName EN, 3 - itemImage, 4 - itemURl FR, 5 - itemUrl EN
 		$itemId = wc_get_product_id_by_sku( $item[0] );
-		$itemImage =  wp_get_attachment_url( $product->get_image_id() ); 
+		$itemImage =  the_post_thumbnail(); 
 		$itemUrl = get_permalink($itemId);
 		$itemName = get_the_title($itemId);
 		// if ($lang == 'en') :
