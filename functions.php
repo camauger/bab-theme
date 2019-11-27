@@ -311,10 +311,11 @@ function kitList()
 		'Bagues alliance',	'Pour homme',	'Collier/pendentif',	'Fantaisie',	'Camées',	'3 bracelets argent',	'3 bagues bleues',
 		'Ensemble perles',	'Bijoux antiques',	'Fantaisie',	'3 colliers',	'Bagues diamants',	'Avis aux Pères noël'
 	];
+	
 	foreach ($kitList as $kit) {
 		$kitListHtml .= '<div class="ball ball--small ball--full">
 		<div class="ball--full__date">
-			<span class="ball--full__date--day">' . array_search($kit, $kitList) . '</span>
+			<span class="ball--full__date--day">' . array_search($kit, $kitList) + 1 . '</span>
 			<span class="ball--full__date--month">décembre</span>
 			<span class="ball__shadow"></span>
 		</div>
