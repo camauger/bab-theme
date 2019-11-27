@@ -312,11 +312,19 @@ function kitList()
 		'Ensemble perles',	'Bijoux antiques',	'Fantaisie',	'3 colliers',	'Bagues diamants',	'Avis aux Pères noël'
 	];
 
+	$month = '';
+	if (ICL_LANGUAGE_CODE == 'en') :
+		$month = 'december';
+	elseif (ICL_LANGUAGE_CODE == 'fr') :
+		$month = 'décembre';
+	endif;
+
+
 	foreach ($kitList as $kit) {
 		$kitListHtml .= '<div class="ball ball--small ball--full">
 		<div class="ball--full__date">
-			<span class="ball--full__date--day">' . (array_search($kit, $kitList) + 1) . '</span>
-			<span class="ball--full__date--month">' . esc_html_e('december', 'christmas'). '</span>
+			<span class="ball--full__date--day">' . (array_search($kit, $kitList) + 2) . '</span>
+			<span class="ball--full__date--month">' . $month . '</span>
 			<span class="ball__shadow"></span>
 		</div>
 		<a class="kit__name" href="">' . $kit . '</a>
