@@ -25,7 +25,7 @@ function kit($items)
     $kithtml = '';
     foreach ($items as $item) {
         $kithtml .= '<div class="ball ball--small ball--empty ball--one">
-    <a href=""><img src="https://laboiteabijoux.ca/wp-content/uploads/2018/11/B6144-1.jpg" alt=""></a>
+    <a href="' . esc_html($item[2]) . '"><img src="' . esc_html($item[1]) . '" alt="' . esc_html($item[0]) . '"></a>
     <a class="kit__name kit--one" href="">' . esc_html($item[0]) . '</a><span class="ball__shadow"></span>
 </div>';
     }
@@ -53,7 +53,7 @@ function kit($items)
                     <a class="kit__name kit--big" href="">Ensemble diamant</a><span class="ball__shadow"></span>
                 </div>
                 <?php
-                $items = [['Bague saphirs multicolore, 18K or jaune']];
+                $items = [['Bague saphirs multicolore, 18K or jaune', 'https://laboiteabijoux.ca/wp-content/uploads/2018/11/B6144-1.jpg', 'https://laboiteabijoux.ca/boutique/saphirs-multicolore-18k-or-jaune/']];
                 kit($items); ?>
                 <!-- <div class="ball ball--small ball--empty ball--one">
                     <a href=""><img src="https://laboiteabijoux.ca/wp-content/uploads/2018/11/B6144-1.jpg" alt=""></a>
