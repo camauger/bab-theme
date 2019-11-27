@@ -53,7 +53,17 @@ function kit($items)
                     <a class="kit__name kit--big" href="">Ensemble diamant</a><span class="ball__shadow"></span>
                 </div>
                 <?php
-                $items = [['Bague saphirs multicolore, 18K or jaune', 'https://laboiteabijoux.ca/wp-content/uploads/2018/11/B6144-1.jpg', 'https://laboiteabijoux.ca/boutique/saphirs-multicolore-18k-or-jaune/']];
+                $items = [['Bague saphirs multicolore, 18K or jaune', 'https://laboiteabijoux.ca/wp-content/uploads/2018/11/B6144-1.jpg', 'https://laboiteabijoux.ca/boutique/saphirs-multicolore-18k-or-jaune/'], [
+                    'Bague Péridot et diamants, 14K jaune',
+                    'https://laboiteabijoux.ca/wp-content/uploads/2019/10/B6693-1.jpg',
+                    'https://laboiteabijoux.ca/boutique/bague-peridot-et-diamants-14k-jaune/'
+
+                ],
+            [
+                'Bague Améthystes et diamants, 14K or jaune',
+                'https://laboiteabijoux.ca/wp-content/uploads/2018/07/B3076-1-1.jpg',
+                'https://laboiteabijoux.ca/boutique/amethystes-et-diamants-14k-jaune'
+            ]];
                 kit($items); ?>
                 <!-- <div class="ball ball--small ball--empty ball--one">
                     <a href=""><img src="https://laboiteabijoux.ca/wp-content/uploads/2018/11/B6144-1.jpg" alt=""></a>
