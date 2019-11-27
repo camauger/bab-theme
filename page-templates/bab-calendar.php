@@ -53,7 +53,7 @@ function kit($items)
                     <a class="kit__name kit--big" href="">Ensemble diamant</a><span class="ball__shadow"></span>
                 </div>
                 <?php
-                $items = ['Bague saphirs multicolore, 18K or jaune'];
+                $items = [['Bague saphirs multicolore, 18K or jaune']];
                 kit($items); ?>
                 <!-- <div class="ball ball--small ball--empty ball--one">
                     <a href=""><img src="https://laboiteabijoux.ca/wp-content/uploads/2018/11/B6144-1.jpg" alt=""></a>
