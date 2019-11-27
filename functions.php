@@ -318,14 +318,14 @@ function kitList()
 	elseif (ICL_LANGUAGE_CODE == 'fr') :
 		$month = 'décembre';
 	endif;
-	$slice = 2;
+	$slice = 1;
 	$kitListToday = array_slice($kitList, $slice);
 
 
 	foreach ($kitListToday as $kit) {
 		$kitListHtml .= '<div class="ball ball--small ball--full">
 		<div class="ball--full__date">
-			<span class="ball--full__date--day">' . (array_search($kit, $kitList) + 2) . '</span>
+			<span class="ball--full__date--day">' . (array_search($kit, $kitList) + 1) . '</span>
 			<span class="ball--full__date--month">' . $month . '</span>
 			<span class="ball__shadow"></span>
 		</div>
