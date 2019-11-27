@@ -261,18 +261,20 @@ function kit($lang, $kit, $items)
     $kithtml = '';
     $kitName = '';
     $kitImage = esc_html($kit[1]);
-    $kitUrl = esc_html($kit[2]);
+    $kitUrl = '';
 
     // Déclarations des variables en fonction de la langue
     if ($lang == 'en') :
-        $kitName = esc_html($kit[0]);
+		$kitName = esc_html($kit[1]);
+		$kitUrl = esc_html($kit[4]);
     elseif ($lang == 'fr') :
-        $kitName = esc_html($kit[0]);
+		$kitName = esc_html($kit[0]);
+		$kitUrl = esc_html($kit[3]);
     endif;
     // Le Kit
     $kithtml = '<div class="ball--first ball ball--big ball--empty">
     <a href="' . $kitUrl . '"><img src="' . $kitImage . '" alt="' . $kitName . '"></a>
-    <a class="kit__name kit--big" href="">' . $kitName . '</a><span class="ball__shadow"></span>
+    <a class="kit__name kit--big" href="' . $kitUrl . '">' . $kitName . '</a><span class="ball__shadow"></span>
 </div>';
     // Les items appartenant au kit
     foreach ($items as $item) {
@@ -297,3 +299,22 @@ function kit($lang, $kit, $items)
     // Affichage de l'ensemble
     echo $kithtml;
 };
+
+//** Liste des Kits */
+
+function kitList () {
+	$kitListHtml = '';
+	$kitList = [1, 2, 3];
+	foreach ($kitList as $kit) {
+		$kitListHtml .= '<div class="ball ball--small ball--full">
+		<div class="ball--full__date">
+			<span class="ball--full__date--day">' . $kit . '</span>
+			<span class="ball--full__date--month">décembre</span>
+			<span class="ball__shadow"></span>
+		</div>
+		<a class="kit__name" href="">Ensemble diamant</a>
+	</div>';
+};
+	echo $kitListHtml;
+
+}

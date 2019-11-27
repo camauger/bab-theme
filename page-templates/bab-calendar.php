@@ -45,6 +45,7 @@ $container = get_theme_mod('understrap_container_type');
 
             </div>
             <div class="balls">
+            <?php kitList(); ?>
                 <div class="ball ball--small ball--full">
                     <div class="ball--full__date">
                         <span class="ball--full__date--day">2</span>
