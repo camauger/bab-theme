@@ -24,3 +24,9 @@ $items = [
 ];
 
                 //** Kits en anglais */
+                
+                if (ICL_LANGUAGE_CODE == 'en') :
+                    kit('en', $kit, $items);
+                elseif (ICL_LANGUAGE_CODE == 'fr') :
+                    kit('fr', $kit, $items);
+                endif;
