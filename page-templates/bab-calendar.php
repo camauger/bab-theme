@@ -19,7 +19,7 @@ $container = get_theme_mod('understrap_container_type');
     <?php get_template_part('global-templates/hero'); ?>
 <?php endif; ?>
 
-<?php get_template_part('page-modules/christmas-functions'); ?>
+<!-- <?php get_template_part('page-modules/christmas-functions'); ?> -->
 <?php get_template_part('page-modules/christmas-products'); ?>
 
 <div class="wrapper" id="full-width-page-wrapper">
