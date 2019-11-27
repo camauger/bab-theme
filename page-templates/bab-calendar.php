@@ -19,19 +19,8 @@ $container = get_theme_mod('understrap_container_type');
     <?php get_template_part('global-templates/hero'); ?>
 <?php endif; ?>
 
-<?php
-function kit($items)
-{
-    $kithtml = '';
-    foreach ($items as $item) {
-        $kithtml .= '<div class="ball ball--small ball--empty ball--one">
-    <a href="' . esc_html($item[2]) . '"><img src="' . esc_html($item[1]) . '" alt="' . esc_html($item[0]) . '"></a>
-    <a class="kit__name kit--one" href="">' . esc_html($item[0]) . '</a><span class="ball__shadow"></span>
-</div>';
-    }
-    echo $kithtml;
-};
-?>
+<?php get_template_part('page-modules/christmas-functions'); ?>
+<?php get_template_part('page-modules/christmas-products'); ?>
 
 <div class="wrapper" id="full-width-page-wrapper">
 
@@ -52,31 +41,8 @@ function kit($items)
                     <a href=""><img src="https://res.cloudinary.com/prospection/image/upload/v1574865030/boiteabijoux/kit1.png" alt=""></a>
                     <a class="kit__name kit--big" href="">Ensemble diamant</a><span class="ball__shadow"></span>
                 </div>
-                <?php
-                $items = [['Bague saphirs multicolore, 18K or jaune', 'https://laboiteabijoux.ca/wp-content/uploads/2018/11/B6144-1.jpg', 'https://laboiteabijoux.ca/boutique/saphirs-multicolore-18k-or-jaune/'], [
-                    'Bague Péridot et diamants, 14K jaune',
-                    'https://laboiteabijoux.ca/wp-content/uploads/2019/10/B6693-1.jpg',
-                    'https://laboiteabijoux.ca/boutique/bague-peridot-et-diamants-14k-jaune/'
+                <?php kit($kit, $items); ?>
 
-                ],
-            [
-                'Bague Améthystes et diamants, 14K or jaune',
-                'https://laboiteabijoux.ca/wp-content/uploads/2018/07/B3076-1-1.jpg',
-                'https://laboiteabijoux.ca/boutique/amethystes-et-diamants-14k-jaune'
-            ]];
-                kit($items); ?>
-                <!-- <div class="ball ball--small ball--empty ball--one">
-                    <a href=""><img src="https://laboiteabijoux.ca/wp-content/uploads/2018/11/B6144-1.jpg" alt=""></a>
-                    <a class="kit__name kit--one" href="">Bague saphirs multicolore, 18K or jaune</a><span class="ball__shadow"></span>
-                </div>
-                <div class="ball ball--small ball--empty ball-two">
-                    <a href=""><img src="https://laboiteabijoux.ca/wp-content/uploads/2019/10/B6693-1.jpg" alt=""></a>
-                    <a class="kit__name kit--two" href="">Bague Péridot et diamants, 14K jaune</a><span class="ball__shadow"></span>
-                </div>
-                <div class="ball ball--small ball--empty ball--three">
-                    <a href=""><img src="https://laboiteabijoux.ca/wp-content/uploads/2018/07/B3076-1-1.jpg" alt=""></a>
-                    <a class="kit__name kit--three" href="">Bague Améthystes et diamants, 14K or jaune</a><span class="ball__shadow"></span>
-                </div> -->
             </div>
         </div>
 
@@ -86,7 +52,6 @@ function kit($items)
             </div>
             <div class="balls">
                 <div class="ball ball--small ball--full">
-
                     <div class="ball--full__date">
                         <span class="ball--full__date--day">2</span>
                         <span class="ball--full__date--month">décembre</span>

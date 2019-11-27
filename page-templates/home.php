@@ -160,16 +160,16 @@ $container = get_theme_mod('understrap_container_type');
 			</div>
 
 			<div class="col-12 col-md-4 col-lg">
-			<?php 
-                                collectionCatFr('Bijoux Anciens', 'bijoux-anciens', 'bijoux-anciens.jpg');
-                                
-                                ?>
+				<?php
+					collectionCatFr('Bijoux Anciens', 'bijoux-anciens', 'bijoux-anciens.jpg');
+
+					?>
 			</div>
 
 			<div class="col-12 col-md-4 col-lg">
-			<?php 
-                                collectionCatFr('Bijoux Argent', 'bijoux-argent', 'bijoux-argent.jpg');
-                                ?>
+				<?php
+					collectionCatFr('Bijoux Argent', 'bijoux-argent', 'bijoux-argent.jpg');
+					?>
 			</div>
 
 			<div class="col-12 col-md-4 col-lg">
