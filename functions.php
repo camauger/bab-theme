@@ -257,64 +257,69 @@ function collectionCatEn($catName, $catSlug, $imgSlug)
 // */
 function kit($lang, $kit, $items)
 {
-    // Déclarations des variables
-    $kithtml = '';
-    $kitName = '';
-    $kitImage = esc_html($kit[1]);
-    $kitUrl = '';
+	// Déclarations des variables
+	$kithtml = '';
+	$kitName = '';
+	$kitImage = esc_html($kit[1]);
+	$kitUrl = '';
 
-    // Déclarations des variables en fonction de la langue
-    if ($lang == 'en') :
+	// Déclarations des variables en fonction de la langue
+	if ($lang == 'en') :
 		$kitName = esc_html($kit[1]);
 		$kitUrl = esc_html($kit[4]);
-    elseif ($lang == 'fr') :
+	elseif ($lang == 'fr') :
 		$kitName = esc_html($kit[0]);
 		$kitUrl = esc_html($kit[3]);
-    endif;
-    // Le Kit
-    $kithtml = '<div class="ball--first ball ball--big ball--empty">
+	endif;
+	// Le Kit
+	$kithtml = '<div class="ball--first ball ball--big ball--empty">
     <a href="' . $kitUrl . '"><img src="' . $kitImage . '" alt="' . $kitName . '"></a>
     <a class="kit__name kit--big" href="' . $kitUrl . '">' . $kitName . '</a><span class="ball__shadow"></span>
 </div>';
-    // Les items appartenant au kit
-    foreach ($items as $item) {
-        // Déclarations des variables en fonction de la langue
-        //  1 - itemName FR, 2 - itemName EN, 3 - itemImage, 4 - itemURl FR, 5 - itemUrl EN
-        $itemImage = esc_html($item[2]);
-        $itemUrl = '';
-        $itemName = '';
-        if ($lang == 'en') :
-            $itemName = esc_html($item[1]);
-            $itemUrl = esc_html($item[4]);
-        elseif ($lang == 'fr') :
-            $itemName = esc_html($item[0]);
-            $itemUrl = esc_html($item[3]);
-        endif;
+	// Les items appartenant au kit
+	foreach ($items as $item) {
+		// Déclarations des variables en fonction de la langue
+		//  1 - itemName FR, 2 - itemName EN, 3 - itemImage, 4 - itemURl FR, 5 - itemUrl EN
+		$itemImage = esc_html($item[2]);
+		$itemUrl = '';
+		$itemName = '';
+		if ($lang == 'en') :
+			$itemName = esc_html($item[1]);
+			$itemUrl = esc_html($item[4]);
+		elseif ($lang == 'fr') :
+			$itemName = esc_html($item[0]);
+			$itemUrl = esc_html($item[3]);
+		endif;
 
-        $kithtml .= '<div class="ball ball--small ball--empty ball--one">
+		$kithtml .= '<div class="ball ball--small ball--empty ball--one">
     <a href="' . $itemUrl . '"><img src="' . $itemImage . '" alt="' . $itemName . '"></a>
     <a class="kit__name kit--one" href="' . $itemUrl . '">' . $itemName . '</a><span class="ball__shadow"></span>
 </div>';
-    }
-    // Affichage de l'ensemble
-    echo $kithtml;
+	}
+	// Affichage de l'ensemble
+	echo $kithtml;
 };
 
 //** Liste des Kits */
 
-function kitList () {
+function kitList()
+{
 	$kitListHtml = '';
-	$kitList = [1, 2, 3];
+	$kitList = [
+		'3 bagues couleurs',
+		'Colliers argent',	'B.O.',	'3 bracelets or',	'Fantaisie',	'Colliers perles',	'Bagues argent',
+		'Bagues alliance',	'Pour homme',	'Collier/pendentif',	'Fantaisie',	'Camées',	'3 bracelets argent',	'3 bagues bleues',
+		'Ensemble perles',	'Bijoux antiques',	'Fantaisie',	'3 colliers',	'Bagues diamants',	'Avis aux Pères noël'
+	];
 	foreach ($kitList as $kit) {
 		$kitListHtml .= '<div class="ball ball--small ball--full">
 		<div class="ball--full__date">
-			<span class="ball--full__date--day">' . $kit . '</span>
+			<span class="ball--full__date--day">' . array_search($kit, $kitList) . '</span>
 			<span class="ball--full__date--month">décembre</span>
 			<span class="ball__shadow"></span>
 		</div>
-		<a class="kit__name" href="">Ensemble diamant</a>
+		<a class="kit__name" href="">' . $kit . '</a>
 	</div>';
-};
+	};
 	echo $kitListHtml;
-
 }
