@@ -257,10 +257,11 @@ function collectionCatEn($catName, $catSlug, $imgSlug)
 // */
 function kit($lang, $kit, $items)
 {
-	// Déclarations des variables
+	// Déclarations des variables de kit
+	// 1 - name FR 2 - name EN - 3 - image 4 - url fr - 5 url en
 	$kithtml = '';
 	$kitName = '';
-	$kitImage = esc_html($kit[1]);
+	$kitImage = esc_html($kit[2]);
 	$kitUrl = '';
 
 	// Déclarations des variables en fonction de la langue
@@ -319,10 +320,12 @@ function kitList()
 		$month = 'décembre';
 	endif;
 	$slice = 1;
-	$kitListToday = array_slice($kitList, $slice);
+	$sliceNow = sizeof($kitList);
+	$kitListFuture = array_slice($kitList, $slice);
+	$kitListNow = array_slice($kitList, $sliceNow);
 
 
-	foreach ($kitListToday as $kit) {
+	foreach ($kitListFuture as $kit) {
 		$kitListHtml .= '<div class="ball ball--small ball--full">
 		<div class="ball--full__date">
 			<span class="ball--full__date--day">' . (array_search($kit, $kitList) + 1) . '</span>

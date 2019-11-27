@@ -38,7 +38,7 @@ $items = [
     ]
 ];
 
-                //** Kits en anglais */
+                //**  */
                 
                 if (ICL_LANGUAGE_CODE == 'en') :
                     kit('en', $kit, $items);

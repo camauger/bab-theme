@@ -287,13 +287,13 @@ main.christmas {
 		lighten($primary, 1%),
 		$primary
 	);
-	&:hover {
-		background: radial-gradient(
-			circle at 100px 100px,
-			lighten($secondary, 1%),
-			$secondary
-		);
-	}
+	// &:hover {
+	// 	background: radial-gradient(
+	// 		circle at 100px 100px,
+	// 		lighten($secondary, 1%),
+	// 		$secondary
+	// 	);
+	// }
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;

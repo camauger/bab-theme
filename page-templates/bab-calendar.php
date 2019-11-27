@@ -45,40 +45,7 @@ $container = get_theme_mod('understrap_container_type');
 
             </div>
             <div class="balls">
-            <?php kitList(); ?>
-                <div class="ball ball--small ball--full">
-                    <div class="ball--full__date">
-                        <span class="ball--full__date--day">2</span>
-                        <span class="ball--full__date--month">décembre</span>
-                        <span class="ball__shadow"></span>
-                    </div>
-                    <a class="kit__name" href="">Ensemble diamant</a>
-                </div>
-
-                <div class="ball ball--small ball--full">
-                    <div class="ball--full__date">
-                        <span class="ball--full__date--day">3</span>
-                        <span class="ball--full__date--month">décembre</span>
-                        <span class="ball__shadow"></span>
-                    </div>
-                    <a class="kit__name" href="">Ensemble diamant</a>
-                </div>
-                <div class="ball ball--small ball--full">
-                    <div class="ball--full__date">
-                        <span class="ball--full__date--day">4</span>
-                        <span class="ball--full__date--month">décembre</span>
-                        <span class="ball__shadow"></span>
-                    </div>
-                    <a class="kit__name" href="">Ensemble diamant</a>
-                </div>
-                <div class="ball ball--small ball--full">
-                    <div class="ball--full__date">
-                        <span class="ball--full__date--day">5</span>
-                        <span class="ball--full__date--month">décembre</span>
-                        <span class="ball__shadow"></span>
-                    </div>
-                    <a class="kit__name" href="">Ensemble diamant</a>
-                </div>
+                <?php kitList(); ?>
             </div>
         </div>
 
