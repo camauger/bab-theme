@@ -278,14 +278,15 @@ function kit($lang, $kit, $items)
 	foreach ($items as $item) {
 		// Déclarations des variables en fonction de la langue
 		//  1 - itemName FR, 2 - itemName EN, 3 - itemImage, 4 - itemURl FR, 5 - itemUrl EN
+		$itemId = wc_get_product_id_by_sku( $item[0] );
 		$itemImage = esc_html($item[2]);
 		$itemUrl = '';
-		$itemName = '';
+		$itemName = get_the_title($itemId);
 		if ($lang == 'en') :
-			$itemName = esc_html($item[1]);
+			// $itemName = esc_html($item[1]);
 			$itemUrl = esc_html($item[4]);
 		elseif ($lang == 'fr') :
-			$itemName = esc_html($item[0]);
+			// $itemName = esc_html($item[0]);
 			$itemUrl = esc_html($item[3]);
 		endif;
 
@@ -343,5 +344,5 @@ function kitList()
 //** SKU */
 function skufetch($sku) {
 	global $product;
-	
+	$itemId = wc_get_product_id_by_sku( $sku );
 }

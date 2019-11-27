@@ -12,20 +12,20 @@ $kit = [
 // Déclarations des produits
 //  1 - itemName FR, 2 - itemName EN, 3 - itemImage, 4 - itemURl FR, 5 - itemUrl EN
 //
-global $product;
+// global $product;
 
-$itemOneId = wc_get_product_id_by_sku( 'B6145' );
-$itemName = get_the_title( $itemOneId );
+// $itemOneId = wc_get_product_id_by_sku( 'B6145' );
+// $itemName = get_the_title( $itemOneId );
 
 $items = [
     [
-        $itemName,
+        'B6145',
         'Multicolored sapphires, 18K yellow gold ring',
         'https://laboiteabijoux.ca/wp-content/uploads/2018/11/B6144-1.jpg',
         'https://laboiteabijoux.ca/boutique/saphirs-multicolore-18k-or-jaune/',
         'https://laboiteabijoux.ca/en/shop/multicolored-sapphires-18k-yellow-gold-ring/'
     ], [
-        'Bague Péridot et diamants, 14K jaune',
+        'B6693',
         'Peridot and diamonds, 14K yellow gold ring',
         'https://laboiteabijoux.ca/wp-content/uploads/2019/10/B6693-1.jpg',
         'https://laboiteabijoux.ca/boutique/bague-peridot-et-diamants-14k-jaune/',
