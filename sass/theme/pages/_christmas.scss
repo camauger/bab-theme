@@ -20,10 +20,13 @@
 	font-display: swap;
 }
 
-
 main.christmas {
-    padding: 30px;
-    // Background de flocons (multiple image background)
+	* {
+		transition: all 250ms ease-in-out;
+	}
+
+	padding: 30px;
+	// Background de flocons (multiple image background)
 	@include media-breakpoint-up(md) {
 		background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon1.png),
 			url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon2.png),
@@ -38,6 +41,11 @@ main.christmas {
 
 .christmas__header {
 	height: 200px;
+	h1 {
+		text-align: center;
+		color: $primary;
+		@extend %page__title;
+	}
 }
 
 .christmas__row {
@@ -60,6 +68,14 @@ main.christmas {
 				$primary calc(50%),
 				rgba(0, 0, 0, 0) calc(50% + 3px)
 			);
+			&:hover {
+				background: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0) calc(50% - 2px),
+					$secondary calc(50%),
+					rgba(0, 0, 0, 0) calc(50% + 3px)
+				);
+			}
 		}
 	}
 }
@@ -135,8 +151,6 @@ main.christmas {
 	}
 }
 
-
-
 .ball--empty {
 	@include media-breakpoint-up(md) {
 		border: 4px solid $primary;
@@ -144,33 +158,32 @@ main.christmas {
 		perspective-origin: top;
 	}
 	&.ball--big {
-        border: 4px solid $primary;
-        @include media-breakpoint-down(sm) {
-            margin-bottom: 60px;
-        }
-    }
-    
-    &.ball--small {
-        @include media-breakpoint-down(sm) {
-            display: flex;
-            flex-direction: row; 
-            width: 100%;
-            align-items: center;
-            height: auto;
-            * {
-                display: flex;
-            }
-            a:first-of-type {
-                width: 20%;
-                flex-basis: 20%;
-            }
-            a:nth-of-type(2) {
-                width: 80%;
-                flex-basis: 80%;
-            }
-         }
-    }
+		border: 4px solid $primary;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 60px;
+		}
+	}
 
+	&.ball--small {
+		@include media-breakpoint-down(sm) {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			align-items: center;
+			height: auto;
+			* {
+				display: flex;
+			}
+			a:first-of-type {
+				width: 20%;
+				flex-basis: 20%;
+			}
+			a:nth-of-type(2) {
+				width: 80%;
+				flex-basis: 80%;
+			}
+		}
+	}
 
 	.ball__shadow {
 		@include media-breakpoint-up(md) {
@@ -191,6 +204,22 @@ main.christmas {
 
 .ball--empty {
 	&.ball--small {
+		&:hover {
+			&::after {
+				@include media-breakpoint-up(md) {
+					content: "";
+					background: url(https://res.cloudinary.com/prospection/image/upload/v1574872229/boiteabijoux/bout-jaune.png);
+					width: 50px;
+					height: 50px;
+					display: block;
+					position: relative;
+					background-repeat: no-repeat;
+					margin-top: -295px;
+					margin-left: 130px;
+					transform: rotate(25deg);
+				}
+			}
+		}
 		&::after {
 			@include media-breakpoint-up(md) {
 				content: "";
@@ -207,6 +236,21 @@ main.christmas {
 		}
 	}
 	&.ball--big {
+		&:hover {
+			&::after {
+				content: "";
+				background: url(https://res.cloudinary.com/prospection/image/upload/v1574872229/boiteabijoux/bout-jaune.png);
+				width: 50px;
+				height: 50px;
+				display: block;
+				position: relative;
+				background-repeat: no-repeat;
+				margin-top: -335px;
+				margin-left: 155px;
+				transform: rotate(25deg);
+			}
+		}
+
 		&::after {
 			content: "";
 			background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
@@ -223,15 +267,23 @@ main.christmas {
 }
 
 .ball--full {
-    @include media-breakpoint-down(sm) {
-        margin-bottom: 40px;}
+	@include media-breakpoint-down(sm) {
+		margin-bottom: 40px;
+	}
 	perspective: 600px;
 	perspective-origin: top;
 	background: radial-gradient(
 		circle at 100px 100px,
-		lighten($primary, 10%),
+		lighten($primary, 1%),
 		$primary
 	);
+	&:hover {
+		background: radial-gradient(
+			circle at 100px 100px,
+			lighten($secondary, 1%),
+			$secondary
+		);
+	}
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -253,9 +305,27 @@ main.christmas {
 			z-index: -1;
 		}
 	}
+	&:hover {
+		&::after {
+			content: "";
+
+			background: url(https://res.cloudinary.com/prospection/image/upload/v1574872229/boiteabijoux/bout-jaune.png);
+
+			width: 50px;
+			height: 50px;
+			display: block;
+			position: relative;
+			background-repeat: no-repeat;
+			margin-top: -295px;
+			margin-left: 135px;
+			transform: rotate(25deg);
+		}
+	}
+
 	&::after {
 		content: "";
 		background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
+
 		width: 50px;
 		height: 50px;
 		display: block;
@@ -273,7 +343,7 @@ main.christmas {
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-	
+
 	.ball--full__date--day,
 	.ball--full__date--month {
 		display: flex;
@@ -292,10 +362,23 @@ main.christmas {
 }
 
 .kit__name {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 	color: $primary;
 	font-weight: bold;
 	text-align: center;
 	margin-top: 20px;
 	display: flex;
 	min-height: 50px;
+	&:hover {
+		color: $secondary;
+	}
+}
+
+// Hover Effects
+
+.ball:hover {
+	border-color: $secondary;
+	background-color: $secondary;
 }
