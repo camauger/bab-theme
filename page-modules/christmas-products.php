@@ -17,29 +17,7 @@ $kit = [
 // $itemOneId = wc_get_product_id_by_sku( 'B6145' );
 // $itemName = get_the_title( $itemOneId );
 
-$items = [
-    [
-        'B6144',
-        'Multicolored sapphires, 18K yellow gold ring',
-        'https://laboiteabijoux.ca/wp-content/uploads/2018/11/B6144-1.jpg',
-        'https://laboiteabijoux.ca/boutique/saphirs-multicolore-18k-or-jaune/',
-        'https://laboiteabijoux.ca/en/shop/multicolored-sapphires-18k-yellow-gold-ring/'
-    ], [
-        'B6693',
-        'Peridot and diamonds, 14K yellow gold ring',
-        'https://laboiteabijoux.ca/wp-content/uploads/2019/10/B6693-1.jpg',
-        'https://laboiteabijoux.ca/boutique/bague-peridot-et-diamants-14k-jaune/',
-        'https://laboiteabijoux.ca/en/shop/peridot-and-diamonds-14k-yellow-gold-ring/'
-
-    ],
-    [
-        'B3076',
-        'Amethysts and diamonds, 14K yellow gold',
-        'https://laboiteabijoux.ca/wp-content/uploads/2018/07/B3076-1-1.jpg',
-        'https://laboiteabijoux.ca/boutique/amethystes-et-diamants-14k-jaune',
-        'https://laboiteabijoux.ca/en/shop/amethysts-and-diamonds-14k-yellow-gold/'
-    ]
-];
+$items = ['B6144','B6693','B3076'];
 
                 //**  */
                 

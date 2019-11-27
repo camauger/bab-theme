@@ -279,17 +279,10 @@ function kit($lang, $kit, $items)
 	foreach ($items as $item) {
 		// Déclarations des variables en fonction de la langue
 		//  1 - itemName FR, 2 - itemName EN, 3 - itemImage, 4 - itemURl FR, 5 - itemUrl EN
-		$itemId = wc_get_product_id_by_sku( $item[0] );
+		$itemId = wc_get_product_id_by_sku( $item );
 		$itemImage =  get_the_post_thumbnail_url($itemId); 
 		$itemUrl = get_permalink($itemId);
 		$itemName = get_the_title($itemId);
-		// if ($lang == 'en') :
-		// 	// $itemName = esc_html($item[1]);
-		// 	//$itemUrl = esc_html($item[4]);
-		// elseif ($lang == 'fr') :
-		// 	// $itemName = esc_html($item[0]);
-		// 	//$itemUrl = esc_html($item[3]);
-		// endif;
 
 		$kithtml .= '<div class="ball ball--small ball--empty ball--one">
     <a href="' . $itemUrl . '"><img src="' . $itemImage . '" alt="' . $itemName . '"></a>
@@ -342,8 +335,3 @@ function kitList()
 }
 
 
-//** SKU */
-function skufetch($sku) {
-	global $product;
-	$itemId = wc_get_product_id_by_sku( $sku );
-}
