@@ -10,7 +10,7 @@ function kit($lang, $kit, $items)
         $kitName = esc_html($kit[0]);
     endif;
 
-    $kithtml .= '<div class="ball--first ball ball--big ball--empty">
+    $kithtml = '<div class="ball--first ball ball--big ball--empty">
     <a href="' . esc_html($kit[2]) . '"><img src="' . esc_html($kit[1]) . '" alt=""></a>
     <a class="kit__name kit--big" href="">' . $kitName . '</a><span class="ball__shadow"></span>
 </div>';
