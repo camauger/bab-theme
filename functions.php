@@ -320,10 +320,9 @@ function kitList()
 	// Si nous ne sommes pas en décembre, le premier rang sera révélé (slice = 1)
 	$todayDay = date("d");
 	$todayMonth = date("m");
+	$slice = 1;
 	if ($todayMonth != 12) {
 		$slice = $todayDay;
-	} else {
-		$slice = 1;
 	};
 
 	$month = '';
