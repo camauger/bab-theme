@@ -398,11 +398,15 @@ main.christmas {
 	text-align: center;
 	color: $primary;
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: center;
-		min-height: 100px;
+	min-height: 100px;
 	@include media-breakpoint-down(sm) {
+		align-items: flex-start;
 		padding-left: 10px;
+		&.kit--big {
+			margin-top: 20px;
+		}
 	}
 }
 
