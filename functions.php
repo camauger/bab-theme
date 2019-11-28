@@ -252,35 +252,41 @@ function collectionCatEn($catName, $catSlug, $imgSlug)
 //**
 // Christmas Products (Kits)
 // */
-function kit($lang, $kit, $items)
+function kit($number, $name)
 {
 	global $product;
 	// Déclarations des variables de kit
+
+	//**Les Kits */
+
+	$kitName = esc_html_e($name, 'christmas');
+	$kitItems = 'items' . $number;
+	$kitImage = 'https://res.cloudinary.com/prospection/image/upload/v1574865030/boiteabijoux/kit' . $number . '.png';
+
 	// 1 - name FR 2 - name EN - 3 - image 4 - url fr - 5 url en
 	$kithtml = '';
 	$kitName = '';
-	$kitImage = esc_html($kit[2]);
 	$kitUrl = '';
 
 	// Déclarations des variables en fonction de la langue
-	if ($lang == 'en') :
-		$kitName = esc_html($kit[1]);
-		$kitUrl = esc_html($kit[4]);
-	elseif ($lang == 'fr') :
-		$kitName = esc_html($kit[0]);
-		$kitUrl = esc_html($kit[3]);
-	endif;
+	// if ($lang == 'en') :
+	// 	$kitName = esc_html($kit[1]);
+	// 	$kitUrl = esc_html($kit[4]);
+	// elseif ($lang == 'fr') :
+	// 	$kitName = esc_html($kit[0]);
+	// 	$kitUrl = esc_html($kit[3]);
+	// endif;
 	// Le Kit
 	$kithtml = '<div class="ball--first ball ball--big ball--empty">
     <a href="' . $kitUrl . '"><img src="' . $kitImage . '" alt="' . $kitName . '"></a>
     <a class="kit__name kit--big" href="' . $kitUrl . '">' . $kitName . '</a><span class="ball__shadow"></span>
 </div>';
 	// Les items appartenant au kit
-	foreach ($items as $item) {
+	foreach ($kitItems as $item) {
 		// Déclarations des variables en fonction de la langue
 		//  1 - itemName FR, 2 - itemName EN, 3 - itemImage, 4 - itemURl FR, 5 - itemUrl EN
-		$itemId = wc_get_product_id_by_sku( $item );
-		$itemImage =  get_the_post_thumbnail_url($itemId); 
+		$itemId = wc_get_product_id_by_sku($item);
+		$itemImage =  get_the_post_thumbnail_url($itemId);
 		$itemUrl = get_permalink($itemId);
 		$itemName = get_the_title($itemId);
 
@@ -293,10 +299,15 @@ function kit($lang, $kit, $items)
 	echo $kithtml;
 };
 
+
+
+
 //** Liste des Kits */
 
 function kitList()
 {
+
+
 	$kitListHtml = '';
 	$kitList = [
 		'3 bagues couleurs',
@@ -317,9 +328,9 @@ function kitList()
 	$kitListNow = array_slice($kitList, $sliceNow);
 
 	include 'page-modules/christmas-products';
-	// foreach ($kitListNow as $kit) {
-	// 	$kitListHtml .= kit('fr', $kit, $items);
-	// }
+	foreach ($kitListNow as $kit) {
+		$kitListHtml .= kit('fr', $kit, $items);
+	}
 
 	foreach ($kitListFuture as $kit) {
 		$kitListHtml .= '<div class="ball ball--small ball--full">
@@ -333,5 +344,3 @@ function kitList()
 	};
 	echo $kitListHtml;
 }
-
-

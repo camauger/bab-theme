@@ -9,6 +9,10 @@ $kit = [
     ''
 ];
 
+
+
+
+
 // Déclarations des produits
 //  1 - itemName FR, 2 - itemName EN, 3 - itemImage, 4 - itemURl FR, 5 - itemUrl EN
 //
@@ -18,6 +22,8 @@ $kit = [
 // $itemName = get_the_title( $itemOneId );
 
 $items = ['B6144','B6693','B3076'];
+
+$kitItems = ['B6144','B6693','B3076'];
 
                 //**  */
                 
