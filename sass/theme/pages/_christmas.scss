@@ -75,13 +75,24 @@ main.christmas {
 			url(https://res.cloudinary.com/prospection/image/upload/v1574712718/boiteabijoux/flocon5.png),
 			url(https://res.cloudinary.com/prospection/image/upload/v1574712718/boiteabijoux/flocon6.png);
 		background-repeat: no-repeat;
-		background-position: right 35% bottom 45%, 25% 75%, left, right, top, bottom,
-			right 35% bottom 45%, 25% 75%, left, right, top, bottom;
+        background-position: 10% 5%,
+        30% 15%,
+        55% 35%,
+        40% 40%,
+        80% 20%,
+        35% 75%,
+        90% 60%,
+        top,
+        center,
+        right,
+        left,
+        bottom
+        ;
 	}
 }
 
 .christmas__header {
-	height: 200px;
+	
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -89,7 +100,10 @@ main.christmas {
 		text-align: center;
 		color: $primary;
 		@extend %page__title;
-	}
+    }
+    @include media-breakpoint-up(md) {
+        height: 200px;
+    }
 }
 
 .christmas__row {
@@ -242,6 +256,7 @@ main.christmas {
 .ball--empty {
 	&.ball--small {
 		&::after {
+            @include media-breakpoint-up(md) {
 			content: "";
 			width: 50px;
 			height: 50px;
@@ -251,7 +266,7 @@ main.christmas {
 			background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
 			margin-top: -345px;
 			margin-left: 130px;
-			transform: rotate(25deg);
+			transform: rotate(25deg);}
 		}
 	}
 }
@@ -260,6 +275,7 @@ main.christmas {
 	&.ball--small {
 		&:hover {
 			&::after {
+                @include media-breakpoint-up(md) {
 				width: 50px;
 				height: 50px;
 				display: block;
@@ -269,7 +285,7 @@ main.christmas {
 				background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574872229/boiteabijoux/bout-jaune.png);
 				margin-top: -345px;
 				margin-left: 130px;
-				transform: rotate(25deg);
+				transform: rotate(25deg);}
 			}
 		}
 	}
@@ -305,13 +321,13 @@ main.christmas {
 }
 
 .ball--full {
-	@include media-breakpoint-down(sm) {
-		margin-bottom: 40px;
-	}
+	
+		margin-bottom: 100px;
+	
 	@include media-breakpoint-up(md) {
 		margin-left: 30px;
 		margin-right: 30px;
-		margin-bottom: 80px;
+		
 	}
 	perspective: 600px;
 	perspective-origin: top;
@@ -377,9 +393,13 @@ main.christmas {
 	color: $primary;
 	font-weight: bold;
 	margin-top: 20px;
-	display: flex;
+    display: flex;
+    align-items: center;
 	justify-content: center;
-	min-height: 100px;
+    min-height: 100px;
+    @include media-breakpoint-down(sm) {
+        padding-left: 10px;
+    }
 	&:hover {
 		color: $secondary;
 	}
