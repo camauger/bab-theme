@@ -320,9 +320,11 @@ function kitList()
 	// Si nous ne sommes pas en décembre, le premier rang sera révélé (slice = 1)
 	$todayDay = date("d");
 	$todayMonth = date("m");
-	$slice = 1;
-	if ($todayMonth != 12) {
+	
+	if ($todayMonth == 12) {
 		$slice = $todayDay;
+	} else {
+		$slice = 1;
 	};
 
 	$month = '';
@@ -331,8 +333,9 @@ function kitList()
 	elseif (ICL_LANGUAGE_CODE == 'fr') :
 		$month = 'décembre';
 	endif;
-	$sliceNow = $todayDay;
-	//$sliceNow = sizeof($kitList) - $slice;
+
+
+	$sliceNow = sizeof($kitList) - $slice;
 	$kitListFuture = array_slice($kitList, $slice);
 	$kitListNow = array_slice($kitList, $sliceNow);
 
