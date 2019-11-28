@@ -283,7 +283,7 @@ function kit($number, $name)
 </div>';
 	// Les items appartenant au kit
 	foreach ($kitItems[$kitItemsId] as $item) {
-		global $product;
+		
 		// Déclarations des variables en fonction de la langue
 		//  1 - itemName FR, 2 - itemName EN, 3 - itemImage, 4 - itemURl FR, 5 - itemUrl EN
 		$itemId = wc_get_product_id_by_sku($item);
@@ -341,7 +341,7 @@ function kitList()
 
 	include 'page-modules/christmas-products';
 	foreach ($kitListNow as $kit) {
-		$kitListHtml .= kit(1, '3 bagues couleurs');
+		$kitListHtml .= kit(1, $kitListNow[$kit]);
 	}
 
 	$kitListHtml .= '<div class="christmas__row">
