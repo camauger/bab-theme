@@ -274,8 +274,6 @@ function kit($number, $name)
 
 	$kitItems = [['B6144','B6693','B3076']];
 		
-	
-
 	// Le Kit
 	$kithtml .= '<div class="ball--first ball ball--big ball--empty">
     <a href="' . $kitUrl . '"><img src="' . $kitImage . '" alt="' . $kitName . '"></a>
@@ -310,7 +308,6 @@ function kit($number, $name)
 function kitList()
 {
 
-
 	$kitListHtml = '';
 	$kitList = [
 		'3 bagues couleurs',
@@ -335,6 +332,12 @@ function kitList()
 		$kitListHtml .= kit(1, '3 bagues couleurs');
 	}
 
+	$kitListHtml .= '<div class="christmas__row">
+	<div class="christmas__spacer">
+
+	</div>
+	<div class="balls">';
+
 	foreach ($kitListFuture as $kit) {
 		$kitListHtml .= '<div class="ball ball--small ball--full">
 		<div class="ball--full__date">
@@ -345,5 +348,8 @@ function kitList()
 		<a class="kit__name" href="">' . $kit . '</a>
 	</div>';
 	};
+
+	$kitListHtml .= '</div>
+	</div>';
 	echo $kitListHtml;
 }

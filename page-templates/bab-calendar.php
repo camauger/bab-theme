@@ -29,16 +29,16 @@ $container = get_theme_mod('understrap_container_type');
             <h1>Vedettes de Noël</h1>
         </div>
 
-        <div class="christmas__row revealed">
+        <!-- <div class="christmas__row revealed">
             <div class="date">
                 <div class="date__wrapper">
                     <span class="date__text">1er décembre</span>
                 </div>
             </div>
             <div class="balls">
-                <?php get_template_part('page-modules/christmas-products'); ?>
+               
             </div>
-        </div>
+        </div> -->
 
         <div class="christmas__row">
             <div class="christmas__spacer">
