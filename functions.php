@@ -297,19 +297,71 @@ function kit($number, $name)
 			'B4624',
 			'B6838'
 		],
-		['B5780', 'B6020', 'B6487'],
-		['B6110', 'B6657', 'B6772'],
-		['B6413', 'B6078', 'B6174'],
-		['B6432', 'B6571', 'B3197'],
-		['B6641', 'B6706', 'B6766'],
-		['B5202', 'B6334', 'B6565'],
-		['B6473', 'B5705', 'B4017'],
-		['B6159', 'B3615', 'B6625'],
-		['B6216', 'B6276', 'B6598'],
-		['B6055', 'B6553', 'B6261'],
-		['B3100', 'B6608', 'B6609'],
-		['B6530', 'B3616', 'B6771'],
-		['B4715', 'B6019', 'B6492'],
+		[
+			'B5780',
+			'B6020',
+			'B6487'
+		],
+		[
+			'B6110',
+			'B6657',
+			'B6772'
+		],
+		[
+			'B6413',
+			'B6078',
+			'B6174'
+		],
+		[
+			'B6432',
+			'B6571',
+			'B3197'
+		],
+		[
+			'B6641',
+			'B6706',
+			'B6766'
+		],
+		[
+			'B5202',
+			'B6334',
+			'B6565'
+		],
+		[
+			'B6473',
+			'B5705',
+			'B4017'
+		],
+		[
+			'B6159',
+			'B3615',
+			'B6625'
+		],
+		[
+			'B6216',
+			'B6276',
+			'B6598'
+		],
+		[
+			'B6055',
+			'B6553',
+			'B6261'
+		],
+		[
+			'B3100',
+			'B6608',
+			'B6609'
+		],
+		[
+			'B6530',
+			'B3616',
+			'B6771'
+		],
+		[
+			'B4715',
+			'B6019',
+			'B6492'
+		],
 		[
 			'B5816',
 			'B6631',
@@ -388,7 +440,7 @@ function kitList()
 	if ($todayMonth == 12) {
 		$slice = $todayDay;
 	} else {
-		$slice = 8;
+		$slice = 6;
 	};
 
 	$month = '';
@@ -428,17 +480,28 @@ function kitList()
 
 	echo $kitListHtml;
 
+	// Kit Items Test
+	foreach ($kitItems as $item) {
+		$itemId = wc_get_product_id_by_sku($item);
+		$itemImage =  get_the_post_thumbnail_url($itemId);
+		$itemUrl = get_permalink($itemId);
+		$itemName = get_the_title($itemId);
+		echo '<pre>';
+		echo $itemName;
+		echo '</pre>';
+	}
+
 	// Code de tests
-	// echo "kitlist =>";
-	// echo '<pre>';
-	// print_r($kitList);
-	// echo '</pre>';
-	// echo "kitlistfuture =>";
-	// echo '<pre>';
-	// print_r($kitListFuture);
-	// echo '</pre>';
-	// echo "kitlistnow =>";
-	// echo '<pre>';
-	// print_r($kitListNow);
-	// echo '</pre>';
+	echo "kitlist =>";
+	echo '<pre>';
+	print_r($kitList);
+	echo '</pre>';
+	echo "kitlistfuture =>";
+	echo '<pre>';
+	print_r($kitListFuture);
+	echo '</pre>';
+	echo "kitlistnow =>";
+	echo '<pre>';
+	print_r($kitListNow);
+	echo '</pre>';
 }
