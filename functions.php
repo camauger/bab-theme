@@ -285,8 +285,8 @@ function kit($number)
     <a class="kit__name kit--big">' . $kitName . '</a><span class="ball__shadow"></span>
 </div>';
 	// Les items appartenant au kit
-	$theItems = array_slice($kits[$number], 0, 1);
-
+	//$theItems = array_slice($kits[$number], 0, 1);
+$theItems = [];
 
 	foreach ($theItems as $item) {
 		// Déclarations des variables du prduit
