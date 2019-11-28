@@ -30,8 +30,8 @@ $container = get_theme_mod('understrap_container_type');
         </div>
 
 
-                <?php kitList(); ?>
-            
+        <?php kitList(); ?>
+
 
     </main>
 
