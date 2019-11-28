@@ -260,7 +260,7 @@ function kit($number, $name)
 	//**Les Kits */
 
 	$kitName = esc_html_e($name, 'christmas');
-	$kitItemsId = ($number - 1);
+	$kitItemsId = 0;
 	$kitImage = 'https://res.cloudinary.com/prospection/image/upload/v1574865030/boiteabijoux/kit' . $number . '.png';
 
 	$kithtml = '<div class="christmas__row revealed">
@@ -272,7 +272,7 @@ function kit($number, $name)
 	<div class="balls">';
 	$kitUrl = '';
 
-	$kitItems = ['B6144','B6693','B3076'];
+	$kitItems = [['B6144','B6693','B3076']];
 		
 	
 
