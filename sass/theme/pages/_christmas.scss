@@ -236,27 +236,29 @@ main.christmas {
 	}
 }
 
-.ball--empty.ball--small::after {
-	&:nth-of-type(1) {
-		content: "";
-		width: 50px;
-		height: 50px;
-		display: block;
-		position: relative;
-		background-repeat: no-repeat;
-		background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
-		margin-top: -345px;
-		margin-left: 130px;
-		transform: rotate(25deg);
-	}
+.ball--empty.ball--small:nth-of-type(1)::after {
+	content: "";
+	width: 50px;
+	height: 50px;
+	display: block;
+	position: relative;
+	background-repeat: no-repeat;
+	background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
+	margin-top: -345px;
+	margin-left: 130px;
+	transform: rotate(25deg);
 }
 
 .ball--empty {
 	&.ball--small {
 		&:hover {
 			&::after {
-                @extend %ballDecoration;
-                content: "";
+				width: 50px;
+		height: 50px;
+		display: block;
+		position: relative;
+		background-repeat: no-repeat;
+				content: "";
 				background: url(https://res.cloudinary.com/prospection/image/upload/v1574872229/boiteabijoux/bout-jaune.png);
 				margin-top: -345px;
 				margin-left: 130px;
@@ -267,8 +269,12 @@ main.christmas {
 	&.ball--big {
 		&:hover {
 			&::after {
-                @extend %ballDecoration;
-                content: "";
+				width: 50px;
+		height: 50px;
+		display: block;
+		position: relative;
+		background-repeat: no-repeat;
+				content: "";
 				background: url(https://res.cloudinary.com/prospection/image/upload/v1574872229/boiteabijoux/bout-jaune.png);
 				margin-top: -385px;
 				margin-left: 155px;
@@ -277,8 +283,12 @@ main.christmas {
 		}
 
 		&::after {
-            @extend %ballDecoration;
-            content: "";
+			width: 50px;
+		height: 50px;
+		display: block;
+		position: relative;
+		background-repeat: no-repeat;
+			content: "";
 			background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
 			margin-top: -385px;
 			margin-left: 155px;
@@ -316,8 +326,12 @@ main.christmas {
 	}
 
 	&::after {
-        @extend %ballDecoration;
-        content: "";
+		width: 50px;
+		height: 50px;
+		display: block;
+		position: relative;
+		background-repeat: no-repeat;
+		content: "";
 		background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
 		margin-top: -345px;
 		margin-left: 135px;
