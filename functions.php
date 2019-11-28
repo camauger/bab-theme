@@ -259,7 +259,7 @@ function kit($number, $name)
 
 	//**Les Kits */
 
-	$kitName = esc_html_e($name, 'christmas');
+	$kitName = $name;
 	$kitItemsId = 0;
 	$kitImage = 'https://res.cloudinary.com/prospection/image/upload/v1574865030/boiteabijoux/kit' . $number . '.png';
 
