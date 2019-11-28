@@ -303,7 +303,13 @@ function kit($number, $name)
 		$itemUrl = get_permalink($itemId);
 		$itemName = get_the_title($itemId);
 		// Est-ce que le produit est en stock?
-		$stock = get_stock_quantity($itemId);
+		global $product;
+    if ( ! $product->managing_stock() && ! $product->is_in_stock() ) {
+		$stock = 'YES';
+	}	else {
+		$stock = 'BOO';
+	}
+		
 
 		$kithtml .= '<div class="ball ball--small ball--empty">
     <a href="' . $itemUrl . '"><img src="' . $itemImage . '" alt="' . $itemName . '"></a>
