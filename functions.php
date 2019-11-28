@@ -337,7 +337,7 @@ function kitList()
 
 	$sliceNow = - (sizeof($kitList) - $slice);
 	$kitListFuture = array_slice($kitList, $slice);
-	$kitListNow = array_slice($kitList, $sliceNow);
+	$kitListNow = array_slice($kitList, $sliceNow, sizeof($kitList));
 
 	include 'page-modules/christmas-products';
 	foreach ($kitListNow as $kit) {
