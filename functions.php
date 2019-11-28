@@ -329,7 +329,7 @@ function kitList()
 
 	include 'page-modules/christmas-products';
 	foreach ($kitListNow as $kit) {
-		$kitListHtml .= kit('fr', $kit, $items);
+		$kitListHtml .= kit(1, '3 bagues couleurs');
 	}
 
 	foreach ($kitListFuture as $kit) {
