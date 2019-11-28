@@ -266,7 +266,7 @@ function kit($number, $name)
 	$kithtml = '<div class="christmas__row revealed">
 	<div class="date">
 		<div class="date__wrapper">
-			<span class="date__text">' . date('D, M') . '</span>
+			<span class="date__text">' . $number . ' décembre' . '</span>
 		</div>
 	</div>
 	<div class="balls">';
@@ -349,10 +349,8 @@ function kitList()
 
 	include 'page-modules/christmas-products';
 	foreach ($kitListNow as $kit) {
-		$name = $kitListNow[0];
 		$index = array_search($kit, $kitListNow);
-
-		$kitListHtml .= kit(($index + 1), $name);
+		$kitListHtml .= kit(($index + 1), $kitListNow[$index]);
 	}
 
 	$kitListHtml .= '<div class="christmas__row">
