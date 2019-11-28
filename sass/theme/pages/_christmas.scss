@@ -20,9 +20,40 @@
 	font-display: swap;
 }
 
+// Ball Decoration
+
+%ballDecoration {
+	@include media-breakpoint-up(md) {
+		content: "";
+		width: 50px;
+		height: 50px;
+		display: block;
+		position: relative;
+		background-repeat: no-repeat;
+	}
+}
+
+// Ball Shadow
+%shadowTemplate {
+	@include media-breakpoint-up(md) {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: radial-gradient(
+			circle at 50% 50%,
+			rgba(0, 0, 0, 0.4),
+			rgba(0, 0, 0, 0.1) 40%,
+			rgba(0, 0, 0, 0) 50%
+		);
+		//transform: rotateX(90deg) translateZ(220px);
+		z-index: -1;
+	}
+}
+
 main.christmas {
 	* {
-		transition: all 250ms ease-in-out;
+		transition: border 250ms ease-in-out;
+		transition: background 300ms ease-in-out;
 	}
 
 	a:hover {
@@ -37,14 +68,24 @@ main.christmas {
 			url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon3.png),
 			url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon4.png),
 			url(https://res.cloudinary.com/prospection/image/upload/v1574712718/boiteabijoux/flocon5.png),
+			url(https://res.cloudinary.com/prospection/image/upload/v1574712718/boiteabijoux/flocon6.png),
+			url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon1.png),
+			url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon2.png),
+			url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon3.png),
+			url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon4.png),
+			url(https://res.cloudinary.com/prospection/image/upload/v1574712718/boiteabijoux/flocon5.png),
 			url(https://res.cloudinary.com/prospection/image/upload/v1574712718/boiteabijoux/flocon6.png);
 		background-repeat: no-repeat;
-		background-position: right 35% bottom 45%, 25% 75%, left, right, top, bottom;
+		background-position: right 35% bottom 45%, 25% 75%, left, right, top, bottom,
+			right 35% bottom 45%, 25% 75%, left, right, top, bottom;
 	}
 }
 
 .christmas__header {
 	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	h1 {
 		text-align: center;
 		color: $primary;
@@ -191,19 +232,8 @@ main.christmas {
 	}
 
 	.ball__shadow {
-		@include media-breakpoint-up(md) {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			background: radial-gradient(
-				circle at 50% 50%,
-				rgba(0, 0, 0, 0.4),
-				rgba(0, 0, 0, 0.1) 40%,
-				rgba(0, 0, 0, 0) 50%
-			);
-			transform: rotateX(90deg) translateZ(220px);
-			z-index: -1;
-		}
+		@extend %shadowTemplate;
+		transform: rotateX(90deg) translateZ(220px);
 	}
 }
 
@@ -211,45 +241,40 @@ main.christmas {
 	&.ball--small {
 		&:hover {
 			&::after {
-				@include media-breakpoint-up(md) {
-					content: "";
-					background: url(https://res.cloudinary.com/prospection/image/upload/v1574872229/boiteabijoux/bout-jaune.png);
-					width: 50px;
-					height: 50px;
-					display: block;
-					position: relative;
-					background-repeat: no-repeat;
-                    margin-top: -345px;
-					margin-left: 130px;
-					transform: rotate(25deg);
-				}
-			}
-		}
-		&::after {
-			@include media-breakpoint-up(md) {
-				content: "";
-				background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
-				width: 50px;
-				height: 50px;
-				display: block;
-				position: relative;
-				background-repeat: no-repeat;
-                margin-top: -345px;
+				@extend %ballDecoration;
+				background: url(https://res.cloudinary.com/prospection/image/upload/v1574872229/boiteabijoux/bout-jaune.png);
+				margin-top: -345px;
 				margin-left: 130px;
 				transform: rotate(25deg);
 			}
+		}
+		&:nth-of-type(1):after {
+			@extend %ballDecoration;
+			background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
+			margin-top: -345px;
+			margin-left: 130px;
+			transform: rotate(25deg);
+        }
+        &:nth-of-type(1):after {
+			@extend %ballDecoration;
+			background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
+			margin-top: -345px;
+			margin-left: 130px;
+			transform: rotate(25deg);
+        }
+        &:nth-of-type(1):after {
+			@extend %ballDecoration;
+			background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
+			margin-top: -345px;
+			margin-left: 130px;
+			transform: rotate(25deg);
 		}
 	}
 	&.ball--big {
 		&:hover {
 			&::after {
-				content: "";
+				@extend %ballDecoration;
 				background: url(https://res.cloudinary.com/prospection/image/upload/v1574872229/boiteabijoux/bout-jaune.png);
-				width: 50px;
-				height: 50px;
-				display: block;
-				position: relative;
-				background-repeat: no-repeat;
 				margin-top: -385px;
 				margin-left: 155px;
 				transform: rotate(25deg);
@@ -257,13 +282,8 @@ main.christmas {
 		}
 
 		&::after {
-			content: "";
+			@extend %ballDecoration;
 			background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
-			width: 50px;
-			height: 50px;
-			display: block;
-			position: relative;
-			background-repeat: no-repeat;
 			margin-top: -385px;
 			margin-left: 155px;
 			transform: rotate(25deg);
@@ -287,7 +307,7 @@ main.christmas {
 		lighten($primary, 1%),
 		$primary
 	);
-	
+
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -295,31 +315,13 @@ main.christmas {
 	box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.4),
 		15px 15px 2px rgba(0, 0, 0, 0.02);
 	.ball__shadow {
-		@include media-breakpoint-up(md) {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			background: radial-gradient(
-				circle at 50% 50%,
-				rgba(0, 0, 0, 0.4),
-				rgba(0, 0, 0, 0.1) 40%,
-				rgba(0, 0, 0, 0) 50%
-			);
-			transform: rotateX(90deg) translateZ(-110px);
-			z-index: -1;
-		}
+		@extend %shadowTemplate;
+		transform: rotateX(90deg) translateZ(-110px);
 	}
 
-
 	&::after {
-		content: "";
+		@extend %ballDecoration;
 		background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
-
-		width: 50px;
-		height: 50px;
-		display: block;
-		position: relative;
-		background-repeat: no-repeat;
 		margin-top: -345px;
 		margin-left: 135px;
 		transform: rotate(25deg);
@@ -353,11 +355,12 @@ main.christmas {
 .kit__name {
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
 	color: $primary;
 	font-weight: bold;
 	margin-top: 20px;
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 	min-height: 100px;
 	&:hover {
 		color: $secondary;
@@ -368,5 +371,4 @@ main.christmas {
 
 .ball:hover {
 	border-color: $secondary;
-	
 }
