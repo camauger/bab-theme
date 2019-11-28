@@ -260,7 +260,7 @@ function kit($number, $name)
 	//**Les Kits */
 
 	$kitName = $name;
-	
+
 	if ($number < 10) {
 		$imageNumber = '0' . $number;
 	} else {
@@ -276,7 +276,7 @@ function kit($number, $name)
 		</div>
 	</div>
 	<div class="balls">';
-	
+
 	// Items
 
 	$kitItems = [
@@ -303,13 +303,12 @@ function kit($number, $name)
 		$itemUrl = get_permalink($itemId);
 		$itemName = get_the_title($itemId);
 		// Est-ce que le produit est en stock?
-		if ( ! $itemId->managing_stock() && ! $itemId->is_in_stock() ) {
-			$kithtml .= 'OUT OF STOCK';
-		} else {
-		$kithtml .= '<div class="ball ball--small ball--empty">
+		
+			$kithtml .= '<div class="ball ball--small ball--empty">
     <a href="' . $itemUrl . '"><img src="' . $itemImage . '" alt="' . $itemName . '"></a>
     <a class="kit__name kit--one" href="' . $itemUrl . '">' . $itemName . '</a><span class="ball__shadow"></span>
-</div>';}
+</div>';
+		
 	}
 	// Affichage de l'ensemble
 	$kithtml .= '</div>
