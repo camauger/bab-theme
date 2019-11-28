@@ -62,24 +62,41 @@ main.christmas {
 	padding: 30px;
 	// Background de flocons (multiple image background)
 	@include media-breakpoint-up(xl) {
-		background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon1.png),
-			url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon2.png),
-			url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon3.png),
-			url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon4.png),
-			url(https://res.cloudinary.com/prospection/image/upload/v1574712718/boiteabijoux/flocon5.png),
-			url(https://res.cloudinary.com/prospection/image/upload/v1574712718/boiteabijoux/flocon6.png),
-			url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon1.png),
-			url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon2.png),
-			url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon3.png),
-			url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon4.png),
-			url(https://res.cloudinary.com/prospection/image/upload/v1574712718/boiteabijoux/flocon5.png),
-			url(https://res.cloudinary.com/prospection/image/upload/v1574712718/boiteabijoux/flocon6.png),
-			url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon3.png);
+		background-image: '';
 		background-repeat: no-repeat;
 		background-position: 10% 5%, 30% 15%, 55% 35%, 40% 40%, 80% 20%, 35% 75%,
-			90% 60%, top, center, right, left, bottom, 100% 0%;
+            90% 60%, top, center, right, left, bottom, 100% 0%;
+            -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+            animation-name:snowflakes;
+            animation-duration: 4s;
+         
 	}
 }
+
+ /* Safari 4.0 - 8.0 */
+//  @-webkit-keyframes example {
+//     from {background-color: red;}
+//     to {background-color: yellow;}
+//   }
+  
+  /* Standard syntax */
+  @keyframes snowflakes {
+    from {background-image:'';}
+    to {background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon1.png),
+        url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon2.png),
+        url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon3.png),
+        url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon4.png),
+        url(https://res.cloudinary.com/prospection/image/upload/v1574712718/boiteabijoux/flocon5.png),
+        url(https://res.cloudinary.com/prospection/image/upload/v1574712718/boiteabijoux/flocon6.png),
+        url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon1.png),
+        url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon2.png),
+        url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon3.png),
+        url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon4.png),
+        url(https://res.cloudinary.com/prospection/image/upload/v1574712718/boiteabijoux/flocon5.png),
+        url(https://res.cloudinary.com/prospection/image/upload/v1574712718/boiteabijoux/flocon6.png),
+        url(https://res.cloudinary.com/prospection/image/upload/v1574712723/boiteabijoux/flocon3.png);}
+  }
 
 .christmas__header {
 	display: flex;
