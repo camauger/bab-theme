@@ -335,7 +335,7 @@ function kitList()
 	endif;
 
 
-	$sliceNow = sizeof($kitList) - $slice;
+	$sliceNow = - (sizeof($kitList) - $slice);
 	$kitListFuture = array_slice($kitList, $slice);
 	$kitListNow = array_slice($kitList, $sliceNow);
 
