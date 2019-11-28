@@ -276,7 +276,7 @@ function kit($number, $name)
 		</div>
 	</div>
 	<div class="balls">';
-	$kitUrl = '';
+	
 	// Items
 
 	$kitItems = [
@@ -292,23 +292,24 @@ function kit($number, $name)
 
 	// Le Kit
 	$kithtml .= '<div class="ball--first ball ball--big ball--empty">
-    <a href="' . $kitUrl . '"><img src="' . $kitImage . '" alt="' . $kitName . '"></a>
-    <a class="kit__name kit--big" href="' . $kitUrl . '">' . $kitName . '</a><span class="ball__shadow"></span>
+    <a><img src="' . $kitImage . '" alt="' . $kitName . '"></a>
+    <a class="kit__name kit--big">' . $kitName . '</a><span class="ball__shadow"></span>
 </div>';
 	// Les items appartenant au kit
 	foreach ($kitItems[$number] as $item) {
-
-		// Déclarations des variables en fonction de la langue
-		//  1 - itemName FR, 2 - itemName EN, 3 - itemImage, 4 - itemURl FR, 5 - itemUrl EN
+		// Déclarations des variables du prduit
 		$itemId = wc_get_product_id_by_sku($item);
 		$itemImage =  get_the_post_thumbnail_url($itemId);
 		$itemUrl = get_permalink($itemId);
 		$itemName = get_the_title($itemId);
-
+		// Est-ce que le produit est en stock?
+		if ( ! $itemId->managing_stock() && ! $itemId->is_in_stock() ) {
+			$kithtml .= 'OUT OF STOCK';
+		} else {
 		$kithtml .= '<div class="ball ball--small ball--empty">
     <a href="' . $itemUrl . '"><img src="' . $itemImage . '" alt="' . $itemName . '"></a>
     <a class="kit__name kit--one" href="' . $itemUrl . '">' . $itemName . '</a><span class="ball__shadow"></span>
-</div>';
+</div>';}
 	}
 	// Affichage de l'ensemble
 	$kithtml .= '</div>
@@ -371,7 +372,7 @@ function kitList()
 			<span class="ball--full__date--month">' . $month . '</span>
 			<span class="ball__shadow"></span>
 		</div>
-		<a class="kit__name" href="">' . $kit . '</a>
+		<a class="kit__name">' . $kit . '</a>
 	</div>';
 	};
 

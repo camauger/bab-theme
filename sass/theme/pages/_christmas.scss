@@ -130,7 +130,7 @@ main.christmas {
 .balls {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+    justify-content: flex-start;
 	align-items: center;
 	flex-basis: 100%;
 	@include media-breakpoint-up(xl) {
@@ -345,8 +345,12 @@ main.christmas {
 		position: relative;
 		background-repeat: no-repeat;
 		content: "";
-		background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
-		margin-top: -365px;
+        background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
+        margin-top: -330px;
+        @include media-breakpoint-up(xl) {
+            margin-top: -365px;
+        }
+		
 		margin-left: 135px;
 		transform: rotate(25deg);
 	}
