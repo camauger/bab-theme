@@ -40,14 +40,14 @@ $container = get_theme_mod('understrap_container_type');
             </div>
         </div> -->
 
-        <div class="christmas__row">
+        <!-- <div class="christmas__row">
             <div class="christmas__spacer">
 
             </div>
-            <div class="balls">
+            <div class="balls"> -->
                 <?php kitList(); ?>
-            </div>
-        </div>
+            <!-- </div>
+        </div> -->
 
     </main>
 
