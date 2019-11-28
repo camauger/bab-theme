@@ -414,8 +414,10 @@ main.christmas {
 // Hover Effects
 
 .ball--small:hover {
-	border-color: $secondary;
+	&.ball--empty {
+        border-color: $secondary;
 	.kit__name {
 		color: $secondary;
 	}
+    }
 }
