@@ -248,21 +248,21 @@ main.christmas {
 				transform: rotate(25deg);
 			}
 		}
-		&:nth-of-type(1):after {
+		&.ball--1::after {
 			@extend %ballDecoration;
 			background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
 			margin-top: -345px;
 			margin-left: 130px;
 			transform: rotate(25deg);
         }
-        &:nth-of-type(1):after {
+        &.ball--2::after {
 			@extend %ballDecoration;
 			background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
 			margin-top: -345px;
 			margin-left: 130px;
 			transform: rotate(25deg);
         }
-        &:nth-of-type(1):after {
+        &.ball--2::after {
 			@extend %ballDecoration;
 			background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
 			margin-top: -345px;

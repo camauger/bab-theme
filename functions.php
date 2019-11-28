@@ -305,7 +305,7 @@ function kit($number, $name)
 		$itemUrl = get_permalink($itemId);
 		$itemName = get_the_title($itemId);
 
-		$kithtml .= '<div class="ball ball--small ball--empty ball--one">
+		$kithtml .= '<div class="ball ball--small ball--empty ball--' . $kitItems[$number] . '">
     <a href="' . $itemUrl . '"><img src="' . $itemImage . '" alt="' . $itemName . '"></a>
     <a class="kit__name kit--one" href="' . $itemUrl . '">' . $itemName . '</a><span class="ball__shadow"></span>
 </div>';
