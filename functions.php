@@ -303,15 +303,14 @@ function kit($number, $name)
 		$itemUrl = get_permalink($itemId);
 		$itemName = get_the_title($itemId);
 		// Est-ce que le produit est en stock?
-		$stock = get_stock_status($itemId);
+		$stock = get_stock_quantity($itemId);
 
-			$kithtml .= '<div class="ball ball--small ball--empty">
+		$kithtml .= '<div class="ball ball--small ball--empty">
     <a href="' . $itemUrl . '"><img src="' . $itemImage . '" alt="' . $itemName . '"></a>
 	<a class="kit__name kit--one" href="' . $itemUrl . '">' . $itemName . '</a>
-	<span>' . $stock .  '</span>
+	<span>' . $stock . '</span>
 	<span class="ball__shadow"></span>
 </div>';
-		
 	}
 	// Affichage de l'ensemble
 	$kithtml .= '</div>
