@@ -203,6 +203,10 @@ main.christmas {
 		perspective-origin: top;
 	}
 	&.ball--big {
+		.ball__shadow {
+			@extend %shadowTemplate;
+			transform: rotateX(90deg) translateZ(240px);
+		}
 		border: 4px solid $primary;
 		@include media-breakpoint-down(sm) {
 			margin-bottom: 60px;
@@ -210,6 +214,10 @@ main.christmas {
 	}
 
 	&.ball--small {
+		.ball__shadow {
+			@extend %shadowTemplate;
+			transform: rotateX(90deg) translateZ(220px);
+		}
 		@include media-breakpoint-down(sm) {
 			display: flex;
 			flex-direction: row;
@@ -229,29 +237,23 @@ main.christmas {
 			}
 		}
 	}
-
-	.ball__shadow {
-		@extend %shadowTemplate;
-		transform: rotateX(90deg) translateZ(220px);
-	}
 }
 
-.ball--empty:nth-of-type(1){
-
+.ball--empty {
 	&.ball--small {
-        &::after {
-            content: "";
-        width: 50px;
-        height: 50px;
-        display: block;
-        position: relative;
-        background-repeat: no-repeat;
-        background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
-        margin-top: -345px;
-        margin-left: 130px;
-        transform: rotate(25deg);
-        }
-    }
+		&::after {
+			content: "";
+			width: 50px;
+			height: 50px;
+			display: block;
+			position: relative;
+			background-repeat: no-repeat;
+			background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
+			margin-top: -345px;
+			margin-left: 130px;
+			transform: rotate(25deg);
+		}
+	}
 }
 
 .ball--empty {
@@ -264,7 +266,7 @@ main.christmas {
 				position: relative;
 				background-repeat: no-repeat;
 				content: "";
-				background: url(https://res.cloudinary.com/prospection/image/upload/v1574872229/boiteabijoux/bout-jaune.png);
+				background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574872229/boiteabijoux/bout-jaune.png);
 				margin-top: -345px;
 				margin-left: 130px;
 				transform: rotate(25deg);
@@ -280,7 +282,7 @@ main.christmas {
 				position: relative;
 				background-repeat: no-repeat;
 				content: "";
-				background: url(https://res.cloudinary.com/prospection/image/upload/v1574872229/boiteabijoux/bout-jaune.png);
+				background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574872229/boiteabijoux/bout-jaune.png);
 				margin-top: -385px;
 				margin-left: 155px;
 				transform: rotate(25deg);
@@ -294,7 +296,7 @@ main.christmas {
 			position: relative;
 			background-repeat: no-repeat;
 			content: "";
-			background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
+			background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
 			margin-top: -385px;
 			margin-left: 155px;
 			transform: rotate(25deg);
@@ -337,7 +339,7 @@ main.christmas {
 		position: relative;
 		background-repeat: no-repeat;
 		content: "";
-		background: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
+		background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
 		margin-top: -345px;
 		margin-left: 135px;
 		transform: rotate(25deg);
