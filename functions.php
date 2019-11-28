@@ -252,11 +252,10 @@ function collectionCatEn($catName, $catSlug, $imgSlug)
 //**
 // Christmas Products (Kits)
 // */
-function kit($number, $name)
+function kit($number)
 {
 
 	// Déclarations des variables de kit
-
 	//**Les Kits */
 
 	$kitName = $name;
@@ -318,9 +317,7 @@ function kit($number, $name)
 			$kithtml .= '<div class="ball ball--small ball--empty">
     <a href="' . $itemUrl . '"><img src="' . $itemImage . '" alt="' . $itemName . '"></a>
 	<a class="kit__name kit--one" href="' . $itemUrl . '">' . $itemName . '</a>
-	
-	<span class="ball__shadow"></span>
-</div>';
+	<span class="ball__shadow"></span></div>';
 		}
 	}
 	// Affichage de l'ensemble
@@ -353,7 +350,7 @@ function kitList()
 	if ($todayMonth == 12) {
 		$slice = $todayDay;
 	} else {
-		$slice = 20;
+		$slice = 1;
 	};
 
 	$month = '';
@@ -366,7 +363,7 @@ function kitList()
 	$kitListFuture = array_slice($kitList, $slice);
 	$kitListNow = array_slice($kitList, 0, $slice);
 
-	include 'page-modules/christmas-products';
+	//include 'page-modules/christmas-products';
 	foreach ($kitListNow as $kit) {
 		$index = array_search($kit, $kitListNow);
 		$kitListHtml .= kit(($index + 1), $kitListNow[$index]);
