@@ -363,7 +363,10 @@ function kitList()
 	echo $kitListHtml;
 
 	echo "Today is " . date("d-m");
-	echo "kitlist =>" . $kitList;
-	echo "kitlistfuture =>" . $kitListFuture;
-	echo "kitlistnow =>" . $kitListNow;
+	echo "kitlist =>";
+	echo '<pre>'; print_r($kitList); echo '</pre>';
+	echo "kitlistfuture =>" ;
+	echo '<pre>'; print_r($kitListFuture); echo '</pre>';
+	echo "kitlistnow =>";
+	echo '<pre>'; print_r($kitListNow); echo '</pre>';
 }
