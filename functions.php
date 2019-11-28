@@ -286,8 +286,45 @@ function kit($number, $name)
 			'B6145',
 			'B6764',
 			'B6889'
+		],
+		[
+			'B4176',
+			'B6655',
+			'B6856'
+		],
+		[
+			'B6116',
+			'B4624',
+			'B6838'
+		],
+		['B5780', 'B6020', 'B6487'],
+		['B6110', 'B6657', 'B6772'],
+		['B6413', 'B6078', 'B6174'],
+		['B6432', 'B6571', 'B3197'],
+		['B6641', 'B6706', 'B6766'],
+		['B5202', 'B6334', 'B6565'],
+		['B6473', 'B5705', 'B4017'],
+		['B6159', 'B3615', 'B6625'],
+		['B6216', 'B6276', 'B6598'],
+		['B6055', 'B6553', 'B6261'],
+		['B3100', 'B6608', 'B6609'],
+		['B6530', 'B3616', 'B6771'],
+		['B4715', 'B6019', 'B6492'],
+		[
+			'B5816',
+			'B6631',
+			'B6078'
+		],
+		[
+			'B6146',
+			'B6831',
+			'B5834'
+		],
+		[
+			'C3127',
+			'C3132',
+			'B6437'
 		]
-
 	];
 
 	// Le Kit
@@ -305,17 +342,14 @@ function kit($number, $name)
 		// Est-ce que le produit est en stock?
 		$product = wc_get_product($itemId);
 		if (!$product->managing_stock() && !$product->is_in_stock()) {
+			// Si le produit n'est pas en stock, affichage d'une boule pleine
 			$kithtml .= '<div class="ball ball--small ball--full">
 			<a>Ce produit n\'est plus disponible</a>
 			<a class="kit__name kit--one" ></a>
 			<span class="ball__shadow"></span>
 		</div>';
-
-		 } else {
-
-
-
-
+		} else {
+			// Si le produit est disponible, l'afficher
 			$kithtml .= '<div class="ball ball--small ball--empty">
     <a href="' . $itemUrl . '"><img src="' . $itemImage . '" alt="' . $itemName . '"></a>
 	<a class="kit__name kit--one" href="' . $itemUrl . '">' . $itemName . '</a>
@@ -354,7 +388,7 @@ function kitList()
 	if ($todayMonth == 12) {
 		$slice = $todayDay;
 	} else {
-		$slice = 2;
+		$slice = 20;
 	};
 
 	$month = '';
@@ -394,16 +428,17 @@ function kitList()
 
 	echo $kitListHtml;
 
-	echo "kitlist =>";
-	echo '<pre>';
-	print_r($kitList);
-	echo '</pre>';
-	echo "kitlistfuture =>";
-	echo '<pre>';
-	print_r($kitListFuture);
-	echo '</pre>';
-	echo "kitlistnow =>";
-	echo '<pre>';
-	print_r($kitListNow);
-	echo '</pre>';
+	// Code de tests
+	// echo "kitlist =>";
+	// echo '<pre>';
+	// print_r($kitList);
+	// echo '</pre>';
+	// echo "kitlistfuture =>";
+	// echo '<pre>';
+	// print_r($kitListFuture);
+	// echo '</pre>';
+	// echo "kitlistnow =>";
+	// echo '<pre>';
+	// print_r($kitListNow);
+	// echo '</pre>';
 }
