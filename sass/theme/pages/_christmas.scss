@@ -406,18 +406,15 @@ main.christmas {
 	@include media-breakpoint-down(sm) {
 		padding-left: 10px;
 	}
-	&:hover {
-		color: $secondary;
-	}
 }
 
 // Hover Effects
 
 .ball--small:hover {
 	&.ball--empty {
-        border-color: $secondary;
-	.kit__name {
-		color: $secondary;
+		border-color: $secondary;
+		.kit__name {
+			color: $secondary;
+		}
 	}
-    }
 }
