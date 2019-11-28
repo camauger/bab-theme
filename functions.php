@@ -486,9 +486,8 @@ function kitList()
 		$itemImage =  get_the_post_thumbnail_url($itemId);
 		$itemUrl = get_permalink($itemId);
 		$itemName = get_the_title($itemId);
-		echo '<pre>';
 		echo $itemName;
-		echo '</pre>';
+		echo '<br/>';
 	}
 
 	// Code de tests
