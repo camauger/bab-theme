@@ -274,8 +274,8 @@ function kit($number, $name)
 	<div class="balls">';
 	$kitUrl = '';
 
-	$kitItems = [['B6144','B6693','B3076']];
-		
+	$kitItems = [['B6144', 'B6693', 'B3076']];
+
 	// Le Kit
 	$kithtml .= '<div class="ball--first ball ball--big ball--empty">
     <a href="' . $kitUrl . '"><img src="' . $kitImage . '" alt="' . $kitName . '"></a>
@@ -318,13 +318,23 @@ function kitList()
 		'Ensemble perles',	'Bijoux antiques',	'Fantaisie 3',	'3 colliers',	'Bagues diamants',	'Avis aux Pères noël'
 	];
 
+	// Vérifier que nous sommes bien en décembre pour passer la bonne date
+	// Si nous ne sommes pas en décembre, le premier rang sera révélé (slice = 1)
+	$todayDay = date("d");
+	$todayMonth = date("m");
+	if ($todayMonth != 12) {
+		$slice = $todayDay;
+	} else {
+		$slice = 1;
+	};
+
 	$month = '';
 	if (ICL_LANGUAGE_CODE == 'en') :
 		$month = 'december';
 	elseif (ICL_LANGUAGE_CODE == 'fr') :
 		$month = 'décembre';
 	endif;
-	$slice = 1;
+
 	$sliceNow = sizeof($kitList) - $slice;
 	$kitListFuture = array_slice($kitList, $slice);
 	$kitListNow = array_slice($kitList, $sliceNow);
@@ -336,7 +346,6 @@ function kitList()
 
 	$kitListHtml .= '<div class="christmas__row">
 	<div class="christmas__spacer">
-
 	</div>
 	<div class="balls">';
 
