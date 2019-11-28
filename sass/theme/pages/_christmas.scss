@@ -211,7 +211,7 @@ main.christmas {
 			transform: rotateX(90deg) translateZ(250px);
 		}
 		border: 4px solid $primary;
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(lg) {
 			margin-bottom: 60px;
 		}
 	}
@@ -221,7 +221,7 @@ main.christmas {
 			@extend %shadowTemplate;
 			transform: rotateX(90deg) translateZ(240px);
 		}
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(lg) {
 			display: flex;
 			flex-direction: row;
 			width: 100%;
@@ -401,7 +401,7 @@ main.christmas {
 	align-items: flex-start;
 	justify-content: center;
 	min-height: 100px;
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(lg) {
 		align-items: center;
 		padding-left: 10px;
 		&.kit--big {
