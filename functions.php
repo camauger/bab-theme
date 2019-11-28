@@ -261,7 +261,13 @@ function kit($number, $name)
 
 	$kitName = $name;
 	// $kitItemsId = $number - 1;
-	$kitImage = 'https://res.cloudinary.com/prospection/image/upload/v1574865030/boiteabijoux/kit' . $number . '.png';
+	if ($number < 10) {
+		$imageNumber = '0' . $number;
+	} else {
+		$imageNumber = $number;
+	}
+
+	$kitImage = get_template_directory_uri() . '/images/kits/' . $imageNumber . '.png';
 
 	$kithtml = '<div class="christmas__row revealed">
 	<div class="date">
