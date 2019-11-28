@@ -359,9 +359,11 @@ function kitList()
 
 	$kitListHtml .= '</div>
 	</div>';
-	echo "Today is " . date("d-m");
-	echo $kitList;
+	
 	echo $kitListHtml;
-	echo $kitListFuture;
-	echo $kitListNow;
+
+	echo "Today is " . date("d-m");
+	echo "kitlist =>" . $kitList;
+	echo "kitlistfuture =>" . $kitListFuture;
+	echo "kitlistnow =>" . $kitListNow;
 }
