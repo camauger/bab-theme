@@ -440,7 +440,7 @@ function kitList()
 	if ($todayMonth == 12) {
 		$slice = $todayDay;
 	} else {
-		$slice = 6;
+		$slice = 7;
 	};
 
 	$month = '';
@@ -486,7 +486,7 @@ function kitList()
 		$itemImage =  get_the_post_thumbnail_url($itemId);
 		$itemUrl = get_permalink($itemId);
 		$itemName = get_the_title($itemId);
-		echo $itemName;
+		echo '<p>' . $itemName . '</p>';
 		echo '<br/>';
 	}
 
