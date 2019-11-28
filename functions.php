@@ -260,29 +260,29 @@ function kit($number, $name)
 	//**Les Kits */
 
 	$kitName = esc_html_e($name, 'christmas');
-	$kitItems = 'items' . $number;
+	$kitItemsId = ($number - 1);
 	$kitImage = 'https://res.cloudinary.com/prospection/image/upload/v1574865030/boiteabijoux/kit' . $number . '.png';
 
-	// 1 - name FR 2 - name EN - 3 - image 4 - url fr - 5 url en
-	$kithtml = '';
-	$kitName = '';
+	$kithtml = '<div class="christmas__row revealed">
+	<div class="date">
+		<div class="date__wrapper">
+			<span class="date__text">1er décembre</span>
+		</div>
+	</div>
+	<div class="balls">';
 	$kitUrl = '';
 
-	// Déclarations des variables en fonction de la langue
-	// if ($lang == 'en') :
-	// 	$kitName = esc_html($kit[1]);
-	// 	$kitUrl = esc_html($kit[4]);
-	// elseif ($lang == 'fr') :
-	// 	$kitName = esc_html($kit[0]);
-	// 	$kitUrl = esc_html($kit[3]);
-	// endif;
+	$kitItems = ['B6144','B6693','B3076'];
+		
+	
+
 	// Le Kit
-	$kithtml = '<div class="ball--first ball ball--big ball--empty">
+	$kithtml .= '<div class="ball--first ball ball--big ball--empty">
     <a href="' . $kitUrl . '"><img src="' . $kitImage . '" alt="' . $kitName . '"></a>
     <a class="kit__name kit--big" href="' . $kitUrl . '">' . $kitName . '</a><span class="ball__shadow"></span>
 </div>';
 	// Les items appartenant au kit
-	foreach ($kitItems as $item) {
+	foreach ($kitItems[$kitItemsId] as $item) {
 		// Déclarations des variables en fonction de la langue
 		//  1 - itemName FR, 2 - itemName EN, 3 - itemImage, 4 - itemURl FR, 5 - itemUrl EN
 		$itemId = wc_get_product_id_by_sku($item);
@@ -296,6 +296,8 @@ function kit($number, $name)
 </div>';
 	}
 	// Affichage de l'ensemble
+	$kithtml .= '</div>
+	</div>';
 	echo $kithtml;
 };
 

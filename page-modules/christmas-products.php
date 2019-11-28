@@ -9,10 +9,6 @@ $kit = [
     ''
 ];
 
-
-
-
-
 // Déclarations des produits
 //  1 - itemName FR, 2 - itemName EN, 3 - itemImage, 4 - itemURl FR, 5 - itemUrl EN
 //
