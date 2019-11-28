@@ -278,106 +278,7 @@ function kit($number, $name)
 	<div class="balls__revealed">';
 
 	// Items
-
-	$kitItems = [
-		['testing value'],
-		['B6144', 'B6693', 'B3076'],
-		[
-			'B6145',
-			'B6764',
-			'B6889'
-		],
-		[
-			'B4176',
-			'B6655',
-			'B6856'
-		],
-		[
-			'B6116',
-			'B4624',
-			'B6838'
-		],
-		[
-			'B5780',
-			'B6020',
-			'B6487'
-		],
-		[
-			'B6110',
-			'B6657',
-			'B6772'
-		],
-		[
-			'B6413',
-			'B6078',
-			'B6079'
-		],
-		[
-			'B6432',
-			'B6571',
-			'B3197'
-		],
-		[
-			'B6641',
-			'B6706',
-			'B6766'
-		],
-		[
-			'B5202',
-			'B6334',
-			'B6565'
-		],
-		[
-			'B6473',
-			'B5705',
-			'B4017'
-		],
-		[
-			'B6159',
-			'B3615',
-			'B6625'
-		],
-		[
-			'B6216',
-			'B6276',
-			'B6598'
-		],
-		[
-			'B6055',
-			'B6553',
-			'B6261'
-		],
-		[
-			'B3100',
-			'B6608',
-			'B6609'
-		],
-		[
-			'B6530',
-			'B3616',
-			'B6771'
-		],
-		[
-			'B4715',
-			'B6019',
-			'B6492'
-		],
-		[
-			'B5816',
-			'B6631',
-			'B6078'
-		],
-		[
-			'B6146',
-			'B6831',
-			'B5834'
-		],
-		[
-			'C3127',
-			'C3132',
-			'B6437'
-		]
-	];
+	include 'page-modules/christmas-products.php';
 
 	// Le Kit
 	$kithtml .= '<div class="ball--first ball ball--big ball--empty">
@@ -385,9 +286,11 @@ function kit($number, $name)
     <a class="kit__name kit--big">' . $kitName . '</a><span class="ball__shadow"></span>
 </div>';
 	// Les items appartenant au kit
-	foreach ($kitItems[$number] as $item) {
+	$theItems = array_slice($kits[$number], 0, 1);
+
+	foreach ($theItems as $item) {
 		// Déclarations des variables du prduit
-		if (wc_get_product_id_by_sku($item) != null ){ 
+		if (wc_get_product_id_by_sku($item) != null) {
 			$itemId = wc_get_product_id_by_sku($item);
 		} else {
 			// Si le sku n'existe pas, affichage d'une boule pleine
@@ -397,7 +300,7 @@ function kit($number, $name)
 			<span class="ball__shadow"></span>
 		</div>';
 		}
-		
+
 		$itemImage =  get_the_post_thumbnail_url($itemId);
 		$itemUrl = get_permalink($itemId);
 		$itemName = get_the_title($itemId);
@@ -490,15 +393,7 @@ function kitList()
 
 	echo $kitListHtml;
 
-	// Kit Items Test
-	foreach ($kitItems as $item) {
-		$itemId = wc_get_product_id_by_sku($item);
-		$itemImage =  get_the_post_thumbnail_url($itemId);
-		$itemUrl = get_permalink($itemId);
-		$itemName = get_the_title($itemId);
-		echo '<p>' . $itemName . '</p>';
-		echo '<br/>';
-	}
+
 
 	// Code de tests
 	echo "kitlist =>";
