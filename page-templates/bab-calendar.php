@@ -29,25 +29,9 @@ $container = get_theme_mod('understrap_container_type');
             <h1>Vedettes de Noël</h1>
         </div>
 
-        <!-- <div class="christmas__row revealed">
-            <div class="date">
-                <div class="date__wrapper">
-                    <span class="date__text">1er décembre</span>
-                </div>
-            </div>
-            <div class="balls">
-               
-            </div>
-        </div> -->
 
-        <!-- <div class="christmas__row">
-            <div class="christmas__spacer">
-
-            </div>
-            <div class="balls"> -->
                 <?php kitList(); ?>
-            <!-- </div>
-        </div> -->
+            
 
     </main>
 

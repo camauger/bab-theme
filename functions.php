@@ -261,12 +261,14 @@ function kit($number, $name)
 
 	$kitName = $name;
 	$kitItemsId = 0;
+
+
 	$kitImage = 'https://res.cloudinary.com/prospection/image/upload/v1574865030/boiteabijoux/kit' . $number . '.png';
 
 	$kithtml = '<div class="christmas__row revealed">
 	<div class="date">
 		<div class="date__wrapper">
-			<span class="date__text">1er décembre</span>
+			<span class="date__text">' . date('D, M') . '</span>
 		</div>
 	</div>
 	<div class="balls">';
@@ -311,9 +313,9 @@ function kitList()
 	$kitListHtml = '';
 	$kitList = [
 		'3 bagues couleurs',
-		'Colliers argent',	'B.O.',	'3 bracelets or',	'Fantaisie',	'Colliers perles',	'Bagues argent',
-		'Bagues alliance',	'Pour homme',	'Collier/pendentif',	'Fantaisie',	'Camées',	'3 bracelets argent',	'3 bagues bleues',
-		'Ensemble perles',	'Bijoux antiques',	'Fantaisie',	'3 colliers',	'Bagues diamants',	'Avis aux Pères noël'
+		'Colliers argent',	'B.O.',	'3 bracelets or',	'Fantaisie 1',	'Colliers perles',	'Bagues argent',
+		'Bagues alliance',	'Pour homme',	'Collier/pendentif',	'Fantaisie 2',	'Camées',	'3 bracelets argent',	'3 bagues bleues',
+		'Ensemble perles',	'Bijoux antiques',	'Fantaisie 3',	'3 colliers',	'Bagues diamants',	'Avis aux Pères noël'
 	];
 
 	$month = '';
@@ -351,5 +353,6 @@ function kitList()
 
 	$kitListHtml .= '</div>
 	</div>';
+	echo "Today is " . date("d");
 	echo $kitListHtml;
 }
