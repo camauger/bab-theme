@@ -334,13 +334,12 @@ function kitList()
 		$month = 'décembre';
 	endif;
 
-
-	$sliceNow = - (sizeof($kitList) - $slice);
 	$kitListFuture = array_slice($kitList, $slice);
 	$kitListNow = array_slice($kitList, 0, $slice);
 
 	include 'page-modules/christmas-products';
 	foreach ($kitListNow as $kit) {
+		echo "this is kit: $kit";
 		$kitListHtml .= kit(1, $kitListNow[0]);
 	}
 
@@ -365,8 +364,6 @@ function kitList()
 	
 	echo $kitListHtml;
 
-	echo "Today is " . date("d-m");
-	echo "SliceNow =>" . $sliceNow;
 	echo "kitlist =>";
 	echo '<pre>'; print_r($kitList); echo '</pre>';
 	echo "kitlistfuture =>" ;
