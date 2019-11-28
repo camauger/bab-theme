@@ -260,7 +260,7 @@ function kit($number, $name)
 	//**Les Kits */
 
 	$kitName = $name;
-	// $kitItemsId = $number - 1;
+	
 	if ($number < 10) {
 		$imageNumber = '0' . $number;
 	} else {

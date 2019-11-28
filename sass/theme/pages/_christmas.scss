@@ -201,7 +201,7 @@ main.christmas {
 				rgba(0, 0, 0, 0.1) 40%,
 				rgba(0, 0, 0, 0) 50%
 			);
-			transform: rotateX(90deg) translateZ(170px);
+			transform: rotateX(90deg) translateZ(220px);
 			z-index: -1;
 		}
 	}
@@ -219,7 +219,7 @@ main.christmas {
 					display: block;
 					position: relative;
 					background-repeat: no-repeat;
-					margin-top: -295px;
+                    margin-top: -345px;
 					margin-left: 130px;
 					transform: rotate(25deg);
 				}
@@ -234,7 +234,7 @@ main.christmas {
 				display: block;
 				position: relative;
 				background-repeat: no-repeat;
-				margin-top: -295px;
+                margin-top: -345px;
 				margin-left: 130px;
 				transform: rotate(25deg);
 			}
@@ -250,7 +250,7 @@ main.christmas {
 				display: block;
 				position: relative;
 				background-repeat: no-repeat;
-				margin-top: -335px;
+				margin-top: -385px;
 				margin-left: 155px;
 				transform: rotate(25deg);
 			}
@@ -264,7 +264,7 @@ main.christmas {
 			display: block;
 			position: relative;
 			background-repeat: no-repeat;
-			margin-top: -335px;
+			margin-top: -385px;
 			margin-left: 155px;
 			transform: rotate(25deg);
 		}
@@ -287,13 +287,7 @@ main.christmas {
 		lighten($primary, 1%),
 		$primary
 	);
-	// &:hover {
-	// 	background: radial-gradient(
-	// 		circle at 100px 100px,
-	// 		lighten($secondary, 1%),
-	// 		$secondary
-	// 	);
-	// }
+	
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -315,22 +309,7 @@ main.christmas {
 			z-index: -1;
 		}
 	}
-	&:hover {
-		&::after {
-			content: "";
 
-			background: url(https://res.cloudinary.com/prospection/image/upload/v1574872229/boiteabijoux/bout-jaune.png);
-
-			width: 50px;
-			height: 50px;
-			display: block;
-			position: relative;
-			background-repeat: no-repeat;
-			margin-top: -295px;
-			margin-left: 135px;
-			transform: rotate(25deg);
-		}
-	}
 
 	&::after {
 		content: "";
@@ -341,7 +320,7 @@ main.christmas {
 		display: block;
 		position: relative;
 		background-repeat: no-repeat;
-		margin-top: -295px;
+		margin-top: -345px;
 		margin-left: 135px;
 		transform: rotate(25deg);
 	}
@@ -372,15 +351,14 @@ main.christmas {
 }
 
 .kit__name {
-	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 	color: $primary;
 	font-weight: bold;
-	text-align: center;
 	margin-top: 20px;
-	display: flex;
-	min-height: 50px;
+    display: flex;
+    justify-content: center;
+	min-height: 100px;
 	&:hover {
 		color: $secondary;
 	}
@@ -390,5 +368,5 @@ main.christmas {
 
 .ball:hover {
 	border-color: $secondary;
-	//background-color: $secondary;
+	
 }
