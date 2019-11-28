@@ -257,8 +257,8 @@ function kit($number)
 
 	// Déclarations des variables de kit
 	//**Les Kits */
-
-	$kitName = $name;
+	include 'page-modules/christmas-products.php';
+	$kitName = $kits[$number][0];
 
 	if ($number < 10) {
 		$imageNumber = '0' . $number;
@@ -277,7 +277,7 @@ function kit($number)
 	<div class="balls__revealed">';
 
 	// Items
-	include 'page-modules/christmas-products.php';
+	
 
 	// Le Kit
 	$kithtml .= '<div class="ball--first ball ball--big ball--empty">
@@ -286,6 +286,7 @@ function kit($number)
 </div>';
 	// Les items appartenant au kit
 	$theItems = array_slice($kits[$number], 0, 1);
+
 
 	foreach ($theItems as $item) {
 		// Déclarations des variables du prduit
