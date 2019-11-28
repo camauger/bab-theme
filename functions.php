@@ -260,7 +260,7 @@ function kit($number, $name)
 	//**Les Kits */
 
 	$kitName = $name;
-	$kitItemsId = 0;
+	// $kitItemsId = $number - 1;
 	$kitImage = 'https://res.cloudinary.com/prospection/image/upload/v1574865030/boiteabijoux/kit' . $number . '.png';
 
 	$kithtml = '<div class="christmas__row revealed">
@@ -271,8 +271,18 @@ function kit($number, $name)
 	</div>
 	<div class="balls">';
 	$kitUrl = '';
+	// Items
 
-	$kitItems = [['B6144', 'B6693', 'B3076']];
+	$kitItems = [
+		['testing value'],
+		['B6144', 'B6693', 'B3076'],
+		[
+			'B6145',
+			'B6764',
+			'B6889'
+		]
+
+	];
 
 	// Le Kit
 	$kithtml .= '<div class="ball--first ball ball--big ball--empty">
@@ -280,8 +290,8 @@ function kit($number, $name)
     <a class="kit__name kit--big" href="' . $kitUrl . '">' . $kitName . '</a><span class="ball__shadow"></span>
 </div>';
 	// Les items appartenant au kit
-	foreach ($kitItems[$kitItemsId] as $item) {
-		
+	foreach ($kitItems[$number] as $item) {
+
 		// Déclarations des variables en fonction de la langue
 		//  1 - itemName FR, 2 - itemName EN, 3 - itemImage, 4 - itemURl FR, 5 - itemUrl EN
 		$itemId = wc_get_product_id_by_sku($item);
@@ -320,11 +330,11 @@ function kitList()
 	// Si nous ne sommes pas en décembre, le premier rang sera révélé (slice = 1)
 	$todayDay = date("d");
 	$todayMonth = date("m");
-	
+
 	if ($todayMonth == 12) {
 		$slice = $todayDay;
 	} else {
-		$slice = 1;
+		$slice = 2;
 	};
 
 	$month = '';
@@ -339,9 +349,10 @@ function kitList()
 
 	include 'page-modules/christmas-products';
 	foreach ($kitListNow as $kit) {
-		echo "this is kit: $kit";
-		echo "this is kit index:" . array_search($kit, $kitListNow);
-		$kitListHtml .= kit(1, $kitListNow[0]);
+		$name = $kitListNow[0];
+		$index = array_search($kit, $kitListNow);
+
+		$kitListHtml .= kit(($index + 1), $name);
 	}
 
 	$kitListHtml .= '<div class="christmas__row">
@@ -362,13 +373,19 @@ function kitList()
 
 	$kitListHtml .= '</div>
 	</div>';
-	
+
 	echo $kitListHtml;
 
 	echo "kitlist =>";
-	echo '<pre>'; print_r($kitList); echo '</pre>';
-	echo "kitlistfuture =>" ;
-	echo '<pre>'; print_r($kitListFuture); echo '</pre>';
+	echo '<pre>';
+	print_r($kitList);
+	echo '</pre>';
+	echo "kitlistfuture =>";
+	echo '<pre>';
+	print_r($kitListFuture);
+	echo '</pre>';
 	echo "kitlistnow =>";
-	echo '<pre>'; print_r($kitListNow); echo '</pre>';
+	echo '<pre>';
+	print_r($kitListNow);
+	echo '</pre>';
 }
