@@ -338,7 +338,7 @@ function kitList()
 
 	include 'page-modules/christmas-products';
 	foreach ($kitListNow as $kit) {
-		$kitListHtml .= kit(1, $kitListNow[$kit]);
+		$kitListHtml .= kit(1, $kitListNow[0]);
 	}
 
 	$kitListHtml .= '<div class="christmas__row">
