@@ -305,18 +305,24 @@ function kit($number, $name)
 		// Est-ce que le produit est en stock?
 		$product = wc_get_product($itemId);
 		if (!$product->managing_stock() && !$product->is_in_stock()) {
-			$stock = 'YES';
-		} else {
-			$stock = 'BOO';
-		}
+			$kithtml .= '<div class="ball ball--small ball--full">
+			<a>Ce produit n\'est plus disponible</a>
+			<a class="kit__name kit--one" ></a>
+			<span class="ball__shadow"></span>
+		</div>';
+
+		 } else {
 
 
-		$kithtml .= '<div class="ball ball--small ball--empty">
+
+
+			$kithtml .= '<div class="ball ball--small ball--empty">
     <a href="' . $itemUrl . '"><img src="' . $itemImage . '" alt="' . $itemName . '"></a>
 	<a class="kit__name kit--one" href="' . $itemUrl . '">' . $itemName . '</a>
-	<span>' . $stock . '</span>
+	
 	<span class="ball__shadow"></span>
 </div>';
+		}
 	}
 	// Affichage de l'ensemble
 	$kithtml .= '</div>
