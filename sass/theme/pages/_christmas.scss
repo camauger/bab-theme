@@ -281,20 +281,20 @@ main.christmas {
 		}
 	}
 	&.ball--big {
-		&:hover {
-			&::after {
-				width: 50px;
-				height: 50px;
-				display: block;
-				position: relative;
-				background-repeat: no-repeat;
-				content: "";
-				background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574872229/boiteabijoux/bout-jaune.png);
-				margin-top: -385px;
-				margin-left: 155px;
-				transform: rotate(25deg);
-			}
-		}
+		// &:hover {
+		// 	&::after {
+		// 		width: 50px;
+		// 		height: 50px;
+		// 		display: block;
+		// 		position: relative;
+		// 		background-repeat: no-repeat;
+		// 		content: "";
+		// 		background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574872229/boiteabijoux/bout-jaune.png);
+		// 		margin-top: -385px;
+		// 		margin-left: 155px;
+		// 		transform: rotate(25deg);
+		// 	}
+		// }
 
 		&::after {
 			width: 50px;
@@ -346,7 +346,7 @@ main.christmas {
 		background-repeat: no-repeat;
 		content: "";
 		background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
-		margin-top: -345px;
+		margin-top: -365px;
 		margin-left: 135px;
 		transform: rotate(25deg);
 	}
@@ -397,7 +397,6 @@ main.christmas {
 	margin-right: auto;
 	text-align: center;
 	color: $primary;
-	font-weight: bold;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
