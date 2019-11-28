@@ -340,7 +340,7 @@ function kitList()
 	include 'page-modules/christmas-products';
 	foreach ($kitListNow as $kit) {
 		echo "this is kit: $kit";
-		echo "this is kit index:" . $kit[0];
+		echo "this is kit index:" . array_search($kit, $kitListNow);
 		$kitListHtml .= kit(1, $kitListNow[0]);
 	}
 
