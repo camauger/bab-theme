@@ -321,9 +321,9 @@ function kitList()
 	$todayDay = date("d");
 	$todayMonth = date("m");
 	$slice = 1;
-	// if ($todayMonth != 12) {
-	// 	$slice = $todayDay;
-	// };
+	if ($todayMonth != 12) {
+		$slice = $todayDay;
+	};
 
 	$month = '';
 	if (ICL_LANGUAGE_CODE == 'en') :
@@ -331,8 +331,8 @@ function kitList()
 	elseif (ICL_LANGUAGE_CODE == 'fr') :
 		$month = 'décembre';
 	endif;
-
-	$sliceNow = sizeof($kitList) - $slice;
+	$sliceNow = $todayDay;
+	//$sliceNow = sizeof($kitList) - $slice;
 	$kitListFuture = array_slice($kitList, $slice);
 	$kitListNow = array_slice($kitList, $sliceNow);
 
@@ -363,6 +363,7 @@ function kitList()
 	echo $kitListHtml;
 
 	echo "Today is " . date("d-m");
+	echo "SliceNow =>" . $sliceNow;
 	echo "kitlist =>";
 	echo '<pre>'; print_r($kitList); echo '</pre>';
 	echo "kitlistfuture =>" ;
