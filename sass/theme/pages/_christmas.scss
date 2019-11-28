@@ -127,10 +127,18 @@ main.christmas {
 	}
 }
 
+
+.balls {
+    justify-content: flex-start;
+}
+.balls__revealed {
+    justify-content: space-between;
+}
+
+.balls__revealed,
 .balls {
 	display: flex;
 	flex-direction: column;
-    justify-content: flex-start;
 	align-items: center;
 	flex-basis: 100%;
 	@include media-breakpoint-up(xl) {

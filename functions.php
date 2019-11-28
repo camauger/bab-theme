@@ -275,7 +275,7 @@ function kit($number, $name)
 			<span class="date__text">' . $number . ' décembre' . '</span>
 		</div>
 	</div>
-	<div class="balls">';
+	<div class="balls__revealed">';
 
 	// Items
 
@@ -304,9 +304,12 @@ function kit($number, $name)
 		$itemName = get_the_title($itemId);
 		// Est-ce que le produit est en stock?
 		
+
 			$kithtml .= '<div class="ball ball--small ball--empty">
     <a href="' . $itemUrl . '"><img src="' . $itemImage . '" alt="' . $itemName . '"></a>
-    <a class="kit__name kit--one" href="' . $itemUrl . '">' . $itemName . '</a><span class="ball__shadow"></span>
+	<a class="kit__name kit--one" href="' . $itemUrl . '">' . $itemName . '</a>
+	<span>' . get_stock_quantity($itemId) . '</span>
+	<span class="ball__shadow"></span>
 </div>';
 		
 	}
