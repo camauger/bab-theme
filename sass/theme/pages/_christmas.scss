@@ -115,14 +115,14 @@ main.christmas {
 				$primary calc(50%),
 				rgba(0, 0, 0, 0) calc(50% + 3px)
 			);
-			&:hover {
-				background: linear-gradient(
-					180deg,
-					rgba(0, 0, 0, 0) calc(50% - 2px),
-					$secondary calc(50%),
-					rgba(0, 0, 0, 0) calc(50% + 3px)
-				);
-			}
+			// &:hover {
+			// 	background: linear-gradient(
+			// 		180deg,
+			// 		rgba(0, 0, 0, 0) calc(50% - 2px),
+			// 		$secondary calc(50%),
+			// 		rgba(0, 0, 0, 0) calc(50% + 3px)
+			// 	);
+			// }
 		}
 	}
 }
@@ -398,11 +398,11 @@ main.christmas {
 	text-align: center;
 	color: $primary;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	min-height: 100px;
 	@include media-breakpoint-down(sm) {
-		align-items: flex-start;
+		align-items: center;
 		padding-left: 10px;
 		&.kit--big {
 			margin-top: 20px;
