@@ -310,7 +310,7 @@ function kit($number, $name)
 		[
 			'B6413',
 			'B6078',
-			'B6174'
+			'B6079'
 		],
 		[
 			'B6432',
@@ -387,7 +387,17 @@ function kit($number, $name)
 	// Les items appartenant au kit
 	foreach ($kitItems[$number] as $item) {
 		// Déclarations des variables du prduit
-		$itemId = wc_get_product_id_by_sku($item);
+		if (wc_get_product_id_by_sku($item) != null ){ 
+			$itemId = wc_get_product_id_by_sku($item);
+		} else {
+			// Si le sku n'existe pas, affichage d'une boule pleine
+			$kithtml .= '<div class="ball ball--small ball--full">
+			<a>Ce produit n\'est pas disponible</a>
+			<a class="kit__name kit--one" ></a>
+			<span class="ball__shadow"></span>
+		</div>';
+		}
+		
 		$itemImage =  get_the_post_thumbnail_url($itemId);
 		$itemUrl = get_permalink($itemId);
 		$itemName = get_the_title($itemId);
@@ -440,7 +450,7 @@ function kitList()
 	if ($todayMonth == 12) {
 		$slice = $todayDay;
 	} else {
-		$slice = 6;
+		$slice = 20;
 	};
 
 	$month = '';
