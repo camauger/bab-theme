@@ -281,7 +281,7 @@ function kit($number, $name)
 </div>';
 	// Les items appartenant au kit
 	foreach ($kitItems[$kitItemsId] as $item) {
-
+		
 		// Déclarations des variables en fonction de la langue
 		//  1 - itemName FR, 2 - itemName EN, 3 - itemImage, 4 - itemURl FR, 5 - itemUrl EN
 		$itemId = wc_get_product_id_by_sku($item);
@@ -321,9 +321,9 @@ function kitList()
 	$todayDay = date("d");
 	$todayMonth = date("m");
 	$slice = 1;
-	if ($todayMonth != 12) {
-		$slice = $todayDay;
-	};
+	// if ($todayMonth != 12) {
+	// 	$slice = $todayDay;
+	// };
 
 	$month = '';
 	if (ICL_LANGUAGE_CODE == 'en') :
@@ -360,6 +360,7 @@ function kitList()
 	$kitListHtml .= '</div>
 	</div>';
 	echo "Today is " . date("d-m");
+	echo $kitList;
 	echo $kitListHtml;
 	echo $kitListFuture;
 	echo $kitListNow;
