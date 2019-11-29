@@ -259,7 +259,11 @@ function kit($arr, $number)
 	// Déclarations des variables de kit
 	//**Les Kits */
 	$html = '';
-	$kitName = $arr[$number][0];
+	$kitList = [];
+	foreach ($arr as $list) {
+		array_push($kitList, $list[0]);
+	}
+	$kitName = $kitList[$number];
 
 	if ($number < 10) {
 		$imageNumber = '0' . $number;
