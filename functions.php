@@ -252,13 +252,14 @@ function collectionCatEn($catName, $catSlug, $imgSlug)
 //**
 // Christmas Products (Kits)
 // */
-function kit($number)
-{
 
+/** Revealed Kit */
+function kit($html, $arr, $number)
+{
 	// Déclarations des variables de kit
 	//**Les Kits */
-	include 'page-modules/christmas-products.php';
-	$kitName = $kits[$number][0];
+
+	$kitName = $arr[$number][0];
 
 	if ($number < 10) {
 		$imageNumber = '0' . $number;
@@ -268,7 +269,7 @@ function kit($number)
 
 	$kitImage = get_template_directory_uri() . '/images/kits/' . $imageNumber . '.png';
 
-	$kithtml = '<div class="christmas__row revealed">
+	$html .= '<div class="christmas__row revealed">
 	<div class="date">
 		<div class="date__wrapper">
 			<span class="date__text">' . $number . ' décembre' . '</span>
@@ -276,25 +277,25 @@ function kit($number)
 	</div>
 	<div class="balls__revealed">';
 
-	// Items
-	
-
-	// Le Kit
-	$kithtml .= '<div class="ball--first ball ball--big ball--empty">
+	$html .= '<div class="ball--first ball ball--big ball--empty">
     <a><img src="' . $kitImage . '" alt="' . $kitName . '"></a>
     <a class="kit__name kit--big">' . $kitName . '</a><span class="ball__shadow"></span>
 </div>';
+}
+
+function kitItems($html, $arr, $kit)
+{
 	// Les items appartenant au kit
 	//$theItems = array_slice($kits[$number], 0, 1);
-$theItems = [];
 
+	$theItems = array_slice($arr[$kit], 0, 1);;
 	foreach ($theItems as $item) {
 		// Déclarations des variables du prduit
 		if (wc_get_product_id_by_sku($item) != null) {
 			$itemId = wc_get_product_id_by_sku($item);
 		} else {
 			// Si le sku n'existe pas, affichage d'une boule pleine
-			$kithtml .= '<div class="ball ball--small ball--full">
+			$html .= '<div class="ball ball--small ball--full">
 			<a>Ce produit n\'est pas disponible</a>
 			<a class="kit__name kit--one" ></a>
 			<span class="ball__shadow"></span>
@@ -308,23 +309,28 @@ $theItems = [];
 		$product = wc_get_product($itemId);
 		if (!$product->managing_stock() && !$product->is_in_stock()) {
 			// Si le produit n'est pas en stock, affichage d'une boule pleine
-			$kithtml .= '<div class="ball ball--small ball--full">
+			$html .= '<div class="ball ball--small ball--full">
 			<a>Ce produit n\'est plus disponible</a>
 			<a class="kit__name kit--one" ></a>
 			<span class="ball__shadow"></span>
 		</div>';
 		} else {
 			// Si le produit est disponible, l'afficher
-			$kithtml .= '<div class="ball ball--small ball--empty">
+			$html .= '<div class="ball ball--small ball--empty">
     <a href="' . $itemUrl . '"><img src="' . $itemImage . '" alt="' . $itemName . '"></a>
 	<a class="kit__name kit--one" href="' . $itemUrl . '">' . $itemName . '</a>
 	<span class="ball__shadow"></span></div>';
 		}
 	}
+}
+
+
+function endList ($html)
+{
 	// Affichage de l'ensemble
-	$kithtml .= '</div>
+	$html .= '</div>
 	</div>';
-	echo $kithtml;
+	echo $html;
 };
 
 
@@ -332,16 +338,11 @@ $theItems = [];
 
 //** Liste des Kits */
 
-function kitList()
+function kitList($arr)
 {
 
-	$kitListHtml = '';
-	$kitList = [
-		'3 bagues couleurs',
-		'Colliers argent',	'B.O.',	'3 bracelets or',	'Fantaisie 1',	'Colliers perles',	'Bagues argent',
-		'Bagues alliance',	'Pour homme',	'Collier/pendentif',	'Fantaisie 2',	'Camées',	'3 bracelets argent',	'3 bagues bleues',
-		'Ensemble perles',	'Bijoux antiques',	'Fantaisie 3',	'3 colliers',	'Bagues diamants',	'Avis aux Pères noël'
-	];
+	$html = '';
+	$kitList = $arr;
 
 	// Vérifier que nous sommes bien en décembre pour passer la bonne date
 	// Si nous ne sommes pas en décembre, le premier rang sera révélé (slice = 1)
@@ -367,16 +368,16 @@ function kitList()
 	//include 'page-modules/christmas-products';
 	foreach ($kitListNow as $kit) {
 		$index = array_search($kit, $kitListNow);
-		$kitListHtml .= kit(($index + 1), $kitListNow[$index]);
+		$html .= kit($html, ($index + 1), $kitListNow[$index]);
 	}
 
-	$kitListHtml .= '<div class="christmas__row">
+	$html .= '<div class="christmas__row">
 	<div class="christmas__spacer">
 	</div>
 	<div class="balls">';
 
 	foreach ($kitListFuture as $kit) {
-		$kitListHtml .= '<div class="ball ball--small ball--full">
+		$html .= '<div class="ball ball--small ball--full">
 		<div class="ball--full__date">
 			<span class="ball--full__date--day">' . (array_search($kit, $kitList) + 1) . '</span>
 			<span class="ball--full__date--month">' . $month . '</span>
@@ -386,10 +387,11 @@ function kitList()
 	</div>';
 	};
 
-	$kitListHtml .= '</div>
+	$html .= '</div>
 	</div>';
 
-	echo $kitListHtml;
+	endList ($html);
+	echo $html;
 
 
 
