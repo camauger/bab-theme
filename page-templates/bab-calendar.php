@@ -156,8 +156,12 @@ $kits = [
 ];
 
 // Enregistrer les strings pour la traduction
-do_action('wpml_register_string', $kitname, 'name', $kits, 'Kit name', 'LINE');
 
+foreach ($kits as $kit)
+{
+$kitname = $kit[0];
+do_action('wpml_register_string', 'Kit List', $kitname, $kits, $kitname);
+}
 
 ?>
 
