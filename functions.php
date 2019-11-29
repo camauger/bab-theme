@@ -329,17 +329,19 @@ function kit($arr, $number)
 	<span class="ball__shadow"></span></div>';
 		}
 	}
+	$html .= '</div>
+	</div>';
 	echo $html;
 }
 
 
-function endList($html)
-{
-	// Affichage de l'ensemble
-	$html .= '</div>
-	</div>';
-	echo $html;
-};
+// function endList($html)
+// {
+// 	// Affichage de l'ensemble
+// 	$html .= '</div>
+// 	</div>';
+// 	echo $html;
+// };
 
 
 //** Liste des Kits */
@@ -400,7 +402,7 @@ function kitList($arr)
 	$html .= '</div>
 	</div>';
 
-	endList($html);
+	
 	echo $html;
 
 
