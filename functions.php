@@ -368,10 +368,9 @@ function kitList($arr)
 	$kitListFuture = array_slice($kitList, $slice);
 	$kitListNow = array_slice($kitList, 0, $slice);
 
-	//include 'page-modules/christmas-products';
 	foreach ($kitListNow as $kit) {
 		$index = array_search($kit, $kitListNow);
-		$html .= kit(($index + 1), $kitListNow[$index]);
+		$html .= kit(($index), $kitListNow[$index]);
 	}
 
 	$html .= '<div class="christmas__row">
