@@ -337,13 +337,6 @@ function kit($arr, $number)
 }
 
 
-// function endList($html)
-// {
-// 	// Affichage de l'ensemble
-// 	$html .= '</div>
-// 	</div>';
-// 	echo $html;
-// };
 
 
 //** Liste des Kits */
@@ -381,6 +374,7 @@ function kitList($arr)
 	foreach ($kitListNow as $kit) {
 		
 			$index = array_search($kit, $data);
+			echo $index;
 			$html .= kit($data, $index);
 		
 	}
