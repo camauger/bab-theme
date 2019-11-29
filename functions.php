@@ -266,13 +266,11 @@ function kit($arr, $number)
 		array_push($kitList, $list[0]);
 	}
 	$kitName = $kitList[$number];
-	// up the number
-	$number = $number + 1;
 
 	if ($number < 10) {
-		$imageNumber = '0' . $number;
+		$imageNumber = '0' . ($number +1);
 	} else {
-		$imageNumber = $number;
+		$imageNumber = ($number +1);
 	}
 
 	$kitImage = get_template_directory_uri() . '/images/kits/' . $imageNumber . '.png';
@@ -280,7 +278,7 @@ function kit($arr, $number)
 	$html .= '<div class="christmas__row revealed">
 	<div class="date">
 		<div class="date__wrapper">
-			<span class="date__text">' . $number . ' décembre' . '</span>
+			<span class="date__text">' . ($number +1) . ' décembre' . '</span>
 		</div>
 	</div>
 	<div class="balls__revealed">';
@@ -297,7 +295,7 @@ function kit($arr, $number)
 	// 	array_push($theItems);
 	// }
 
-	$theItems = array_slice($arr[($number) +1 ], 1);
+	$theItems = array_slice($arr[$number], 1);
 	foreach ($theItems as $item) {
 		// Déclarations des variables du prduit
 		if (wc_get_product_id_by_sku($item) != null) {
