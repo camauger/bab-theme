@@ -288,7 +288,7 @@ function kitItems($html, $arr, $kit)
 	// Les items appartenant au kit
 	//$theItems = array_slice($kits[$number], 0, 1);
 
-	$theItems = array_slice($arr[$kit], 0, 1);;
+	$theItems = array_slice($arr[$kit], 0, 1);
 	foreach ($theItems as $item) {
 		// Déclarations des variables du prduit
 		if (wc_get_product_id_by_sku($item) != null) {
@@ -325,15 +325,13 @@ function kitItems($html, $arr, $kit)
 }
 
 
-function endList ($html)
+function endList($html)
 {
 	// Affichage de l'ensemble
 	$html .= '</div>
 	</div>';
 	echo $html;
 };
-
-
 
 
 //** Liste des Kits */
@@ -390,7 +388,7 @@ function kitList($arr)
 	$html .= '</div>
 	</div>';
 
-	endList ($html);
+	endList($html);
 	echo $html;
 
 
