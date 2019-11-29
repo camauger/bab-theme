@@ -15,26 +15,25 @@ get_header();
 $container = get_theme_mod('understrap_container_type');
 ?>
 
-<?php if (is_front_page()) : ?>
-    <?php get_template_part('global-templates/hero'); ?>
-<?php endif; ?>
-
-
 
 <div class="wrapper" id="full-width-page-wrapper">
 
 
     <main class="christmas">
         <div class="christmas__header">
-            <h1>Vedettes de Noël</h1>
+            <h1><?php esc_html_e( 'Christmas Stars', 'bab' ); ?></h1>
         </div>
 
         <?php
 //**Les Kits */
+// __('Furnished','your-textdomain')
+
+
 $kits = [
     
     [
-        'De toutes les couleurs !',
+        //'De toutes les couleurs !',
+        __('Of all the colors !','christmas'),
         'B6144',
         'B6693',
         'B3076'
