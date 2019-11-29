@@ -377,9 +377,8 @@ function kitList($arr)
 	$kitListNow = array_slice($kitList, 0, $slice);
 
 	foreach ($kitListNow as $kit) {
-		$index = array_search($kit, $kitListNow);
-		$arrIndex = array_search($index, $arr);
-		$html .= kit($arr, $arrIndex);
+		$index = array_search($kit, $arr);
+		$html .= kit($arr, $index);
 	}
 
 	$html .= '<div class="christmas__row">
