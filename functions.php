@@ -374,7 +374,7 @@ function kitList($arr)
 	foreach ($kitListNow as $kit) {
 		
 			$index = array_search($kit, $data);
-			echo $index;
+			
 			$html .= kit($data, $index);
 		
 	}
@@ -416,5 +416,7 @@ function kitList($arr)
 	echo '<pre>';
 	print_r($kitListNow);
 	echo '</pre>';
-	
+	echo '<pre>';
+	print_r($index);
+	echo '</pre>';
 }
