@@ -255,12 +255,6 @@ function collectionCatEn($catName, $catSlug, $imgSlug)
 
 
 
-
-
-
-
-
-
 /** Revealed Kit */
 function kit($arr, $number)
 {
@@ -296,8 +290,8 @@ function kit($arr, $number)
 
 	// Les items appartenant au kit
 	//$theItems = array_slice($kits[$number], 0, 1);
-
-	$theItems = array_slice($arr[$number], 0, 1);
+	$theItems = [];
+	//$theItems = array_slice($arr[$number], 0, 1);
 	foreach ($theItems as $item) {
 		// Déclarations des variables du prduit
 		if (wc_get_product_id_by_sku($item) != null) {
@@ -376,12 +370,12 @@ function kitList($arr)
 	$kitListFuture = array_slice($kitList, $slice);
 	$kitListNow = array_slice($kitList, 0, $slice);
 
-	// foreach ($kitListNow as $kit) {
-	// 	if ($kit != 0 && $kit != null) {
-	// 		$index = array_search($kit, $arr);
-	// 		$html .= kit($arr, $index);
-	// 	}
-	// }
+	foreach ($kitListNow as $kit) {
+		if ($kit != 0 && $kit != null) {
+			$index = array_search($kit, $arr);
+			$html .= kit($arr, $index);
+		}
+	}
 
 	$html .= '<div class="christmas__row">
 	<div class="christmas__spacer">
