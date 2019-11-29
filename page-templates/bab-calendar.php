@@ -39,7 +39,8 @@ $kits = [
         'B3076'
     ],
     [
-        'De l\'argent au cou pour Noël !',
+       // 'De l\'argent au cou pour Noël !',
+        __('Silver on your neck for Christmas!'),
         'B6145',
         'B6764',
         'B6889'
