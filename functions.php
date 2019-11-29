@@ -380,7 +380,7 @@ function kitList($arr)
 
 	foreach ($kitListNow as $kit) {
 		// if ($kit != 0 && $kit != null) {
-			$index = array_search($kit, $arr);
+			$index = array_search($arr, $kit);
 			kit($arr, $index);
 		// }
 	}
