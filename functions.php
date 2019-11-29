@@ -371,7 +371,7 @@ function kitList($arr)
 	$kitListFuture = array_slice($kitList, $slice);
 	$kitListNow = array_slice($kitList, 0, $slice);
 
-	for ($i=1; $i<=sizeof($kitListNow); $i++) {
+	for ($i=0; $i<sizeof($kitListNow); $i++) {
 		$html .= kit($data, $i);
 	}
 
