@@ -266,6 +266,9 @@ function kit($arr, $number)
 		array_push($kitList, $list[0]);
 	}
 	$kitName = $kitList[$number];
+	$kitName = apply_filters( 'wpml_translate_single_string', $kitName, 'christmas', 'Kit Name', ICL_LANGUAGE_CODE );
+
+
 
 	if ($number < 10) {
 		$imageNumber = '0' . ($number +1);
