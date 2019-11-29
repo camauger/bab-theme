@@ -384,7 +384,7 @@ function kitList($arr)
 	if ($todayMonth == 12) {
 		$slice = $todayDay;
 	} else {
-		$slice = 2;
+		$slice = 1;
 	};
 
 	$month = '';

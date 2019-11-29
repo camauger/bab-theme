@@ -46,7 +46,7 @@ $container = get_theme_mod('understrap_container_type');
                 'B6889'
             ],
             [
-                //'Diamants à l\'oreille? Un classique!',
+                //'Diamants à l\'oreille? Un classique !',
                 __('Diamonds? A classic!', 'christmas'),
                 'B4176',
                 'B6655',
