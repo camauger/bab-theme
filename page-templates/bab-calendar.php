@@ -34,115 +34,115 @@ $container = get_theme_mod('understrap_container_type');
 $kits = [
     
     [
-        '3 bagues couleurs',
+        'De toutes les couleurs !',
         'B6144',
         'B6693',
         'B3076'
     ],
     [
-        'Colliers argent',
+        'De l\'argent au cou pour Noël !',
         'B6145',
         'B6764',
         'B6889'
     ],
     [
-        'B.O.',
+        'Diamants à l\'oreille? Un classique!',
         'B4176',
         'B6655',
         'B6856'
     ],
     [
-        '3 bracelets or',
+        'Poignets bien décorés !',
         'B6116',
         'B4624',
         'B6838'
     ],
     [
-        'Fantaisie 1',
+        'Bijoux fantaisie pour tous les budgets !',
         'B5780',
         'B6020',
         'B6487'
     ],
     [
-        'Colliers perles',
+        'Colliers perles encore et encore !',
         'B6110',
         'B6657',
         'B6772'
     ],
     [
-        'Bagues argent',
+        'Élégantes bagues en argent',
         'B6413',
         'B6078',
         'B6079'
     ],
     [
-        'Bagues alliance',
+        'Parfait pour vos fiançailles !',
         'B6432',
         'B6571',
         'B3197'
     ],
     [
-        'Pour homme',
+        'Boutons manchettes: cadeau parfait !',
         'B6641',
         'B6706',
         'B6766'
     ],
     [
-        'Collier/pendentif',
+        'De la couleur au cou !',
         'B5202',
         'B6334',
         'B6565'
     ],
     [
-        'Fantaisie 2',
+        'Fantaisie à prix coup de ♥ !',
         'B6473',
         'B5705',
         'B4017'
     ],
     [
-        'Camées',
+        'Sélection de camées ',
         'B6159',
         'B3615',
         'B6625'
     ],
     [
-        '3 bracelets argent',
+        'Bracelets originaux !',
         'B6216',
         'B6276',
         'B6598'
     ],
     [
-        '3 bagues bleues',
+        '♪ Bleu, bleu, le ciel est bleu ♪',
         'B6055',
         'B6553',
         'B6261'
     ],
     [
-        'Ensemble perles',
+        'Perles de culture',
         'B3100',
         'B6608',
         'B6609'
     ],
     [
-        'Bijoux antiques',
+        'Bijoux d\'un autre siècle !',
         'B6530',
         'B3616',
         'B6771'
     ],
     [
-        'Fantaisie 3',
+        'Signé Swarovski et Lalique',
         'B4715',
         'B6019',
         'B6492'
     ],
     [
-        '3 colliers',
+        'Sélection de la Mère Noël !',
         'B5816',
         'B6631',
         'B6078'
     ],
     [
-        'Bagues diamants',
+        'Style contemporain',
         'B6146',
         'B6831',
         'B5834'

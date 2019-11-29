@@ -408,19 +408,19 @@ function kitList($arr)
 
 
 	// Code de tests
-	echo "kitlist =>";
-	echo '<pre>';
-	print_r($kitList);
-	echo '</pre>';
-	echo "kitlistfuture =>";
-	echo '<pre>';
-	print_r($kitListFuture);
-	echo '</pre>';
-	echo "kitlistnow =>";
-	echo '<pre>';
-	print_r($kitListNow);
-	echo '</pre>';
-	echo '<pre>';
-	print_r($index);
-	echo '</pre>';
+	// echo "kitlist =>";
+	// echo '<pre>';
+	// print_r($kitList);
+	// echo '</pre>';
+	// echo "kitlistfuture =>";
+	// echo '<pre>';
+	// print_r($kitListFuture);
+	// echo '</pre>';
+	// echo "kitlistnow =>";
+	// echo '<pre>';
+	// print_r($kitListNow);
+	// echo '</pre>';
+	// echo '<pre>';
+	// print_r($index);
+	// echo '</pre>';
 }
