@@ -281,13 +281,14 @@ function kit($arr, $number)
     <a><img src="' . $kitImage . '" alt="' . $kitName . '"></a>
     <a class="kit__name kit--big">' . $kitName . '</a><span class="ball__shadow"></span>
 </div>';
+	kitItems($arr, $number);
 }
 
-function kitItems($html, $arr, $kit)
+function kitItems($arr, $kit)
 {
 	// Les items appartenant au kit
 	//$theItems = array_slice($kits[$number], 0, 1);
-
+	$html ='';
 	$theItems = array_slice($arr[$kit], 0, 1);
 	foreach ($theItems as $item) {
 		// Déclarations des variables du prduit
@@ -322,6 +323,7 @@ function kitItems($html, $arr, $kit)
 	<span class="ball__shadow"></span></div>';
 		}
 	}
+	echo $html;
 }
 
 
@@ -353,7 +355,7 @@ function kitList($arr)
 	if ($todayMonth == 12) {
 		$slice = $todayDay;
 	} else {
-		$slice = 1;
+		$slice = 2;
 	};
 
 	$month = '';
