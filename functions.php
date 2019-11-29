@@ -371,13 +371,17 @@ function kitList($arr)
 	$kitListFuture = array_slice($kitList, $slice);
 	$kitListNow = array_slice($kitList, 0, $slice);
 
-	foreach ($kitListNow as $kit) {
-		
-			$index = array_search($kit, $data);
-			
-			$html .= kit($data, $index);
-		
+	for ($i=1; $i<=sizeof($kitListNow); $i++) {
+		$html .= kit($data, $i);
 	}
+
+	// foreach ($kitListNow as $kit) {
+		
+	// 		$index = array_search($kit, $data);
+			
+	// 		$html .= kit($data, $index);
+		
+	// }
 
 	$html .= '<div class="christmas__row">
 	<div class="christmas__spacer">
