@@ -266,6 +266,8 @@ function kit($arr, $number)
 		array_push($kitList, $list[0]);
 	}
 	$kitName = $kitList[$number];
+	// up the number
+	$number = $number + 1;
 
 	if ($number < 10) {
 		$imageNumber = '0' . $number;
@@ -291,7 +293,7 @@ function kit($arr, $number)
 	// Les items appartenant au kit
 	
 	$theItems = [];
-	foreach ($arr[($number) + 1] as $item) {
+	foreach ($arr[$number] as $item) {
 		array_push($theItems);
 	}
 
@@ -420,4 +422,5 @@ function kitList($arr)
 	echo '<pre>';
 	print_r($kitListNow);
 	echo '</pre>';
+	
 }
