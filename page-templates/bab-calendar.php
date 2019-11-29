@@ -152,11 +152,18 @@ $kits = [
         'C3132',
         'B6437'
     ]
-];?>
+];
+
+// Enregistrer les strings pour la traduction
+do_action('wpml_register_string', $kitname, 'name', $kits, 'Kit name', 'LINE');
+$kitsTranslated = apply_filters( 'wpml_translate_string', $kits )
+
+
+?>
 
 
 
-        <?php kitList($kits); ?>
+        <?php kitList($kitsTranslated); ?>
 
 
     </main>
