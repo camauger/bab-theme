@@ -29,8 +29,8 @@ $container = get_theme_mod('understrap_container_type');
             <h1>Vedettes de Noël</h1>
         </div>
 
-
-        <?php kitList(); ?>
+        <?php get_template_part( 'page-modules/christmas-products' ); ?>
+        <?php kitList($kits); ?>
 
 
     </main>
