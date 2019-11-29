@@ -258,7 +258,7 @@ function kit($arr, $number)
 {
 	// Déclarations des variables de kit
 	//**Les Kits */
-
+	$html ='';
 	$kitName = $arr[$number][0];
 
 	if ($number < 10) {
@@ -281,15 +281,11 @@ function kit($arr, $number)
     <a><img src="' . $kitImage . '" alt="' . $kitName . '"></a>
     <a class="kit__name kit--big">' . $kitName . '</a><span class="ball__shadow"></span>
 </div>';
-	kitItems($arr, $number);
-}
 
-function kitItems($arr, $kit)
-{
 	// Les items appartenant au kit
 	//$theItems = array_slice($kits[$number], 0, 1);
-	$html ='';
-	$theItems = array_slice($arr[$kit], 0, 1);
+	
+	$theItems = array_slice($arr[$number], 0, 1);
 	foreach ($theItems as $item) {
 		// Déclarations des variables du prduit
 		if (wc_get_product_id_by_sku($item) != null) {
