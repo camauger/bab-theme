@@ -254,7 +254,7 @@ function collectionCatEn($catName, $catSlug, $imgSlug)
 // */
 
 /** Revealed Kit */
-function kit($html, $arr, $number)
+function kit($arr, $number)
 {
 	// Déclarations des variables de kit
 	//**Les Kits */
@@ -269,7 +269,7 @@ function kit($html, $arr, $number)
 
 	$kitImage = get_template_directory_uri() . '/images/kits/' . $imageNumber . '.png';
 
-	$html .= '<div class="christmas__row revealed">
+	echo '<div class="christmas__row revealed">
 	<div class="date">
 		<div class="date__wrapper">
 			<span class="date__text">' . $number . ' décembre' . '</span>
@@ -277,7 +277,7 @@ function kit($html, $arr, $number)
 	</div>
 	<div class="balls__revealed">';
 
-	$html .= '<div class="ball--first ball ball--big ball--empty">
+	echo '<div class="ball--first ball ball--big ball--empty">
     <a><img src="' . $kitImage . '" alt="' . $kitName . '"></a>
     <a class="kit__name kit--big">' . $kitName . '</a><span class="ball__shadow"></span>
 </div>';
@@ -366,7 +366,7 @@ function kitList($arr)
 	//include 'page-modules/christmas-products';
 	foreach ($kitListNow as $kit) {
 		$index = array_search($kit, $kitListNow);
-		$html .= kit($html, ($index + 1), $kitListNow[$index]);
+		$html .= kit(($index + 1), $kitListNow[$index]);
 	}
 
 	$html .= '<div class="christmas__row">
