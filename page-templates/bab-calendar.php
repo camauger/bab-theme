@@ -157,11 +157,11 @@ $kits = [
 
 // Enregistrer les strings pour la traduction
 
-foreach ($kits as $kit)
-{
-$kitname = $kit[0];
-do_action('wpml_register_string', 'Kit List', $kitname, $kits, $kitname);
-}
+// foreach ($kits as $kit)
+// {
+// $kitname = $kit[0];
+// do_action('wpml_register_string', 'Kit List', $kitname, $kits, $kitname);
+// }
 
 ?>
 
