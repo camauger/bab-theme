@@ -289,9 +289,9 @@ function kit($arr, $number)
 </div>';
 
 	// Les items appartenant au kit
-	//$theItems = array_slice($kits[$number], 0, 1);
-	$theItems = [];
-	//$theItems = array_slice($arr[$number], 0, 1);
+	
+	//$theItems = [];
+	$theItems = array_slice($arr[($number + 1)], 0, 1);
 	foreach ($theItems as $item) {
 		// Déclarations des variables du prduit
 		if (wc_get_product_id_by_sku($item) != null) {
