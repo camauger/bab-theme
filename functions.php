@@ -267,12 +267,36 @@ function kit($arr, $number)
 	}
 	$kitName = $kitList[$number];
 
+	// Date Fix
+	$day = $number + 1;
+	$month = '';
+	if (ICL_LANGUAGE_CODE == 'en') :
+		$month = 'December';
+		if ($day == 1) {
+			$day = '1st';
+		}
+		if ($day == 2) {
+			$day = '2nd';
+		}
+		if ($day == 3) {
+			$day = '3rd';
+		}
+		$date = $month . ' ' . $day;
+	elseif (ICL_LANGUAGE_CODE == 'fr') :
+		$month = 'décembre';
+		if ($day == 1) {
+			$day = '1er';
+		};
+		$date = $day . ' ' . $month;
+	endif;
 
 
+
+	// Image Fetch
 	if ($number < 10) {
-		$imageNumber = '0' . ($number +1);
+		$imageNumber = '0' . ($number + 1);
 	} else {
-		$imageNumber = ($number +1);
+		$imageNumber = ($number + 1);
 	}
 
 	$kitImage = get_template_directory_uri() . '/images/kits/' . $imageNumber . '.png';
@@ -280,7 +304,7 @@ function kit($arr, $number)
 	$html .= '<div class="christmas__row revealed">
 	<div class="date">
 		<div class="date__wrapper">
-			<span class="date__text">' . ($number +1) . ' décembre' . '</span>
+			<span class="date__text">' . $date . '</span>
 		</div>
 	</div>
 	<div class="balls__revealed">';
@@ -291,7 +315,7 @@ function kit($arr, $number)
 </div>';
 
 	// Les items appartenant au kit
-	
+
 	// $theItems = [];
 	// foreach ($arr[$number] as $item) {
 	// 	array_push($theItems);
@@ -303,7 +327,7 @@ function kit($arr, $number)
 		//icl_object_id( $popular->id, get_post_type( $popular->id ), true, ICL_LANGUAGE_CODE );
 		if (wc_get_product_id_by_sku($item) != null) {
 			$itemId = wc_get_product_id_by_sku($item);
-			$itemId = icl_object_id( $itemId, 'any', true, ICL_LANGUAGE_CODE );
+			$itemId = icl_object_id($itemId, 'any', true, ICL_LANGUAGE_CODE);
 		} else {
 			// Si le sku n'existe pas, affichage d'une boule pleine
 			$html .= '<div class="ball ball--small ball--full">
@@ -373,7 +397,7 @@ function kitList($arr)
 	$kitListFuture = array_slice($kitList, $slice);
 	$kitListNow = array_slice($kitList, 0, $slice);
 
-	for ($i=0; $i<sizeof($kitListNow); $i++) {
+	for ($i = 0; $i < sizeof($kitListNow); $i++) {
 		$html .= kit($data, $i);
 	}
 
@@ -396,7 +420,7 @@ function kitList($arr)
 	$html .= '</div>
 	</div>';
 
-	
+
 	echo $html;
 
 
