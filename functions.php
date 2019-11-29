@@ -258,7 +258,7 @@ function kit($arr, $number)
 {
 	// Déclarations des variables de kit
 	//**Les Kits */
-	$html ='';
+	$html = '';
 	$kitName = $arr[$number][0];
 
 	if ($number < 10) {
@@ -269,7 +269,7 @@ function kit($arr, $number)
 
 	$kitImage = get_template_directory_uri() . '/images/kits/' . $imageNumber . '.png';
 
-	echo '<div class="christmas__row revealed">
+	$html .= '<div class="christmas__row revealed">
 	<div class="date">
 		<div class="date__wrapper">
 			<span class="date__text">' . $number . ' décembre' . '</span>
@@ -277,14 +277,14 @@ function kit($arr, $number)
 	</div>
 	<div class="balls__revealed">';
 
-	echo '<div class="ball--first ball ball--big ball--empty">
+	$html .= '<div class="ball--first ball ball--big ball--empty">
     <a><img src="' . $kitImage . '" alt="' . $kitName . '"></a>
     <a class="kit__name kit--big">' . $kitName . '</a><span class="ball__shadow"></span>
 </div>';
 
 	// Les items appartenant au kit
 	//$theItems = array_slice($kits[$number], 0, 1);
-	
+
 	$theItems = array_slice($arr[$number], 0, 1);
 	foreach ($theItems as $item) {
 		// Déclarations des variables du prduit
@@ -339,7 +339,7 @@ function kitList($arr)
 
 	$html = '';
 	$kitList = [];
-	foreach ($arr as $list ) {
+	foreach ($arr as $list) {
 		array_push($kitList, $list[0]);
 	}
 

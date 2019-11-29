@@ -32,7 +32,7 @@ $container = get_theme_mod('understrap_container_type');
         <?php
 //**Les Kits */
 $kits = [
-    ['testing value'],
+    
     [
         '3 bagues couleurs',
         'B6144',
