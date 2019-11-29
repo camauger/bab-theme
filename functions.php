@@ -379,10 +379,10 @@ function kitList($arr)
 	$kitListNow = array_slice($kitList, 0, $slice);
 
 	foreach ($kitListNow as $kit) {
-		if ($kit != 0 && $kit != null) {
+		// if ($kit != 0 && $kit != null) {
 			$index = array_search($kit, $arr);
 			kit($arr, $index);
-		}
+		// }
 	}
 
 	$html .= '<div class="christmas__row">
