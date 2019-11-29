@@ -297,7 +297,7 @@ function kit($arr, $number)
 	// 	array_push($theItems);
 	// }
 
-	$theItems = array_slice($arr[$number], 1);
+	$theItems = array_slice($arr[( + 1)], 1);
 	foreach ($theItems as $item) {
 		// Déclarations des variables du prduit
 		if (wc_get_product_id_by_sku($item) != null) {
