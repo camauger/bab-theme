@@ -33,7 +33,7 @@ $kits = [
     
     [
         //'De toutes les couleurs !',
-        __('Of all the colors !','christmas'),
+        __('Of all the colors!','christmas'),
         'B6144',
         'B6693',
         'B3076'

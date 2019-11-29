@@ -298,8 +298,10 @@ function kit($arr, $number)
 	$theItems = array_slice($arr[$number], 1);
 	foreach ($theItems as $item) {
 		// Déclarations des variables du prduit
+		//icl_object_id( $popular->id, get_post_type( $popular->id ), true, ICL_LANGUAGE_CODE );
 		if (wc_get_product_id_by_sku($item) != null) {
 			$itemId = wc_get_product_id_by_sku($item);
+			$itemId = icl_object_id( $itemId, 'any', true, ICL_LANGUAGE_CODE );
 		} else {
 			// Si le sku n'existe pas, affichage d'une boule pleine
 			$html .= '<div class="ball ball--small ball--full">
@@ -372,14 +374,6 @@ function kitList($arr)
 	for ($i=0; $i<sizeof($kitListNow); $i++) {
 		$html .= kit($data, $i);
 	}
-
-	// foreach ($kitListNow as $kit) {
-		
-	// 		$index = array_search($kit, $data);
-			
-	// 		$html .= kit($data, $index);
-		
-	// }
 
 	$html .= '<div class="christmas__row">
 	<div class="christmas__spacer">
