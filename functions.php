@@ -377,7 +377,7 @@ function kitList($arr)
 	foreach ($kitListNow as $kit) {
 		if ($kit != 0 && $kit != null) {
 			$index = array_search($kit, $arr);
-			$html .= kit($arr, $index);
+			kit($arr, $index);
 		}
 	}
 
