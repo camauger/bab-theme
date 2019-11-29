@@ -340,7 +340,10 @@ function kitList($arr)
 {
 
 	$html = '';
-	$kitList = array_key_first($arr);
+	$kitList = [];
+	foreach ($arr as $list ) {
+		array_push($kitList, $list[0]);
+	}
 
 	// Vérifier que nous sommes bien en décembre pour passer la bonne date
 	// Si nous ne sommes pas en décembre, le premier rang sera révélé (slice = 1)
