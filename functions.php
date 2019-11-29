@@ -350,7 +350,7 @@ function kit($arr, $number)
 
 function kitList($arr)
 {
-
+	$data = $arr;
 	$html = '';
 	$kitList = [];
 	foreach ($arr as $list) {
@@ -380,8 +380,8 @@ function kitList($arr)
 
 	foreach ($kitListNow as $kit) {
 		// if ($kit != 0 && $kit != null) {
-			$index = array_search($arr, $kit);
-			kit($arr, $index);
+			$index = array_search($kit, $data);
+			kit($data, $index);
 		// }
 	}
 
