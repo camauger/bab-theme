@@ -253,6 +253,14 @@ function collectionCatEn($catName, $catSlug, $imgSlug)
 // Christmas Products (Kits)
 // */
 
+
+
+
+
+
+
+
+
 /** Revealed Kit */
 function kit($arr, $number)
 {
@@ -370,7 +378,7 @@ function kitList($arr)
 
 	foreach ($kitListNow as $kit) {
 		$index = array_search($kit, $kitListNow);
-		$html .= kit(($index), $kitListNow[$index]);
+		$html .= kit(($index), $arr[$index]);
 	}
 
 	$html .= '<div class="christmas__row">
