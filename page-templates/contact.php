@@ -28,7 +28,7 @@ $container = get_theme_mod('understrap_container_type');
                     <h1><span><?php esc_html_e('Contact', 'bab'); ?></span></h1>
                 </div>
 
-                <div class="address col-lg-6">
+                <div class="address col-xl-6">
                     <address>
                         <strong>Jocelyne Rouleau, FGA, FCGmA, GJ</strong><br />
                         <?php esc_html_e('Gemologist • Diamond • MV Certified Evaluator', 'bab'); ?>
@@ -50,11 +50,9 @@ $container = get_theme_mod('understrap_container_type');
                     </div>
 
                 </div>
-                <div class="schedule col-lg-6">
+                <div class="schedule col-xl-6">
                     <h3><?php esc_html_e('Store Business Hours', 'bab'); ?></h3>
                     <?php get_template_part('page-modules/schedule'); ?>
-
-
 
                     <h3><?php esc_html_e('Opening hours of the evaluation laboratory', 'bab'); ?></h3>
                     <p>
