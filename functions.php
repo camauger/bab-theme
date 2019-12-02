@@ -344,7 +344,7 @@ function kit($arr, $number)
 		$product = wc_get_product($itemId);
 		if ( !$product->is_in_stock()) {
 			// Si le produit n'est pas en stock, affichage d'une boule pleine
-			$html .= '<div class="ball ball--small ball--full">
+			$html .= '<div class="ball ball--small ball--empty">
 			<a>Ce produit n\'est plus disponible</a>
 			<a class="kit__name kit--one" ></a>
 			<span class="ball__shadow"></span>
