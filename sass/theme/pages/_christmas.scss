@@ -447,10 +447,9 @@ main.christmas {
 				max-height: 50px;
 			}
         }
-        @include media-breakpoint-up (md) {
+        @include media-breakpoint-down (md) {
             img {
 				flex-basis: 100px;
-
 				max-height: 100px;
 			}
         }
