@@ -109,7 +109,7 @@ $container = get_theme_mod('understrap_container_type');
 		</div>
 	</div>
 	<div>
-		<?php echo do_shortcode("[products limit="4" columns="4" orderby="id" order="DESC" visibility="visible"]") ; ?>
+		<?php echo do_shortcode('[products limit="4" columns="4" orderby="id" order="DESC" visibility="visible"]') ; ?>
 	</div>
 	<!-- présentation services -->
 
