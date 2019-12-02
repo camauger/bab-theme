@@ -342,7 +342,7 @@ function kit($arr, $number)
 		$itemName = get_the_title($itemId);
 		// Est-ce que le produit est en stock?
 		$product = wc_get_product($itemId);
-		if ( !$product->is_in_stock()) {
+		if (!$product->is_in_stock()) {
 			// Si le produit n'est pas en stock, affichage d'une boule pleine
 			$html .= '<div class="ball ball--small ball--empty ball--out">
 			<p>' . __('Out of stock', 'christmas') . '</p>
@@ -442,7 +442,3 @@ function kitList($arr)
 	// print_r($index);
 	// echo '</pre>';
 }
-
-
-
-
