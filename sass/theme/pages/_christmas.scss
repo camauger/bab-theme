@@ -438,10 +438,12 @@ main.christmas {
 
 .ball--empty {
 	&.ball--small {
-		@include media-breakpoint-down(sm) {
+
+        @include media-breakpoint-down(sm) {
+            align-self: center;
 			img {
 				flex-basis: 50px;
-				align-self: center;
+
 				max-height: 50px;
 			}
 		}
