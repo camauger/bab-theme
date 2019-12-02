@@ -461,5 +461,9 @@ main.christmas {
 .ball--out {
     background: $primary;
     border-radius: 100%;
-    $color: white;
+    p {
+        $color: white;
+        text-align: center;
+    }
+    
 }
