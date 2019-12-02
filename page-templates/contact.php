@@ -51,7 +51,7 @@ $container = get_theme_mod('understrap_container_type');
 
                 </div>
                 <div class="schedule col-lg-6">
-                <?php get_template_part('page-templates/schedule'); ?>
+                <?php get_template_part('page-modules/schedule'); ?>
                     <!-- <h3><?php esc_html_e('Store Business Hours', 'bab'); ?></h3>
                     <strong><?php esc_html_e('Monday, Tuesday', 'bab'); ?></strong>
                     <span><?php esc_html_e('Closed', 'bab'); ?></span>
