@@ -466,7 +466,7 @@ main.christmas {
     background: $primary;
     border-radius: 100%;
     p {
-        display: block;
+        display: block!important;
         color: white;
         text-align: center;
         height: 100%;
