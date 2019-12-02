@@ -5,11 +5,12 @@ body {
 
 // Headings
 %page__title {
-	
 	text-align: center;
-		font-family: $font-head;
-		font-size: 4rem;
-		@include media-breakpoint-up(md) { font-size: 6rem; }
+	font-family: $font-head;
+	font-size: 4rem;
+	@include media-breakpoint-up(md) {
+		font-size: 6rem;
+	}
 }
 
 h1 {

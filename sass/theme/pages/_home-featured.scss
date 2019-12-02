@@ -182,5 +182,6 @@
 }
 
 .new-products__title {
-	@extend %page--title;
+	@extend %page__title;
+	
 }
