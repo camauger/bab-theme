@@ -136,7 +136,8 @@
 
 	.store--reasons {
 
-		background: gray;
+		background: $the-flesh;
+		;
 
 		@include media-breakpoint-up(md) {
 			grid-column: 3;

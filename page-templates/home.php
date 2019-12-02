@@ -52,8 +52,7 @@ $container = get_theme_mod('understrap_container_type');
 			$product_thumbnail_alt = get_post_meta($post_thumbnail_id, '_wp_attachment_image_alt', true);
 			?>
 
-			<img src="<?php echo $featured_image; ?>";
-								?>" alt="<?php the_title(); ?>">
+			<img src="<?php echo $featured_image; ?>" alt="<?php the_title(); ?>">
 			<div class="product--star__info">
 				<span>
 					<?php esc_html_e('Featured Product', 'bab'); ?></span>
@@ -76,15 +75,18 @@ $container = get_theme_mod('understrap_container_type');
 
 			</div>
 			<div class="store--reasons">
-				<a href="/en/estate-jewelry/" title="Why buy an estate jewelry?">
-
-					<span class="pourquoi"><?php esc_html_e('Why', 'bab'); ?></span>
-					<span class="acheterUnBijouAncien"><?php esc_html_e('buy an estate jewelry?', 'bab'); ?></span>
-					<span class="cinqRaisons">
-						<span class="nombreRaisons">5</span>
-						<span class="raisons"><?php esc_html_e('reasons', 'bab'); ?></span>
-					</span>
-				</a>
+				<?php if (ICL_LANGUAGE_CODE == 'en') : ?>
+					<a href="/en/estate-jewelry-2/" title="Why buy an estate jewelry?">
+					<?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
+						<a href="/bijoux-occasion/" title="Pourquoi acheter un bijou d'occasion?">
+						<?php endif; ?>
+						<span class="pourquoi"><?php esc_html_e('Why', 'bab'); ?></span>
+						<span class="acheterUnBijouAncien"><?php esc_html_e('buy an estate jewelry?', 'bab'); ?></span>
+						<span class="cinqRaisons">
+							<span class="nombreRaisons">5</span>
+							<span class="raisons"><?php esc_html_e('reasons', 'bab'); ?></span>
+						</span>
+						</a>
 			</div>
 
 
