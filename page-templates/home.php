@@ -108,6 +108,9 @@ $container = get_theme_mod('understrap_container_type');
 			<?php the_content(); ?>
 		</div>
 	</div>
+	<div>
+		<?php echo do_shortcode("[products limit="4" columns="4" orderby="id" order="DESC" visibility="visible"]") ; ?>
+	</div>
 	<!-- présentation services -->
 
 	<?php if (ICL_LANGUAGE_CODE == 'en') : ?>
