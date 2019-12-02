@@ -345,7 +345,7 @@ function kit($arr, $number)
 		if ( !$product->is_in_stock()) {
 			// Si le produit n'est pas en stock, affichage d'une boule pleine
 			$html .= '<div class="ball ball--small ball--empty ball--out">
-			<p>Ce produit n\'est plus disponible</p>
+			<p>' . __('Out of stock', 'christmas') . '</p>
 			<a class="kit__name kit--one" ></a>
 			<span class="ball__shadow"></span>
 		</div>';
