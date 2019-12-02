@@ -5,6 +5,6 @@
 <strong><?php esc_html_e('Thursday, Friday', 'bab'); ?></strong>
 <span><?php echo esc_html($post->thursday) ?></span>
 <strong><?php esc_html_e('Saturday', 'bab'); ?></strong>
-<span><?php echo esc_html($post->maturday) ?></span>
+<span><?php echo esc_html($post->saturday) ?></span>
 <strong><?php esc_html_e('Sunday', 'bab'); ?></strong>
 <span><?php echo esc_html($post->sunday) ?></span>

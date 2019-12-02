@@ -51,18 +51,10 @@ $container = get_theme_mod('understrap_container_type');
 
                 </div>
                 <div class="schedule col-lg-6">
-                <?php get_template_part('page-modules/schedule'); ?>
-                    <!-- <h3><?php esc_html_e('Store Business Hours', 'bab'); ?></h3>
-                    <strong><?php esc_html_e('Monday, Tuesday', 'bab'); ?></strong>
-                    <span><?php esc_html_e('Closed', 'bab'); ?></span>
-                    <strong><?php esc_html_e('Wednesday', 'bab'); ?></strong>
-                    <span><?php esc_html_e('11:00 to 17:30', 'bab'); ?></span>
-                    <strong><?php esc_html_e('Thursday, Friday', 'bab'); ?></strong>
-                    <span><?php esc_html_e('11:00 to 18:00', 'bab'); ?></span>
-                    <strong><?php esc_html_e('Saturday', 'bab'); ?></strong>
-                    <span><?php esc_html_e('By Appointment', 'bab'); ?></span>
-                    <strong><?php esc_html_e('Sunday', 'bab'); ?></strong>
-                    <span><?php esc_html_e('Closed', 'bab'); ?></span> -->
+                    <h3><?php esc_html_e('Store Business Hours', 'bab'); ?></h3>
+                    <?php get_template_part('page-modules/schedule'); ?>
+
+
 
                     <h3><?php esc_html_e('Opening hours of the evaluation laboratory', 'bab'); ?></h3>
                     <p>
