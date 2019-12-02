@@ -456,3 +456,10 @@ main.christmas {
 		}
 	}
 }
+
+// Ball out of stock
+.ball--out {
+    background: $primary;
+    border-radius: 100%;
+    $color: white;
+}
