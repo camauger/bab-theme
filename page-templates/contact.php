@@ -25,13 +25,13 @@ $container = get_theme_mod('understrap_container_type');
         <main class="site-main container contact" id="main" role="main">
             <div class="row">
                 <div class="col-12">
-                    <h1><span><?php esc_html_e( 'Contact', 'bab' ); ?></span></h1>
+                    <h1><span><?php esc_html_e('Contact', 'bab'); ?></span></h1>
                 </div>
 
                 <div class="address col-lg-6">
                     <address>
                         <strong>Jocelyne Rouleau, FGA, FCGmA, GJ</strong><br />
-                        <?php esc_html_e( 'Gemologist • Diamond • MV Certified Evaluator', 'bab' ); ?>
+                        <?php esc_html_e('Gemologist • Diamond • MV Certified Evaluator', 'bab'); ?>
                         <br />
                         1323, avenue Maguire, bureau 101<br />
                         Québec (Québec) G1T 1Z2<br />
@@ -42,40 +42,39 @@ $container = get_theme_mod('understrap_container_type');
                         </a>
                         <a class="btn btn-secondary" href="https://www.google.com/maps/place/La+Bo%C3%AEte+%C3%A0+Bijoux/@46.7810912,-71.2540924,17z/data=!4m13!1m7!3m6!1s0x4cb896bd29c91561:0x6cafd85ebdd68a46!2s1323+Avenue+Maguire,+Qu%C3%A9bec,+QC+G1T+1K6!3b1!8m2!3d46.7810912!4d-71.2519037!3m4!1s0x4cb896bd29caada9:0x2f053529d5c2e97e!8m2!3d46.7810912!4d-71.2519037" target="_blank" title="S'y rendre">
                             <i class="fas fa-map-pin"></i>
-                            <?php esc_html_e( 'Getting There', 'bab' ); ?>
+                            <?php esc_html_e('Getting There', 'bab'); ?>
                         </a>
                     </div>
                     <div>
-                        <?php the_content() ; ?>
+                        <?php the_content(); ?>
                     </div>
 
                 </div>
                 <div class="schedule col-lg-6">
-                    <h3><?php esc_html_e( 'Store Business Hours', 'bab' ); ?></h3>
-                    <strong><?php esc_html_e( 'Monday, Tuesday', 'bab' ); ?></strong>
-                    <span><?php esc_html_e( 'Closed', 'bab' ); ?></span>
-                    <strong><?php esc_html_e( 'Wednesday', 'bab' ); ?></strong>
-                    <span><?php esc_html_e( '11:00 to 17:30', 'bab' ); ?></span>
-                    <strong><?php esc_html_e( 'Thursday, Friday', 'bab' ); ?></strong>
-                    <span><?php esc_html_e( '11:00 to 18:00', 'bab' ); ?></span>
-                    <strong><?php esc_html_e( 'Saturday', 'bab' ); ?></strong>
-                    <span><?php esc_html_e( 'By Appointment', 'bab' ); ?></span>
-                    <strong><?php esc_html_e( 'Sunday', 'bab' ); ?></strong>
-                    <span><?php esc_html_e( 'Closed', 'bab' ); ?></span>
+                <?php get_template_part('page-templates/schedule'); ?>
+                    <!-- <h3><?php esc_html_e('Store Business Hours', 'bab'); ?></h3>
+                    <strong><?php esc_html_e('Monday, Tuesday', 'bab'); ?></strong>
+                    <span><?php esc_html_e('Closed', 'bab'); ?></span>
+                    <strong><?php esc_html_e('Wednesday', 'bab'); ?></strong>
+                    <span><?php esc_html_e('11:00 to 17:30', 'bab'); ?></span>
+                    <strong><?php esc_html_e('Thursday, Friday', 'bab'); ?></strong>
+                    <span><?php esc_html_e('11:00 to 18:00', 'bab'); ?></span>
+                    <strong><?php esc_html_e('Saturday', 'bab'); ?></strong>
+                    <span><?php esc_html_e('By Appointment', 'bab'); ?></span>
+                    <strong><?php esc_html_e('Sunday', 'bab'); ?></strong>
+                    <span><?php esc_html_e('Closed', 'bab'); ?></span> -->
 
-                    <h3><?php esc_html_e( 'Opening hours of the evaluation laboratory', 'bab' ); ?></h3>
+                    <h3><?php esc_html_e('Opening hours of the evaluation laboratory', 'bab'); ?></h3>
                     <p>
-                    <?php esc_html_e( 'By appointment only. Fill out the form to make the request', 'bab' ); ?>
+                        <?php esc_html_e('By appointment only. Fill out the form to make the request', 'bab'); ?>
                     </p>
-                    <h3><?php esc_html_e( 'Return', 'bab' ); ?></h3>
-                    <p><?php esc_html_e( 'To return a product, you must first make the request by completing the form.', 'bab' ); ?></p>
+                    <h3><?php esc_html_e('Return', 'bab'); ?></h3>
+                    <p><?php esc_html_e('To return a product, you must first make the request by completing the form.', 'bab'); ?></p>
                 </div>
 
         </main><!-- #main -->
     </div>
-    <?php get_template_part('page-templates/questions'); ?>
-
-
+    <?php get_template_part('page-modules/questions'); ?>
 
 </div><!-- #content -->
 
