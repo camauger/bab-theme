@@ -8,7 +8,6 @@
 	font-size: 20px;
 
 	span {
-
 		text-align: center;
 		color: white;
 	}
@@ -24,7 +23,6 @@
 	}
 
 	img {
-		
 		@include media-breakpoint-up(md) {
 			grid-column: 1 / 3;
 			grid-row: 1 / 3;
@@ -69,11 +67,9 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
-
 	}
 
 	.store--info {
-
 		background: $primary;
 		display: flex;
 
@@ -102,47 +98,40 @@
 			.fa-shopping-cart {
 				display: none;
 				@include media-breakpoint-up(md) {
-				display: inherit;
-				position: absolute;
-				align-self: center;
-				font-size: 12rem;
-				color: $secondary-blue;}
+					display: inherit;
+					position: absolute;
+					align-self: center;
+					font-size: 12rem;
+					color: $secondary-blue;
+				}
 			}
 
 			.boutiqueEnLigne {
-
 				text-transform: uppercase;
 				font-size: 1.5rem;
 				z-index: 2;
 			}
 
 			.plusDe {
-
 				z-index: 2;
 			}
 
 			.vedetteMontant {
-
 				font-size: 2rem;
 				z-index: 2;
 			}
 
 			.bijouxUniques {
-
 				z-index: 2;
 			}
 		}
 	}
 
 	.store--reasons {
-
 		background: $the-flesh;
-		;
-
 		@include media-breakpoint-up(md) {
 			grid-column: 3;
 			grid-row: 2;
-
 		}
 
 		a {
@@ -159,7 +148,6 @@
 			}
 
 			.cinqRaisons {
-
 				position: absolute;
 			}
 
@@ -168,10 +156,10 @@
 				@include media-breakpoint-up(md) {
 					font-size: 16rem;
 				}
-				
+
 				font-weight: bold;
 				line-height: 1.3;
-				color: rgba(255, 255, 255, 0.2)
+				color: rgba(255, 255, 255, 0.2);
 			}
 
 			.raisons {
@@ -191,6 +179,4 @@
 			}
 		}
 	}
-
-
 }

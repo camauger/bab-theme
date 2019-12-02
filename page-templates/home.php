@@ -68,7 +68,7 @@ $container = get_theme_mod('understrap_container_type');
 						<?php endif; ?>
 						<span class="boutiqueEnLigne"><?php esc_html_e('Online Store', 'bab'); ?></span>
 						<span class="plusDe"><?php esc_html_e('more than', 'bab'); ?></span>
-						<span class="vedetteMontant">400</span>
+						<span class="vedetteMontant">450</span>
 						<span class="bijouxUniques"><?php esc_html_e('unique jewelry items', 'bab'); ?></span>
 						<i class="fas fa-shopping-cart"></i>
 						</a>
