@@ -193,7 +193,7 @@ function price_spacing($price)
 {
 
 	if (!$price) {
-		$price .= esc_html_e('Price upon request', 'bab');
+		$price .= __('Price upon request', 'bab');
 	}
 	return $price;
 }
