@@ -459,7 +459,7 @@ main.christmas {
 
 // Ball out of stock
 .ball--out {
-    display: none1!important;
+    display: none!important;
     @include media-breakpoint-up(xl) {
     background: $primary;
     border-radius: 100%;
