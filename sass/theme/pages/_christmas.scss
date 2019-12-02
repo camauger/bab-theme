@@ -461,6 +461,7 @@ main.christmas {
 .ball--out {
     display: none!important;
     @include media-breakpoint-up(xl) {
+        display: inherit;
     background: $primary;
     border-radius: 100%;
     p {
