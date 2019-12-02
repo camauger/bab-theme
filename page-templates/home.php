@@ -52,7 +52,7 @@ $container = get_theme_mod('understrap_container_type');
 			$product_thumbnail_alt = get_post_meta($post_thumbnail_id, '_wp_attachment_image_alt', true);
 			?>
 
-			<img src="<?php echo get_template_directory_uri() . "/images/featured/" . $featured_image . "";
+			<img src="<?php echo $featured_image; ?>";
 								?>" alt="<?php the_title(); ?>">
 			<div class="product--star__info">
 				<span>
