@@ -28,7 +28,7 @@ $container = get_theme_mod('understrap_container_type');
                     <h1><span><?php esc_html_e('Contact', 'bab'); ?></span></h1>
                 </div>
 
-                <div class="address col-xl-6">
+                <div class="localization col-xl-6">
                     <address>
                         <strong>Jocelyne Rouleau, FGA, FCGmA, GJ</strong><br />
                         <?php esc_html_e('Gemologist • Diamond • MV Certified Evaluator', 'bab'); ?>
