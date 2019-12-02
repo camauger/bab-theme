@@ -118,7 +118,7 @@ $container = get_theme_mod('understrap_container_type');
 		<div class="home--services">
 
 			<div class="col-12 col-md-6 col-lg">
-				<?php collectionCatEn('Precious Jewelry', 'precious-jewelry', 'precious-jewlery.jpg'); ?>
+				<?php collectionCatEn('Precious Jewelry', 'precious-jewelry', 'precious-jewelry.jpg'); ?>
 			</div>
 
 			<div class="col-12 col-md-6 col-lg">
