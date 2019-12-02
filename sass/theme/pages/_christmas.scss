@@ -446,7 +446,14 @@ main.christmas {
 
 				max-height: 50px;
 			}
-		}
+        }
+        @include media-breakpoint-up (md) {
+            img {
+				flex-basis: 100px;
+
+				max-height: 100px;
+			}
+        }
 	}
 	@include media-breakpoint-up(xl) {
 		a {
