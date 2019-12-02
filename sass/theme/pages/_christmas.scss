@@ -304,17 +304,18 @@ main.christmas {
 		// }
 
 		&::after {
-            @include media-breakpoint-up(xl) {
-			width: 50px;
-			height: 50px;
-			display: block;
-			position: relative;
-			background-repeat: no-repeat;
-			content: "";
-			background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
-			margin-top: -525px;
-			margin-left: 155px;
-			transform: rotate(25deg);}
+			@include media-breakpoint-up(xl) {
+				width: 50px;
+				height: 50px;
+				display: block;
+				position: relative;
+				background-repeat: no-repeat;
+				content: "";
+				background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
+				margin-top: -525px;
+				margin-left: 155px;
+				transform: rotate(25deg);
+			}
 		}
 	}
 }
@@ -436,12 +437,17 @@ main.christmas {
 // Img fix
 
 .ball--empty {
-    img {
-        flex-basis: 50px;
-    }
+	&.ball--small {
+		@include media-breakpoint-down(sm) {
+			img {
+				flex-basis: 50px;
+				align-self: center;
+				max-height: 50px;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {
 		a {
-
 			width: 100%;
 			display: flex;
 			height: 100%;
