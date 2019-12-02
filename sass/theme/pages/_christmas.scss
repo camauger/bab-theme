@@ -78,11 +78,8 @@ main.christmas {
 		background-repeat: no-repeat;
 		background-position: 10% 5%, 30% 15%, 55% 35%, 40% 40%, 80% 20%, 35% 75%,
 			90% 60%, top, center, right, left, bottom, 100% 0%;
-		
 	}
 }
-
-
 
 .christmas__header {
 	display: flex;
@@ -187,8 +184,7 @@ main.christmas {
 	border-radius: 100%;
 	img {
 		object-fit: cover;
-        border-radius: 100%;
-        
+		border-radius: 100%;
 	}
 }
 
@@ -264,7 +260,7 @@ main.christmas {
 				position: relative;
 				background-repeat: no-repeat;
 				background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
-                margin-top: -470px;
+				margin-top: -470px;
 				margin-left: 130px;
 				transform: rotate(25deg);
 			}
@@ -308,6 +304,7 @@ main.christmas {
 		// }
 
 		&::after {
+            @include media-breakpoint-up(xl) {
 			width: 50px;
 			height: 50px;
 			display: block;
@@ -315,9 +312,9 @@ main.christmas {
 			background-repeat: no-repeat;
 			content: "";
 			background-image: url(https://res.cloudinary.com/prospection/image/upload/v1574714607/boiteabijoux/bout-boule.png);
-            margin-top: -525px;
+			margin-top: -525px;
 			margin-left: 155px;
-			transform: rotate(25deg);
+			transform: rotate(25deg);}
 		}
 	}
 }
@@ -436,14 +433,14 @@ main.christmas {
 	}
 }
 
-
 // Img fix
 
 .ball--empty {
-    @include media-breakpoint-up(md) { a {
-        width: 100%;
-        display: flex;
-        height: 100%;
-    } }
-    
+	@include media-breakpoint-up(xl) {
+		a {
+			width: 100%;
+			display: flex;
+			height: 100%;
+		}
+	}
 }
