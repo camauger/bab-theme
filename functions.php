@@ -379,6 +379,7 @@ function kitList($arr)
 	// Vérifier que nous sommes bien en décembre pour passer la bonne date
 	// Si nous ne sommes pas en décembre, le premier rang sera révélé (slice = 1)
 	$todayDay = date("d");
+	$todayHour = $todayDay.getHours();
 	$todayMonth = date("m");
 
 	if ($todayMonth == 12) {
@@ -423,6 +424,8 @@ function kitList($arr)
 
 	echo $html;
 
+	
+	print_r($todayHour);
 
 
 	// Code de tests
@@ -442,3 +445,6 @@ function kitList($arr)
 	// print_r($index);
 	// echo '</pre>';
 }
+
+
+/** WP Search */
