@@ -378,6 +378,8 @@ function kitList($arr)
 
 	// Vérifier que nous sommes bien en décembre pour passer la bonne date
 	// Si nous ne sommes pas en décembre, le premier rang sera révélé (slice = 1)
+	date_default_timezone_set('America/Toronto');
+
 	$todayDay = date("d");
 	$todayMonth = date("m");
 
