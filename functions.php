@@ -428,18 +428,19 @@ function kitList($arr)
 	$today = getdate();
 	print_r($today);
 	echo $today['hours'];
-	echo date( 'D, d M Y H:i:s');
+	echo date('D, d M Y H:i:s');
 
-	
+
 	$date = new DateTime('2001-01-01');
-	
+	echo '<pre>';
 	$date->setTime(14, 55);
+	echo '</pre>';
 	echo $date->format('Y-m-d H:i:s') . "\n";
-	
+	echo '<pre>';
 	$date->setTime(14, 55, 24);
 	echo $date->format('Y-m-d H:i:s') . "\n";
+	echo '</pre>';
 
-	
 
 
 	// Code de tests
