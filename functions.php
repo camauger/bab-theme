@@ -426,7 +426,7 @@ function kitList($arr)
 
 
 	echo $html;
-	echo $todayHour;
+	print_r(gettimeofday());
 	
 
 
