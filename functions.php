@@ -426,21 +426,25 @@ function kitList($arr)
 
 	echo $html;
 
-	echo date('H');
-	//echo date('D, d M Y H:i:s');
+	// echo date('H');
+	// //echo date('D, d M Y H:i:s');
 
 
-	$date = new DateTime('2001-01-01');
-	echo '<pre>';
-	$date->setTime(14, 55);
-	echo '</pre>';
-	echo $date->format('Y-m-d H:i:s') . "\n";
-	echo '<pre>';
-	$date->setTime(14, 55, 24);
-	echo $date->format('Y-m-d H:i:s') . "\n";
-	echo '</pre>';
+	// $date = new DateTime('2001-01-01');
+	// echo '<pre>';
+	// $date->setTime(14, 55);
+	// echo '</pre>';
+	// echo $date->format('Y-m-d H:i:s') . "\n";
+	// echo '<pre>';
+	// $date->setTime(14, 55, 24);
+	// echo $date->format('Y-m-d H:i:s') . "\n";
+	// echo '</pre>';
 
-
+	$date =date('D, d M Y H:i:s');
+	echo $date;
+	
+	$date->setTimezone(new DateTimeZone('America/Toronto'));
+	echo $date->format('Y-m-d H:i:sP') . "\n";
 
 	// Code de tests
 	// echo "kitlist =>";
