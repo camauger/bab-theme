@@ -379,7 +379,6 @@ function kitList($arr)
 	// Vérifier que nous sommes bien en décembre pour passer la bonne date
 	// Si nous ne sommes pas en décembre, le premier rang sera révélé (slice = 1)
 	$todayDay = date("d");
-
 	$todayMonth = date("m");
 
 	$todayHour = gettimeofday();
@@ -431,6 +430,16 @@ function kitList($arr)
 	echo $today['hours'];
 	echo date( 'D, d M Y H:i:s');
 
+	
+	$date = new DateTime('2001-01-01');
+	
+	$date->setTime(14, 55);
+	echo $date->format('Y-m-d H:i:s') . "\n";
+	
+	$date->setTime(14, 55, 24);
+	echo $date->format('Y-m-d H:i:s') . "\n";
+
+	
 
 
 	// Code de tests
