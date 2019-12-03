@@ -426,7 +426,8 @@ function kitList($arr)
 
 
 	echo $html;
-	print_r(gettimeofday());
+	$today = getdate();
+print_r($today);
 	
 
 
