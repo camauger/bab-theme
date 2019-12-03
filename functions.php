@@ -379,10 +379,10 @@ function kitList($arr)
 	// Vérifier que nous sommes bien en décembre pour passer la bonne date
 	// Si nous ne sommes pas en décembre, le premier rang sera révélé (slice = 1)
 	$todayDay = date("d");
-	
+
 	$todayMonth = date("m");
 
-	$todayHour = gettimeofday ();
+	$todayHour = gettimeofday();
 
 
 	if ($todayMonth == 12) {
@@ -427,9 +427,9 @@ function kitList($arr)
 
 	echo $html;
 	$today = getdate();
-print_r($today);
-print_r($today->hours);
-	
+	print_r($today);
+	print_r($today[2]);
+
 
 
 
