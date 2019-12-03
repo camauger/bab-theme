@@ -425,10 +425,9 @@ function kitList($arr)
 
 
 	echo $html;
-	$today = getdate();
-	print_r($today);
-	echo $today['hours'];
-	echo date('D, d M Y H:i:s');
+
+	echo date('H');
+	//echo date('D, d M Y H:i:s');
 
 
 	$date = new DateTime('2001-01-01');
