@@ -443,8 +443,8 @@ function kitList($arr)
 	$date =date('D, d M Y H:i:s');
 	echo $date;
 	
-	$date->setTimezone(new DateTimeZone('America/Toronto'));
-	echo $date->format('Y-m-d H:i:sP') . "\n";
+	// $date->setTimezone(new DateTimeZone('America/Toronto'));
+	// echo $date->format('Y-m-d H:i:sP') . "\n";
 
 	// Code de tests
 	// echo "kitlist =>";
