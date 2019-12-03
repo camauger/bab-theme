@@ -383,8 +383,6 @@ function kitList($arr)
 	$todayDay = date("d");
 	$todayMonth = date("m");
 
-	$todayHour = gettimeofday();
-
 
 	if ($todayMonth == 12) {
 		$slice = $todayDay;
@@ -428,43 +426,4 @@ function kitList($arr)
 
 	echo $html;
 
-	// echo date('H');
-	// //echo date('D, d M Y H:i:s');
 
-
-	// $date = new DateTime('2001-01-01');
-	// echo '<pre>';
-	// $date->setTime(14, 55);
-	// echo '</pre>';
-	// echo $date->format('Y-m-d H:i:s') . "\n";
-	// echo '<pre>';
-	// $date->setTime(14, 55, 24);
-	// echo $date->format('Y-m-d H:i:s') . "\n";
-	// echo '</pre>';
-
-	$date =date('D, d M Y H:i:s');
-	echo $date;
-	
-	// $date->setTimezone(new DateTimeZone('America/Toronto'));
-	// echo $date->format('Y-m-d H:i:sP') . "\n";
-
-	// Code de tests
-	// echo "kitlist =>";
-	// echo '<pre>';
-	// print_r($kitList);
-	// echo '</pre>';
-	// echo "kitlistfuture =>";
-	// echo '<pre>';
-	// print_r($kitListFuture);
-	// echo '</pre>';
-	// echo "kitlistnow =>";
-	// echo '<pre>';
-	// print_r($kitListNow);
-	// echo '</pre>';
-	// echo '<pre>';
-	// print_r($index);
-	// echo '</pre>';
-}
-
-
-/** WP Search */
