@@ -428,6 +428,7 @@ function kitList($arr)
 	echo $html;
 	$today = getdate();
 print_r($today);
+print_r($today->hours);
 	
 
 
