@@ -425,5 +425,4 @@ function kitList($arr)
 
 
 	echo $html;
-
-
+}
