@@ -41,7 +41,6 @@ $container = get_theme_mod('understrap_container_type');
 	$pubImg = get_post_meta(get_the_ID($frontpage_id), 'pubImg', TRUE);
 	$pubUrl = get_post_meta(get_the_ID($frontpage_id), 'pubUrl', TRUE);
 	$pubAlt = get_post_meta(get_the_ID($frontpage_id), 'pubAlt', TRUE);
-
 	if ($featured_product->have_posts()) :
 
 		echo '<div class="product--star">';
@@ -53,17 +52,17 @@ $container = get_theme_mod('understrap_container_type');
 			$product_thumbnail_alt = get_post_meta($post_thumbnail_id, '_wp_attachment_image_alt', true);
 			?>
 
-			
+			<img src="<?php echo $featured_image; ?>" alt="<?php the_title(); ?>">
 			<div class="product--star__info">
 				<span>
 					<?php esc_html_e('Featured Product', 'bab'); ?></span>
 				<h3><?php the_title(); ?></h3>
 				<a class="btn btn-secondary" href="<?php the_permalink(); ?>"><?php esc_html_e('More info', 'bab'); ?></a>
 			</div>
-			<a class="store--info" href ="<?php echo $pubUrl ?>">
-			<img class="" src="<?php echo $pubImg ?>" alt="<?php echo $pubAlt ?>">
-				
-					<!-- <?php if (ICL_LANGUAGE_CODE == 'en') : ?>
+			<a class="store--info" href="<?php echo $pubUrl ?>">
+				<img class="" src="<?php echo $pubImg ?>" alt="<?php echo $pubAlt ?>">
+
+				<!-- <?php if (ICL_LANGUAGE_CODE == 'en') : ?>
 						<a href="/en/our-collections/" title="Online Store">
 						<?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
 							<a href="/nos-collections/" title="Boutique en ligne">
@@ -74,7 +73,7 @@ $container = get_theme_mod('understrap_container_type');
 							<span class="bijouxUniques"><?php esc_html_e('unique jewelry items', 'bab'); ?></span>
 							<i class="fas fa-shopping-cart"></i>
 							</a> -->
-						
+
 
 			</a>
 			<div class="store--reasons">
