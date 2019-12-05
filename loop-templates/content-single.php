@@ -14,19 +14,18 @@ if (!defined('ABSPATH')) {
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 
-	<?php 
-	if ($post->banner == '') {
+	<?php
+	if (! $post->banner) {
 		$banner = get_the_post_thumbnail($post->ID, 'large');
 	} else {
-		$banner = $post->banner;
-	}
-	; ?>
+		$banner = '<img src="' . $post->banner . '" alt="' . the_title() . '">';
+	}; ?>
 	<header class="entry-header">
 		<div class="article-img--hero"><?php echo $banner; ?></div>
 		<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 
 		<div class="entry-meta">
-		<img class="article--avatar" src="<?php echo get_template_directory_uri(); ?>/images/jocelyne-rouleau.jpeg" alt="Jocelyne Rouleau" title="Jocelyne Rouleau">
+			<img class="article--avatar" src="<?php echo get_template_directory_uri(); ?>/images/jocelyne-rouleau.jpeg" alt="Jocelyne Rouleau" title="Jocelyne Rouleau">
 
 			<?php understrap_posted_on(); ?>
 
