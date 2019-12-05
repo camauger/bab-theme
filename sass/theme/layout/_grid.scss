@@ -5,7 +5,7 @@ $blockpadding: 1.5rem;
 $blockpadding-md: 3rem;
 $blockpadding-lg: 5rem;
 
-.block--half:not(.single-post) {
+.block--half {
 	@extend .col-12;
 	@extend .col-lg-6;
 	@extend .d-flex;
