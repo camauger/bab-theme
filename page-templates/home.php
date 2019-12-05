@@ -62,7 +62,7 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="store--info">
 
 				<?php
-						if (!$post->pub) { ?>
+						if (! get_post_meta( '1', 'pub', true )) { ?>
 					<?php if (ICL_LANGUAGE_CODE == 'en') : ?>
 						<a href="/en/our-collections/" title="Online Store">
 						<?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
