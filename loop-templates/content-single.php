@@ -18,7 +18,7 @@ if (!defined('ABSPATH')) {
 	if (! $post->banner) {
 		$banner = get_the_post_thumbnail($post->ID, 'large');
 	} else {
-		$banner = '<img src="' . $post->banner . '" alt="' echo the_title() . '">';
+		$banner = '<img src="' . $post->banner . '" alt="' . $post->post_title . '">';
 	}; ?>
 	<header class="entry-header">
 		<div class="article-img--hero"><?php echo $banner; ?></div>
