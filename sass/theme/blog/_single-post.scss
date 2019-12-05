@@ -11,11 +11,12 @@
 			max-width: 960px;
 			margin-left: auto;
 			margin-right: auto;
-			img:nth-of-type(odd) {
-				@extend .order-1;
-			}
-			img:nth-of-type(even) {
-				@extend .order-2;
+			
+			.wp-block-columns:nth-of-type(even) {
+				.wp-block-column:nth-of-type(even) {
+					@extend .order-1;
+				}
+				
 			}
 		}
 		article {
