@@ -1,12 +1,11 @@
-// Livraison express (sidebard gauche)
+// Livraison express (sidebard gauche & fiche produit)
 .expressShipping {
-
+	margin-top: 20px;
 	* {
 		display: flex;
 	}
 
 	a {
-		margin-top: 20px;
 		padding-top: 20px;
 		padding-bottom: 20px;
 		transition: all 200ms ease-in-out;

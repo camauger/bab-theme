@@ -15,8 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<header class="entry-header">
 
 		<?php
+		$permalink = esc_url( get_permalink() );
 		the_title(
-			sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+			sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', $permalink ),
 			'</a></h2>'
 		);
 		?>
@@ -31,7 +32,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	<?php 
+	
+	echo "<a href='$permalink'>";
+	echo get_the_post_thumbnail( $post->ID, 'large' );
+	echo "</a>";
+	?>
 
 	<div class="entry-content">
 
