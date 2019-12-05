@@ -38,8 +38,9 @@ $container = get_theme_mod('understrap_container_type');
 	$frontpage_id = get_option('page_on_front');
 
 	$featured_image = get_post_meta(get_the_ID($frontpage_id), 'featuredimage', TRUE);
-	$pub = get_post_meta(get_the_ID($frontpage_id), 'pub', TRUE);
-
+	$pubImg = get_post_meta(get_the_ID($frontpage_id), 'pubImg', TRUE);
+	$pubUrl = get_post_meta(get_the_ID($frontpage_id), 'pubUrl', TRUE);
+	$pubAlt = get_post_meta(get_the_ID($frontpage_id), 'pubAlt', TRUE);
 
 	if ($featured_product->have_posts()) :
 
@@ -52,15 +53,15 @@ $container = get_theme_mod('understrap_container_type');
 			$product_thumbnail_alt = get_post_meta($post_thumbnail_id, '_wp_attachment_image_alt', true);
 			?>
 
-			<img src="<?php echo $featured_image; ?>" alt="<?php the_title(); ?>">
+			
 			<div class="product--star__info">
 				<span>
 					<?php esc_html_e('Featured Product', 'bab'); ?></span>
 				<h3><?php the_title(); ?></h3>
 				<a class="btn btn-secondary" href="<?php the_permalink(); ?>"><?php esc_html_e('More info', 'bab'); ?></a>
 			</div>
-			<div class="store--info">
-			<img class="" src="<?php echo $pub ?>" alt="">
+			<a class="store--info" href ="<?php echo $pubUrl ?>">
+			<img class="" src="<?php echo $pubImg ?>" alt="<?php echo $pubAlt ?>">
 				
 					<!-- <?php if (ICL_LANGUAGE_CODE == 'en') : ?>
 						<a href="/en/our-collections/" title="Online Store">
@@ -75,7 +76,7 @@ $container = get_theme_mod('understrap_container_type');
 							</a> -->
 						
 
-			</div>
+			</a>
 			<div class="store--reasons">
 				<?php if (ICL_LANGUAGE_CODE == 'en') : ?>
 					<a href="/en/estate-jewelry-2/" title="Why buy an estate jewelry?">
