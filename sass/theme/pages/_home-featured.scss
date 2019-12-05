@@ -33,7 +33,7 @@
 	}
 
 	.product--star__info {
-		padding: 10px;
+		padding: 20px;
 		color: white;
 		background-color: rgba(0, 0, 0, 0.5);
 
@@ -129,6 +129,7 @@
 
 	.store--reasons {
 		background: $the-flesh;
+		padding: 30px;
 		@include media-breakpoint-up(md) {
 			grid-column: 3;
 			grid-row: 2;
