@@ -74,10 +74,10 @@ $container = get_theme_mod('understrap_container_type');
 							<span class="bijouxUniques"><?php esc_html_e('unique jewelry items', 'bab'); ?></span>
 							<i class="fas fa-shopping-cart"></i>
 							</a>
-						<?php	} else {?>
-							<img class="" src="<?php $post->pub?>>" alt="">
+						<?php	} else { ?>
+							<img class="" src="<?php echo $post->pub ?>>" alt="">
 
-							<?php	}	?>
+						<?php	}	?>
 
 
 
