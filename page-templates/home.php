@@ -60,7 +60,7 @@ $container = get_theme_mod('understrap_container_type');
 				<a class="btn btn-secondary" href="<?php the_permalink(); ?>"><?php esc_html_e('More info', 'bab'); ?></a>
 			</div>
 			<div class="store--info">
-			<img class="" src="<?php echo $post->pub ?>>" alt="">
+			<img class="" src="<?php echo $post->pub ?>" alt="">
 				
 					<!-- <?php if (ICL_LANGUAGE_CODE == 'en') : ?>
 						<a href="/en/our-collections/" title="Online Store">
