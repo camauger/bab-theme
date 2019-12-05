@@ -426,3 +426,6 @@ function kitList($arr)
 
 	echo $html;
 }
+
+/** Remove Zoom in Woocommerce */
+remove_theme_support( 'wc-product-gallery-zoom' );

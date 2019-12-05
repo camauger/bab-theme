@@ -48,14 +48,14 @@ $container = get_theme_mod('understrap_container_type');
 
 			<div class="social">
 				<a class="telephone" href="tel:+14186879393" title="+1 (418) 687-9393">+1 (418) 687-9393</a>
-				<?php if(ICL_LANGUAGE_CODE=='en'): ?>
-				<a class="btn btn-outline-light" href="<?php echo get_site_url(); ?>/en/contact" title="Contact Us">Contact Us</a>
-<?php elseif(ICL_LANGUAGE_CODE=='fr'): ?>
-<a class="btn btn-outline-light" href="<?php echo get_site_url(); ?>/contact" title="Contactez-nous">Contactez-nous</a>
-<?php endif; ?>
-				
-				
-				<h5><?php esc_html_e( 'Follow Us', 'bab' ); ?></h5>
+				<?php if (ICL_LANGUAGE_CODE == 'en') : ?>
+					<a class="btn btn-outline-light" href="<?php echo get_site_url(); ?>/en/contact" title="Contact Us">Contact Us</a>
+				<?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
+					<a class="btn btn-outline-light" href="<?php echo get_site_url(); ?>/contact" title="Contactez-nous">Contactez-nous</a>
+				<?php endif; ?>
+
+
+				<h5><?php esc_html_e('Follow Us', 'bab'); ?></h5>
 				<div>
 					<a target="_blank" href="http://www.facebook.com/LaBoiteaBijouxQuebec" title="Facebook">
 						<i class="fa-fw fab fa-facebook-f"></i>
@@ -67,17 +67,17 @@ $container = get_theme_mod('understrap_container_type');
 						<i class="fa-fw fab fa-youtube"></i>
 					</a>
 				</div>
-				<span><?php esc_html_e( 'All rights reserved.', 'bab' ); ?> © La boîte à bijoux 2019</span>
+				<span><?php esc_html_e('All rights reserved.', 'bab'); ?> © La boîte à bijoux 2019</span>
 			</div>
 			<div class="address">
 
-			<?php if(ICL_LANGUAGE_CODE=='en'): ?>
-			<img class="logo--footer" src="<?php echo get_template_directory_uri(); ?>/images/logo-footer-en.png" alt="La boîte à bijoux" title="La boîte à bijoux">
-<?php elseif(ICL_LANGUAGE_CODE=='fr'): ?>
-<img class="logo--footer" src="<?php echo get_template_directory_uri(); ?>/images/logo-footer-fr.png" alt="La boîte à bijoux" title="La boîte à bijoux">
-<?php endif; ?>
+				<?php if (ICL_LANGUAGE_CODE == 'en') : ?>
+					<img class="logo--footer" src="<?php echo get_template_directory_uri(); ?>/images/logo-footer-en.png" alt="La boîte à bijoux" title="La boîte à bijoux">
+				<?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
+					<img class="logo--footer" src="<?php echo get_template_directory_uri(); ?>/images/logo-footer-fr.png" alt="La boîte à bijoux" title="La boîte à bijoux">
+				<?php endif; ?>
 
-				
+
 				<address>
 					1323, Avenue Maguire, Bureau 101<br />
 					Québec (Québec)<br />
