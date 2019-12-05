@@ -61,17 +61,27 @@ $container = get_theme_mod('understrap_container_type');
 			</div>
 			<div class="store--info">
 
-				<?php if (ICL_LANGUAGE_CODE == 'en') : ?>
-					<a href="/en/our-collections/" title="Online Store">
-					<?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
-						<a href="/nos-collections/" title="Boutique en ligne">
-						<?php endif; ?>
-						<span class="boutiqueEnLigne"><?php esc_html_e('Online Store', 'bab'); ?></span>
-						<span class="plusDe"><?php esc_html_e('more than', 'bab'); ?></span>
-						<span class="vedetteMontant">450</span>
-						<span class="bijouxUniques"><?php esc_html_e('unique jewelry items', 'bab'); ?></span>
-						<i class="fas fa-shopping-cart"></i>
-						</a>
+				<?php
+						if (!$post->pub) { ?>
+					<?php if (ICL_LANGUAGE_CODE == 'en') : ?>
+						<a href="/en/our-collections/" title="Online Store">
+						<?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
+							<a href="/nos-collections/" title="Boutique en ligne">
+							<?php endif; ?>
+							<span class="boutiqueEnLigne"><?php esc_html_e('Online Store', 'bab'); ?></span>
+							<span class="plusDe"><?php esc_html_e('more than', 'bab'); ?></span>
+							<span class="vedetteMontant">450</span>
+							<span class="bijouxUniques"><?php esc_html_e('unique jewelry items', 'bab'); ?></span>
+							<i class="fas fa-shopping-cart"></i>
+							</a>
+						<?php	} else {?>
+							<img class="" src="<?php $post->pub?>>" alt="">
+
+							<?php	}	?>
+
+
+
+
 
 			</div>
 			<div class="store--reasons">
@@ -110,7 +120,7 @@ $container = get_theme_mod('understrap_container_type');
 	</div>
 	<div>
 		<h3 class="new-products__title"><?php esc_html_e('New Items', 'bab'); ?></h3>
-		<?php echo do_shortcode('[products limit="4" columns="4" orderby="id" order="DESC" visibility="visible"]') ; ?>
+		<?php echo do_shortcode('[products limit="4" columns="4" orderby="id" order="DESC" visibility="visible"]'); ?>
 	</div>
 	<!-- présentation services -->
 
