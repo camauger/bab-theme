@@ -13,8 +13,16 @@ if (!defined('ABSPATH')) {
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
+
+	<?php 
+	if ($post->banner == '') {
+		$banner = get_the_post_thumbnail($post->ID, 'large');
+	} else {
+		$banner = $post->banner;
+	}
+	; ?>
 	<header class="entry-header">
-		<div class="article-img--hero"><?php echo get_the_post_thumbnail($post->ID, 'large'); ?></div>
+		<div class="article-img--hero"><?php echo $banner; ?></div>
 		<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 
 		<div class="entry-meta">
