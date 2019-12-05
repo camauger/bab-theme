@@ -20,8 +20,6 @@ $container = get_theme_mod('understrap_container_type');
 <main class="full">
 
 
-
-
 	<?php
 	$args = array(
 		'posts_per_page' => 1,
@@ -40,6 +38,8 @@ $container = get_theme_mod('understrap_container_type');
 	$frontpage_id = get_option('page_on_front');
 
 	$featured_image = get_post_meta(get_the_ID($frontpage_id), 'featuredimage', TRUE);
+	$pub = get_post_meta(get_the_ID($frontpage_id), 'pub', TRUE);
+
 
 	if ($featured_product->have_posts()) :
 
@@ -60,7 +60,7 @@ $container = get_theme_mod('understrap_container_type');
 				<a class="btn btn-secondary" href="<?php the_permalink(); ?>"><?php esc_html_e('More info', 'bab'); ?></a>
 			</div>
 			<div class="store--info">
-			<img class="" src="<?php echo $post->pub ?>" alt="">
+			<img class="" src="<?php echo $pub ?>" alt="">
 				
 					<!-- <?php if (ICL_LANGUAGE_CODE == 'en') : ?>
 						<a href="/en/our-collections/" title="Online Store">
