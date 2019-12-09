@@ -78,7 +78,7 @@ $container = get_theme_mod('understrap_container_type');
                 __('Elegant silver rings', 'christmas'),
                 'B6413',
                 'B6078',
-                'B6079'
+                'B6147'
             ],
             [
                // 'Parfait pour vos fiançailles !',
