@@ -1,3 +1,4 @@
+<p><?php esc_html_e($post->schedulemessage); ?></p>
 <strong><?php esc_html_e('Monday', 'bab'); ?></strong>
 <span><?php echo esc_html($post->monday) ?></span>
 <strong><?php esc_html_e('Tuesday', 'bab'); ?></strong>
