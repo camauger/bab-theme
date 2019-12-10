@@ -293,7 +293,7 @@ function kit($arr, $number)
 
 
 	// Image Fetch
-	if ($number < 10) {
+	if ($number < 9) {
 		$imageNumber = '0' . ($number + 1);
 	} else {
 		$imageNumber = ($number + 1);
