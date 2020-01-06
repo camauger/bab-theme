@@ -50,7 +50,7 @@ $container = get_theme_mod('understrap_container_type');
 			$post_thumbnail_id     = get_post_thumbnail_id();
 			$product_thumbnail     = wp_get_attachment_image_src($post_thumbnail_id, $size = 'shop-feature');
 			$product_thumbnail_alt = get_post_meta($post_thumbnail_id, '_wp_attachment_image_alt', true);
-			?>
+	?>
 
 			<img src="<?php echo $featured_image; ?>" alt="<?php the_title(); ?>">
 			<div class="product--star__info">
@@ -60,22 +60,22 @@ $container = get_theme_mod('understrap_container_type');
 				<a class="btn btn-secondary" href="<?php the_permalink(); ?>"><?php esc_html_e('More info', 'bab'); ?></a>
 			</div>
 			<!-- <a class="store--info" href="<?php echo $pubUrl ?>"> -->
-				<!-- <img class="" src="<?php echo $pubImg ?>" alt="<?php echo $pubAlt ?>"> -->
+			<!-- <img class="" src="<?php echo $pubImg ?>" alt="<?php echo $pubAlt ?>"> -->
 
-				<div class="store--info">
+			<div class="store--info">
 				<?php if (ICL_LANGUAGE_CODE == 'en') : ?>
-						<a href="/en/our-collections/" title="Online Store">
-						<?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
-							<a href="/nos-collections/" title="Boutique en ligne">
-							<?php endif; ?>
-							<span class="boutiqueEnLigne"><?php esc_html_e('Online Store', 'bab'); ?></span>
-							<span class="plusDe"><?php esc_html_e('more than', 'bab'); ?></span>
-							<span class="vedetteMontant">450</span>
-							<span class="bijouxUniques"><?php esc_html_e('unique jewelry items', 'bab'); ?></span>
-							<i class="fas fa-shopping-cart"></i>
-							</a>
+					<a href="/en/our-collections/" title="Online Store">
+					<?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
+						<a href="/nos-collections/" title="Boutique en ligne">
+						<?php endif; ?>
+						<span class="boutiqueEnLigne"><?php esc_html_e('Online Store', 'bab'); ?></span>
+						<span class="plusDe"><?php esc_html_e('more than', 'bab'); ?></span>
+						<span class="vedetteMontant">450</span>
+						<span class="bijouxUniques"><?php esc_html_e('unique jewelry items', 'bab'); ?></span>
+						<i class="fas fa-shopping-cart"></i>
+						</a>
 
-				</div>
+			</div>
 
 			<!-- </a> -->
 			<div class="store--reasons">
@@ -134,14 +134,14 @@ $container = get_theme_mod('understrap_container_type');
 
 			<div class="col-12 col-md-4 col-lg">
 				<?php
-					collectionCatEn('Antique Jewelry', 'antique-jewelry', 'antique-jewelry.jpg');
-					?>
+				collectionCatEn('Antique Jewelry', 'antique-jewelry', 'antique-jewelry.jpg');
+				?>
 
 			</div>
 
 			<div class="col-12 col-md-4 col-lg">
 				<?php
-					collectionCatEn('Silver Jewelry', 'silver-jewelry', 'silver-jewelry.jpg'); ?>
+				collectionCatEn('Silver Jewelry', 'silver-jewelry', 'silver-jewelry.jpg'); ?>
 
 			</div>
 
@@ -159,7 +159,7 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="col-12 col-md-6 col-lg">
 				<?php collectionCatFr('Bijoux Précieux', 'bijoux-precieux', 'bijoux-precieux.jpg');
 
-					?>
+				?>
 			</div>
 
 			<div class="col-12 col-md-6 col-lg">
@@ -171,15 +171,15 @@ $container = get_theme_mod('understrap_container_type');
 
 			<div class="col-12 col-md-4 col-lg">
 				<?php
-					collectionCatFr('Bijoux Anciens', 'bijoux-anciens', 'bijoux-anciens.jpg');
+				collectionCatFr('Bijoux Anciens', 'bijoux-anciens', 'bijoux-anciens.jpg');
 
-					?>
+				?>
 			</div>
 
 			<div class="col-12 col-md-4 col-lg">
 				<?php
-					collectionCatFr('Bijoux Argent', 'bijoux-argent', 'bijoux-argent.jpg');
-					?>
+				collectionCatFr('Bijoux Argent', 'bijoux-argent', 'bijoux-argent.jpg');
+				?>
 			</div>
 
 			<div class="col-12 col-md-4 col-lg">
