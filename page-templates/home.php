@@ -59,8 +59,8 @@ $container = get_theme_mod('understrap_container_type');
 				<h3><?php the_title(); ?></h3>
 				<a class="btn btn-secondary" href="<?php the_permalink(); ?>"><?php esc_html_e('More info', 'bab'); ?></a>
 			</div>
-			<!-- <a class="store--info" href="<?php echo $pubUrl ?>">
-				<img class="" src="<?php echo $pubImg ?>" alt="<?php echo $pubAlt ?>"> -->
+			 <a class="store--info" href="<?php echo $pubUrl ?>">
+				<!-- <img class="" src="<?php echo $pubImg ?>" alt="<?php echo $pubAlt ?>"> -->
 
 				<?php if (ICL_LANGUAGE_CODE == 'en') : ?>
 						<a href="/en/our-collections/" title="Online Store">
