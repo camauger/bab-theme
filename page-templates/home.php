@@ -59,10 +59,10 @@ $container = get_theme_mod('understrap_container_type');
 				<h3><?php the_title(); ?></h3>
 				<a class="btn btn-secondary" href="<?php the_permalink(); ?>"><?php esc_html_e('More info', 'bab'); ?></a>
 			</div>
-			<a class="store--info" href="<?php echo $pubUrl ?>">
-				<img class="" src="<?php echo $pubImg ?>" alt="<?php echo $pubAlt ?>">
+			<!-- <a class="store--info" href="<?php echo $pubUrl ?>">
+				<img class="" src="<?php echo $pubImg ?>" alt="<?php echo $pubAlt ?>"> -->
 
-				<!-- <?php if (ICL_LANGUAGE_CODE == 'en') : ?>
+				<?php if (ICL_LANGUAGE_CODE == 'en') : ?>
 						<a href="/en/our-collections/" title="Online Store">
 						<?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
 							<a href="/nos-collections/" title="Boutique en ligne">
@@ -72,7 +72,7 @@ $container = get_theme_mod('understrap_container_type');
 							<span class="vedetteMontant">450</span>
 							<span class="bijouxUniques"><?php esc_html_e('unique jewelry items', 'bab'); ?></span>
 							<i class="fas fa-shopping-cart"></i>
-							</a> -->
+							</a>
 
 
 			</a>
