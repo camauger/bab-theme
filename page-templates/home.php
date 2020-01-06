@@ -59,9 +59,10 @@ $container = get_theme_mod('understrap_container_type');
 				<h3><?php the_title(); ?></h3>
 				<a class="btn btn-secondary" href="<?php the_permalink(); ?>"><?php esc_html_e('More info', 'bab'); ?></a>
 			</div>
-			<a class="store--info" href="<?php echo $pubUrl ?>">
+			<!-- <a class="store--info" href="<?php echo $pubUrl ?>"> -->
 				<!-- <img class="" src="<?php echo $pubImg ?>" alt="<?php echo $pubAlt ?>"> -->
 
+				<divm class="store--info">
 				<?php if (ICL_LANGUAGE_CODE == 'en') : ?>
 						<a href="/en/our-collections/" title="Online Store">
 						<?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
@@ -74,8 +75,9 @@ $container = get_theme_mod('understrap_container_type');
 							<i class="fas fa-shopping-cart"></i>
 							</a>
 
+				</div>
 
-			</a>
+			<!-- </a> -->
 			<div class="store--reasons">
 				<?php if (ICL_LANGUAGE_CODE == 'en') : ?>
 					<a href="/en/estate-jewelry-2/" title="Why buy an estate jewelry?">
