@@ -67,7 +67,7 @@ $container = get_theme_mod('understrap_container_type');
 						<i class="fa-fw fab fa-youtube"></i>
 					</a>
 				</div>
-				<span><?php esc_html_e('All rights reserved.', 'bab'); ?> © La boîte à bijoux 2019</span>
+				<span><?php esc_html_e('All rights reserved.', 'bab'); ?> © La boîte à bijoux <?php echo date("Y"); ?></span>
 			</div>
 			<div class="address">
 
