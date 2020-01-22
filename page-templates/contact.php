@@ -33,7 +33,7 @@ $container = get_theme_mod('understrap_container_type');
                 <?php the_content(); ?>
     <h3></h3>
                     <address>
-                        <h3>Jocelyne Rouleau, FGA, FCGmA, GJ</h3>
+                        <h3>
                         <?php esc_html_e('Gemologist • Diamond • MV Certified Evaluator', 'bab'); ?>
                         </h3>
                         1323, avenue Maguire, bureau 101<br />
