@@ -46,11 +46,9 @@ $container = get_theme_mod('understrap_container_type');
                         </a>
                     </div>
                     <div>
-                    <?php if (ICL_LANGUAGE_CODE == 'en') : ?>
-                        <?php do_shortcode('[gravityform id="2" title="false" description="true"]'); ?>
-					<?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
-						<?php do_shortcode('[gravityform id="1" title="false" description="true"]'); ?>
-						<?php endif; ?>
+                   
+                    <?php the_content(); ?>
+
                     </div>
 
                 </div>
