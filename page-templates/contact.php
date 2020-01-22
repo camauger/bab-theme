@@ -31,11 +31,11 @@ $container = get_theme_mod('understrap_container_type');
                 <div class="localization col-xl-6">
 
                 <?php the_content(); ?>
-    <h3></h3>
+    <h3>La Boîte à Bijoux</h3>
                     <address>
-                        <h3>
+                        <strong>Jocelyne Rouleau, FGA, FCGmA, GJ</strong><br />
                         <?php esc_html_e('Gemologist • Diamond • MV Certified Evaluator', 'bab'); ?>
-                        </h3>
+                        <br />
                         1323, avenue Maguire, bureau 101<br />
                         Québec (Québec) G1T 1Z2<br />
                     </address>
