@@ -29,6 +29,9 @@ $container = get_theme_mod('understrap_container_type');
                 </div>
 
                 <div class="localization col-xl-6">
+
+                <?php the_content(); ?>
+
                     <address>
                         <strong>Jocelyne Rouleau, FGA, FCGmA, GJ</strong><br />
                         <?php esc_html_e('Gemologist • Diamond • MV Certified Evaluator', 'bab'); ?>
@@ -45,11 +48,11 @@ $container = get_theme_mod('understrap_container_type');
                             <?php esc_html_e('Getting There', 'bab'); ?>
                         </a>
                     </div>
-                    <div>
+                    
                    
-                    <?php the_content(); ?>
+                    
 
-                    </div>
+                    
 
                 </div>
                 <div class="schedule col-xl-6">
