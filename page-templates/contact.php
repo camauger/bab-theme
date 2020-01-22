@@ -31,11 +31,11 @@ $container = get_theme_mod('understrap_container_type');
                 <div class="localization col-xl-6">
 
                 <?php the_content(); ?>
-
+    <h3></h3>
                     <address>
-                        <strong>Jocelyne Rouleau, FGA, FCGmA, GJ</strong><br />
+                        <h3>Jocelyne Rouleau, FGA, FCGmA, GJ</h3>
                         <?php esc_html_e('Gemologist • Diamond • MV Certified Evaluator', 'bab'); ?>
-                        <br />
+                        </h3>
                         1323, avenue Maguire, bureau 101<br />
                         Québec (Québec) G1T 1Z2<br />
                     </address>
