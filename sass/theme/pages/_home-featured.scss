@@ -72,7 +72,7 @@
 	.store--info {
 		background: $primary;
 		display: flex;
-
+		padding: 30px;
 		@include media-breakpoint-up(md) {
 			grid-column: 3;
 			grid-row: 1;
@@ -90,7 +90,7 @@
 
 			&:hover {
 				text-decoration: none;
-				background-color: lighten($color: $primary, $amount: 10%);
+				background-color: lighten($color: $primary, $amount: 5%);
 			}
 
 			* {
@@ -151,7 +151,7 @@
 
 			&:hover {
 				text-decoration: none;
-				background-color: lighten($color: $the-flesh, $amount: 10%);
+				background-color: lighten($color: $the-flesh, $amount: 5%);
 			}
 
 			.cinqRaisons {
@@ -176,7 +176,7 @@
 			}
 
 			.pourquoi {
-				font-size: 4.5rem;
+				font-size: 3.5rem;
 				text-transform: uppercase;
 				text-align: center;
 			}
