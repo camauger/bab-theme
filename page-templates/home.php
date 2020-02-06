@@ -57,7 +57,7 @@ $container = get_theme_mod('understrap_container_type');
         <span>
             <?php esc_html_e('Featured Product', 'bab'); ?></span>
         <h3><?php the_title(); ?></h3>
-        <a class="btn btn-secondary" href="<?php the_permalink(); ?>"><?php esc_html_e('More info', 'bab'); ?></a>
+        <a class="btn btn-lg btn-secondary" href="<?php the_permalink(); ?>"><?php esc_html_e('More info', 'bab'); ?></a>
     </div>
     <!-- <a class="store--info" href="<?php echo $pubUrl ?>"> -->
     <!-- <img class="" src="<?php echo $pubImg ?>" alt="<?php echo $pubAlt ?>"> -->
