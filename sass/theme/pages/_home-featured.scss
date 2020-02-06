@@ -73,6 +73,9 @@
 		background: $primary;
 		display: flex;
 		padding: 30px;
+		&:hover {
+			background-color: lighten($color: $primary, $amount: 5%);
+		}
 		@include media-breakpoint-up(md) {
 			grid-column: 3;
 			grid-row: 1;
@@ -90,7 +93,6 @@
 
 			&:hover {
 				text-decoration: none;
-				background-color: lighten($color: $primary, $amount: 5%);
 			}
 
 			* {
@@ -135,6 +137,9 @@
 	.store--reasons {
 		background: $the-flesh;
 		padding: 30px;
+		&:hover {
+			background-color: lighten($color: $the-flesh, $amount: 5%);
+		}
 		@include media-breakpoint-up(md) {
 			grid-column: 3;
 			grid-row: 2;
@@ -151,7 +156,6 @@
 
 			&:hover {
 				text-decoration: none;
-				background-color: lighten($color: $the-flesh, $amount: 5%);
 			}
 
 			.cinqRaisons {
