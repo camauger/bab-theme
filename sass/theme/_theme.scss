@@ -1,4 +1,7 @@
-// Wrapper 
+// Importation de hover.css
+@import "../../node_modules/hover.css/scss/hover.scss";
+
+// Wrapper
 // réinitialiser les wrappers à 0 padding pour faciliter la mise en page
 .wrapper {
 	padding: 0;
@@ -6,7 +9,7 @@
 
 // Remove edit link pour ne pas créer de confusion
 .edit-link {
-	display: none!important;
+	display: none !important;
 }
 
 // Styles
@@ -21,7 +24,6 @@
 // Woocommerce
 @import "woocommerce/woocommerce";
 
-
 // Components
 @import "components/components";
 /* Home - Page d'accueil */
@@ -35,5 +37,3 @@
 
 // Noël
 @import "pages/christmas";
-
-
