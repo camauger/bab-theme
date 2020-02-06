@@ -80,9 +80,9 @@ $container = get_theme_mod('understrap_container_type');
     <!-- </a> -->
     <div class="store--reasons">
         <?php if (ICL_LANGUAGE_CODE == 'en') : ?>
-        <a href="/en/estate-jewelry-2/" title="Why buy an estate jewelry?">
+        <a class="hvr-grow" href="/en/estate-jewelry-2/" title="Why buy an estate jewelry?">
             <?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
-            <a href="/bijoux-occasion/" title="Pourquoi acheter un bijou d'occasion?">
+            <a class="hvr-grow" href="/bijoux-occasion/" title="Pourquoi acheter un bijou d'occasion?">
                 <?php endif; ?>
                 <span class="pourquoi"><?php esc_html_e('Why', 'bab'); ?></span>
                 <span class="acheterUnBijouAncien"><?php esc_html_e('buy an estate jewelry?', 'bab'); ?></span>

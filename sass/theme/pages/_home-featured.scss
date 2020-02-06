@@ -90,6 +90,7 @@
 
 			&:hover {
 				text-decoration: none;
+				background-color: lighten($color: $primary, $amount: 10%);
 			}
 
 			* {
@@ -119,8 +120,9 @@
 			}
 
 			.vedetteMontant {
-				font-size: 5rem;
+				font-size: 6rem;
 				z-index: 2;
+				font-weight: 600;
 			}
 
 			.bijouxUniques {
@@ -149,6 +151,7 @@
 
 			&:hover {
 				text-decoration: none;
+				background-color: lighten($color: $the-flesh, $amount: 10%);
 			}
 
 			.cinqRaisons {
@@ -173,12 +176,13 @@
 			}
 
 			.pourquoi {
-				font-size: 1.5rem;
+				font-size: 4.5rem;
 				text-transform: uppercase;
 				text-align: center;
 			}
 
 			.acheterUnBijouAncien {
+				font-size: 1.5rem;
 				text-align: center;
 			}
 		}
