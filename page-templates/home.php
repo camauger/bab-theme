@@ -62,9 +62,9 @@ $container = get_theme_mod('understrap_container_type');
 			<!-- <a class="store--info" href="<?php echo $pubUrl ?>"> -->
 			<!-- <img class="" src="<?php echo $pubImg ?>" alt="<?php echo $pubAlt ?>"> -->
 
-			<div class="store--info hvr-grow">
+			<div class="store--info">
 				<?php if (ICL_LANGUAGE_CODE == 'en') : ?>
-					<a href="/en/our-collections/" title="Online Store">
+					<a class="hvr-grow" href="/en/our-collections/" title="Online Store">
 					<?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
 						<a href="/nos-collections/" title="Boutique en ligne">
 						<?php endif; ?>
