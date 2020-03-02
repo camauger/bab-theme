@@ -206,7 +206,7 @@ $container = get_theme_mod('understrap_container_type');
     <!-- témoignages -->
     <div class="home--testimonials">
         <div class="row no-gutters d-flex justify-content-center">
-            <?php get_template_part('page-modules/testimonials'); ?>
+            <?php get_template_part('page-modules/testimonials-home'); ?>
         </div>
     </div>
 
