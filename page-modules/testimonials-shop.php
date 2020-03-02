@@ -4,8 +4,6 @@
 </blockquote>
 
 <blockquote>
-    <?php esc_html_e('
-478/5000
-I received my jewelry on February 12, a beautiful old ring with garnets and pearls, it is really beautiful and has been well preserved over time. Garnet is my birthstone. It was my 3rd purchase at the Jewelry Box and I am really happy with my purchases. Old jewelry speaks a lot to me, it has a story. Thank you for the excellent service, the jewelry is carefully packaged. I look at your online store very often!', 'bab'); ?>
+    <?php esc_html_e('I received my jewelry on February 12, a beautiful old ring with garnets and pearls, it is really beautiful and has been well preserved over time. Garnet is my birthstone. It was my 3rd purchase at the Jewelry Box and I am really happy with my purchases. Old jewelry speaks a lot to me, it has a story. Thank you for the excellent service, the jewelry is carefully packaged. I look at your online store very often!', 'bab'); ?>
     <span>Mme Manon Aubé</span>
 </blockquote>
