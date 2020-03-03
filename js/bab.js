@@ -10,7 +10,7 @@ if (document.body.classList.contains("tax-product_cat")) {
 
 const brochesPage = document.querySelector("body.term-broches-bp");
 
-if (brochesPage) {
+if (catPage) {
 	const header = document.querySelector("header.woocommerce-products-header");
 	const h1 = document.querySelector("h1");
 	h1.style.fontFamily = "Qwigley,cursive";
