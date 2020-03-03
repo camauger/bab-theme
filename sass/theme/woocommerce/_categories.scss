@@ -2,7 +2,6 @@
 
 $catpadding: 30px;
 
-
 .widget.woocommerce.widget_product_search,
 .widget.woocommerce.widget_product_categories {
 	background-color: $primary;
@@ -44,7 +43,7 @@ $catpadding: 30px;
 			}
 			&:hover {
 				text-decoration: none;
-				
+
 				&:after {
 					background-color: white;
 				}
@@ -55,7 +54,6 @@ $catpadding: 30px;
 
 .widget.woocommerce.widget_product_categories {
 	padding-top: 1rem;
-
 }
 
 // Catégories actives
@@ -63,11 +61,16 @@ $catpadding: 30px;
 .cat-item.current-cat {
 	> a {
 		background: white;
-		color: $primary!important;
+		color: $primary !important;
 	}
 	ul.children {
 		a {
 			border-left: 4px solid white;
 		}
 	}
+}
+
+// Page de catégorie
+
+body.tax-product_cat {
 }
