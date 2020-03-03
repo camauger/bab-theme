@@ -72,20 +72,20 @@ $catpadding: 30px;
 
 // Page de catégorie
 
-body.tax-product_cat {
-}
-.header--category {
-	background-image: url(https://laboiteabijoux.ca/wp-content/uploads/2020/03/bg-camee.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: left;
-	padding: 1.5rem;
+// body.tax-product_cat {
+// }
+// .header--category {
+// 	background-image: url(https://laboiteabijoux.ca/wp-content/uploads/2020/03/bg-camee.jpg);
+// 	background-repeat: no-repeat;
+// 	background-size: cover;
+// 	background-position: left;
+// 	padding: 1.5rem;
 
-	.term-description {
-		color: #732937;
-	}
+// 	.term-description {
+// 		color: #732937;
+// 	}
 
-	@include media-breakpoint-up(md) {
-		background-image: url(https://laboiteabijoux.ca/wp-content/uploads/2020/03/bg-camee-wide.jpg);
-	}
-}
+// 	@include media-breakpoint-up(md) {
+// 		background-image: url(https://laboiteabijoux.ca/wp-content/uploads/2020/03/bg-camee-wide.jpg);
+// 	}
+// }
