@@ -1,12 +1,14 @@
 // Request quote
 
 .add-request-quote-button {
-	border-radius: 25px!important;
-    padding-left: 16px!important;
-	padding-right: 16px!important;
-	font-weight: normal!important;
-	min-width: 161px!important;
-	max-width: 170px!important;
-	text-align: center!important;
-	@include media-breakpoint-up(md) { max-width: 260px;}
+	border-radius: 25px !important;
+	padding-left: 16px !important;
+	padding-right: 16px !important;
+	font-weight: normal !important;
+	min-width: 161px !important;
+	max-width: 170px !important;
+	text-align: center !important;
+	@include media-breakpoint-up(md) {
+		max-width: 260px;
+	}
 }

@@ -77,4 +77,7 @@ body.tax-product_cat {
 .header--category {
 	background-image: url(https://laboiteabijoux.ca/wp-content/uploads/2020/03/bg-camee.jpg);
 	background-repeat: no-repeat;
+	@include media-breakpoint-up(md) {
+		background-image: url(https://laboiteabijoux.ca/wp-content/uploads/2020/03/bg-camee-wide.jpg);
+	}
 }

@@ -15,4 +15,5 @@ if (brochesPage) {
 	const h1 = document.querySelector("h1");
 	h1.style.fontFamily = "Qwigley,cursive";
 	h1.style.fontSize = "6rem";
+	header.classList.add("header--category");
 }
