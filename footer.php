@@ -94,8 +94,8 @@ $container = get_theme_mod('understrap_container_type');
                 <?php elseif (ICL_LANGUAGE_CODE == 'fr') : ?>
                 <img class="logo--footer" src="<?php echo get_template_directory_uri(); ?>/images/logo-footer-fr.png"
                     alt="La boîte à bijoux" title="La boîte à bijoux">
-       
-         <?php endif; ?>
+
+                <?php endif; ?>
 
 
                 <address>
@@ -113,6 +113,6 @@ $container = get_theme_mod('understrap_container_type');
 <?php wp_footer(); ?>
 
 </body>
-<script src="./js/bab.js"></script>
+<script src="https://laboiteabijoux.ca/wp-content/themes/boiteabijoux-v2/js/bab.js"></script>
 
 </html>
