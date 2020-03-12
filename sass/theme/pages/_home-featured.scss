@@ -4,6 +4,9 @@
 	&:hover {
 		background-color: $primary;
 		color: white !important;
+		a {
+			color: white !important;
+		}
 	}
 }
 
@@ -46,7 +49,7 @@
 		color: white;
 		background-color: rgba(0, 0, 0, 0.5);
 
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			grid-column: 1;
 			grid-row: 1 / 3;
 			background-color: transparent;
@@ -62,12 +65,12 @@
 			text-align: center;
 		}
 		span {
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(md) {
 				font-size: 1.5rem;
 			}
 		}
 		h3 {
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(md) {
 				font-size: 2rem;
 			}
 		}
